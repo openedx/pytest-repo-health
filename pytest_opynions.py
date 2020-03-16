@@ -5,6 +5,8 @@ import os
 import pytest
 from pytest_harvest import get_fixture_store
 
+import json
+
 def pytest_configure(config):
     """ pytest hook used to add pytest_opynions install dir as place for
         pytest to find tests
@@ -81,6 +83,8 @@ def pytest_sessionfinish(session):
             print("    - '%s':" % test_name)
             for output_name, output_value in results.items():
                 print("      - '%s': %s" % (output_name, output_value))
+    with open("repo_state.json", "w") as write_file:
+        json.dump(results_bag, write_file)
     #TODO(jinder): decide of output file and output it
     # results_bag contains any new info stored by tests,
     # here I would parse through info in results bag and store it in either dict or dataframe
