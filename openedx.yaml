@@ -1,0 +1,19 @@
+# openedx.yaml
+
+---
+owner: jinder
+nick: pytest-opynions
+tags:
+    - tools
+oeps:
+    oep-2: True
+    oep-3:
+        state: False
+        reason: No asynchronous tasks needed
+    oep-5:
+        state: False
+        reason: TODO - Implement for this application if appropriate
+    oep-7: True
+    oep-30:
+        state: False
+        reason: Doesn't handle any user information

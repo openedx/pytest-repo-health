@@ -1,0 +1,5 @@
+# Core requirements for using this application
+-c constraints.txt
+
+pytest                    # Framework used to find and execute each "opynion"
+pytest_harvest            # Used to get additional data from tests
