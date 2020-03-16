@@ -3,8 +3,6 @@ from __future__ import unicode_literals
 import os
 import re
 import codecs
-import os
-import re
 
 import pytest
 
@@ -15,8 +13,8 @@ def get_file_content(path):
     """
     if not os.path.exists(path):
         return ''
-    with codecs.open(path, 'r', 'utf-8') as f:
-        return f.read()
+    with codecs.open(path, 'r', 'utf-8') as open_file:
+        return open_file.read()
 
 @pytest.fixture
 def get_openedx_yaml(repo_path):
@@ -30,31 +28,31 @@ def test_openedx_yaml_exists(get_openedx_yaml, results_bag):
     Test to check if repo has openedx.yaml file
     """
     results_bag.openedx_yaml_exists = False
-    assert len(get_openedx_yaml)>0
+    assert len(get_openedx_yaml) > 0
     results_bag.openedx_yaml_exists = True
 
 
 def test_owner(get_openedx_yaml, results_bag):
     """ Test if owner line exists and get owner name """
-    #TODO(jinder): decide how flexible do we want to be with this, the code below is unforgiving
+    #TODO(jinder): decide how flexible do we want to be with this
     openedx_file = get_openedx_yaml
     regex_pattern = "(?<=owner: ).*"
-    m = re.search(regex_pattern, openedx_file)
+    match = re.search(regex_pattern, openedx_file)
     results_bag.has_owner = False
-    assert m is not None
+    assert match is not None
     results_bag.has_owner = True
 
-    owner = m.group(0).replace("'","")
+    owner = match.group(0).replace("'", "")
     results_bag.owner = owner
 
 def test_nick(get_openedx_yaml, results_bag):
     """ Test if nick line exists and get nick """
-    #TODO(jinder): decide how flexible do we want to be with this, the code below is unforgiving
+    #TODO(jinder): decide how flexible do we want to be with this
     openedx_file = get_openedx_yaml
     regex_pattern = "(?<=nick: ).*\n"
-    m = re.search(regex_pattern, openedx_file)
+    match = re.search(regex_pattern, openedx_file)
     results_bag.has_nick = False
-    assert m is not None
+    assert match is not None
     results_bag.has_nick = True
-    nick = m.group(0).replace("\n","")
+    nick = match.group(0).replace("\n", "")
     results_bag.nick = nick
