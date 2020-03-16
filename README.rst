@@ -18,8 +18,6 @@ pytest-opynions
     :target: https://ci.appveyor.com/project/jinder1s/pytest-opynions/branch/master
     :alt: See Build Status on AppVeyor
 
-A simple plugin to use with pytest
-
 ----
 
 This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
