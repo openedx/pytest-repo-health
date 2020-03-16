@@ -45,7 +45,6 @@ setup(
     author_email='msingh@edx.org',
     maintainer='Manjinder Singh',
     maintainer_email='msingh@edx.org',
-    license='MIT',
     url='https://github.com/jinder1s/pytest-opynions',
     description='A simple plugin to use with pytest',
     long_description=read('README.rst'),
