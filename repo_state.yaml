@@ -1,8 +1,26 @@
-general:
-  has_python_files: true
 makefile:
   exists: true
   has_upgrade_target: true
 openedx_yaml:
-  exists: true
   owner: jinder
+repo_structure:
+  .travis.yml: true
+  Makefile: true
+  README.rst: true
+  has_python_files: true
+  has_section:
+    testenv: false
+    testenv:quality: true
+    tox: true
+  openedx.yaml: true
+  pylintrc: false
+  requirements:
+    base.in: true
+    dev.in: true
+    doc.in: true
+    pip-tools.in: true
+    quality.in: true
+    test.in: true
+    travis.in: true
+  requirements_folder: true
+  tox.ini: true

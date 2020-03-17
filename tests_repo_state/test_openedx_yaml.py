@@ -29,15 +29,6 @@ def get_openedx_yaml(repo_path):
     full_path = repo_path + '/openedx.yaml'
     return get_file_content(full_path)
 
-def test_openedx_yaml_exists(get_openedx_yaml, module_data_holder):
-    """
-    Test to check if repo has openedx.yaml file
-    """
-    module_data_holder['openedx_yaml']['exists'] = False
-    if len(get_openedx_yaml) > 0:
-        module_data_holder['openedx_yaml']['exists'] = True
-
-
 def test_owner(get_openedx_yaml, module_data_holder):
     """ Test if owner line exists and get owner name """
     #TODO(jinder): decide how flexible do we want to be with this
