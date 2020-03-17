@@ -11,8 +11,8 @@ certifi==2019.11.28       # via -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.1              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
-codecov==2.0.16           # via -r requirements/travis.txt
-coverage==5.0.3           # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
+codecov==2.0.17           # via -r requirements/travis.txt
+coverage==5.0.4           # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
 decopatch==1.4.7          # via -r requirements/quality.txt, pytest-harvest
 diff-cover==2.6.0         # via -r requirements/dev.in
 distlib==0.3.0            # via -r requirements/travis.txt, virtualenv
@@ -45,7 +45,8 @@ pylint==2.4.2             # via -r requirements/quality.txt, edx-lint, pylint-ce
 pyparsing==2.4.6          # via -r requirements/quality.txt, -r requirements/travis.txt, packaging
 pytest-cov==2.8.1         # via -r requirements/quality.txt
 pytest-harvest==1.9.0     # via -r requirements/quality.txt
-pytest==5.3.5             # via -r requirements/quality.txt, pytest-cov
+pytest==5.4.1             # via -r requirements/quality.txt, pytest-cov
+pyyaml==5.3               # via -r requirements/quality.txt
 requests==2.23.0          # via -r requirements/travis.txt, codecov
 six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, diff-cover, edx-lint, makefun, packaging, pathlib2, pip-tools, pytest-harvest, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle

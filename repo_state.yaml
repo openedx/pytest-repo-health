@@ -1,0 +1,8 @@
+general:
+  has_python_files: true
+makefile:
+  exists: true
+  has_upgrade_target: true
+openedx_yaml:
+  exists: true
+  owner: jinder

@@ -5,7 +5,7 @@
 #    make upgrade
 #
 attrs==19.3.0             # via -r requirements/base.txt, pytest
-coverage==5.0.3           # via pytest-cov
+coverage==5.0.4           # via pytest-cov
 decopatch==1.4.7          # via -r requirements/base.txt, pytest-harvest
 importlib-metadata==1.5.0  # via -r requirements/base.txt, pluggy, pytest
 makefun==1.7.0            # via -r requirements/base.txt, decopatch, pytest-harvest
@@ -17,7 +17,8 @@ py==1.8.1                 # via -r requirements/base.txt, pytest
 pyparsing==2.4.6          # via -r requirements/base.txt, packaging
 pytest-cov==2.8.1         # via -r requirements/test.in
 pytest-harvest==1.9.0     # via -r requirements/base.txt
-pytest==5.3.5             # via -r requirements/base.txt, pytest-cov
+pytest==5.4.1             # via -r requirements/base.txt, pytest-cov
+pyyaml==5.3               # via -r requirements/base.txt
 six==1.14.0               # via -r requirements/base.txt, makefun, packaging, pathlib2, pytest-harvest
 wcwidth==0.1.8            # via -r requirements/base.txt, pytest
 zipp==1.2.0               # via -r requirements/base.txt, importlib-metadata

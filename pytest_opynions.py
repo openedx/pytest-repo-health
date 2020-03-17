@@ -4,7 +4,7 @@ import os
 
 import pytest
 
-import json
+import yaml
 import pdb
 
 session_data_holder_dict = {}
@@ -82,8 +82,8 @@ def pytest_sessionfinish(session):
     """
     pytest hook used to collect results for tests and put into output file
     """
-    with open("repo_state.json", "w") as write_file:
-        json.dump(session_data_holder_dict, write_file)
+    with open("repo_state.yaml", "w") as write_file:
+        yaml.dump(session_data_holder_dict, write_file)
     #TODO(jinder): decide of output file and output it
     # results_bag contains any new info stored by tests,
     # here I would parse through info in results bag and store it in either dict or dataframe
