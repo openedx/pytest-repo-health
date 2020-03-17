@@ -5,6 +5,11 @@ import re
 import codecs
 
 import pytest
+import yaml
+import pdb
+# TODO(jinder): should I implement methods relaying on openedx.yaml being parsable?
+
+module_dict_key = "openedx_yaml"
 
 def get_file_content(path):
     """
@@ -18,8 +23,8 @@ def get_file_content(path):
 
 @pytest.fixture(scope="module")
 def module_data_holder(data_holder):
-    if 'openedx_yaml' not in data_holder:
-        data_holder['openedx_yaml'] = {}
+    if module_dict_key not in data_holder:
+        data_holder[module_dict_key] = {}
     return data_holder
 
 @pytest.fixture
@@ -35,7 +40,19 @@ def test_owner(get_openedx_yaml, module_data_holder):
     openedx_file = get_openedx_yaml
     regex_pattern = "(?<=owner: ).*"
     match = re.search(regex_pattern, openedx_file)
-    module_data_holder['openedx_yaml']['owner'] = None
+    module_data_holder[module_dict_key]['owner'] = None
     if  match is not None:
         owner = match.group(0).replace("'", "")
-        module_data_holder['openedx_yaml']['owner'] = owner
+        module_data_holder[module_dict_key]['owner'] = owner
+
+def test_yaml_parsable(get_openedx_yaml, module_data_holder):
+    try:
+        data = yaml.load(get_openedx_yaml, Loader=yaml.Loader)
+        module_data_holder[module_dict_key]['is_parsable'] = True
+    except:
+        module_data_holder[module_dict_key]['is_parsable'] = False
+
+def test_oep(get_openedx_yaml, module_data_holder):
+    data = yaml.load(get_openedx_yaml, Loader=yaml.Loader)
+    # TODO(jinder): should I implement methods for both yaml parsing and none yaml parsing 
+

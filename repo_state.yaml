@@ -2,6 +2,7 @@ makefile:
   exists: true
   has_upgrade_target: true
 openedx_yaml:
+  is_parsable: true
   owner: jinder
 repo_structure:
   .travis.yml: true
