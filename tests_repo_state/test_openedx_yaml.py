@@ -28,8 +28,8 @@ def test_openedx_yaml_exists(get_openedx_yaml, results_bag):
     Test to check if repo has openedx.yaml file
     """
     results_bag.openedx_yaml_exists = False
-    assert len(get_openedx_yaml) > 0
-    results_bag.openedx_yaml_exists = True
+    if len(get_openedx_yaml) > 0:
+        results_bag.openedx_yaml_exists = True
 
 
 def test_owner(get_openedx_yaml, results_bag):
@@ -39,20 +39,10 @@ def test_owner(get_openedx_yaml, results_bag):
     regex_pattern = "(?<=owner: ).*"
     match = re.search(regex_pattern, openedx_file)
     results_bag.has_owner = False
-    assert match is not None
-    results_bag.has_owner = True
+    if  match is not None:
+        results_bag.has_owner = True
 
-    owner = match.group(0).replace("'", "")
-    results_bag.owner = owner
-
-def test_nick(get_openedx_yaml, results_bag):
-    """ Test if nick line exists and get nick """
-    #TODO(jinder): decide how flexible do we want to be with this
-    openedx_file = get_openedx_yaml
-    regex_pattern = "(?<=nick: ).*\n"
-    match = re.search(regex_pattern, openedx_file)
-    results_bag.has_nick = False
-    assert match is not None
-    results_bag.has_nick = True
-    nick = match.group(0).replace("\n", "")
-    results_bag.nick = nick
+        owner = match.group(0).replace("'", "")
+        results_bag.owner = owner
+    else:
+        results_bag.owner = None

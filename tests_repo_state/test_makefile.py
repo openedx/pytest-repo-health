@@ -29,8 +29,8 @@ def test_makefile_exists(get_makefile, results_bag):
     Test to check if repo hase Makefile
     """
     results_bag.has_makefile = False
-    assert len(get_makefile) > 0
-    results_bag.has_makefile = True
+    if len(get_makefile) > 0:
+        results_bag.has_makefile = True
 
 def test_has_upgrade(get_makefile, results_bag):
     """
@@ -38,6 +38,6 @@ def test_has_upgrade(get_makefile, results_bag):
     """
     regex_pattern = "upgrade:"
     match = re.search(regex_pattern, get_makefile)
-    results_bag.has_upgrade = False
-    assert match is not None
-    results_bag.has_upgrade = True
+    results_bag.has_upgrade_target = False
+    if match is not None:
+        results_bag.has_upgrade_target = True
