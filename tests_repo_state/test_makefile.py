@@ -23,21 +23,27 @@ def get_makefile(repo_path):
     full_path = repo_path + '/Makefile'
     return get_file_content(full_path)
 
+@pytest.fixture(scope="module")
+def module_data_holder(data_holder):
+    if 'makefile' not in data_holder:
+        data_holder['makefile'] = {}
+    return data_holder
 
-def test_makefile_exists(get_makefile, results_bag):
+
+def test_makefile_exists(get_makefile, module_data_holder):
     """
     Test to check if repo hase Makefile
     """
-    results_bag.has_makefile = False
+    module_data_holder['makefile']['exists'] = False
     if len(get_makefile) > 0:
-        results_bag.has_makefile = True
+        module_data_holder['makefile']['exists'] = True
 
-def test_has_upgrade(get_makefile, results_bag):
+def test_has_upgrade(get_makefile, module_data_holder):
     """
     Test to check if makefile has an upgrade target
     """
     regex_pattern = "upgrade:"
     match = re.search(regex_pattern, get_makefile)
-    results_bag.has_upgrade_target = False
+    module_data_holder['makefile']['has_upgrade_target'] = False
     if match is not None:
-        results_bag.has_upgrade_target = True
+        module_data_holder['makefile']['has_upgrade_target'] = True

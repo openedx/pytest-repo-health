@@ -3,9 +3,15 @@
 import os
 
 import pytest
-from pytest_harvest import get_fixture_store
 
 import json
+import pdb
+
+session_data_holder_dict = {}
+
+@pytest.fixture(scope="session")
+def data_holder():
+    return session_data_holder_dict
 
 def pytest_configure(config):
     """ pytest hook used to add pytest_opynions install dir as place for
@@ -76,15 +82,8 @@ def pytest_sessionfinish(session):
     """
     pytest hook used to collect results for tests and put into output file
     """
-    fixture_store = get_fixture_store(session)
-    if 'results_bag' in fixture_store:
-        results_bag = fixture_store['results_bag']
-        for test_name, results in results_bag.items():
-            print("    - '%s':" % test_name)
-            for output_name, output_value in results.items():
-                print("      - '%s': %s" % (output_name, output_value))
     with open("repo_state.json", "w") as write_file:
-        json.dump(results_bag, write_file)
+        json.dump(session_data_holder_dict, write_file)
     #TODO(jinder): decide of output file and output it
     # results_bag contains any new info stored by tests,
     # here I would parse through info in results bag and store it in either dict or dataframe
