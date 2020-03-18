@@ -9,8 +9,7 @@ template for starting a repository with current best practices, and opynions
 helps it keep up with those practices as they evolve over time.
 
 Currently, the checks implemented in tests_repo_state are very edx specific.
-Moving forward, the goal is to allow each repo checked to define their own
- set of checks(not yet implemented).
+Moving forward, the goal is to allow each repo checked to define their own set of checks(not yet implemented).
 
 
 This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
@@ -25,14 +24,14 @@ You can install "pytest-opynions" via `pip`_ from `PyPI`_::
 
 Usage
 -----
-Once installed, following commands are used to run tests::
+Once installed, following commands are used to run tests_::
     $ pytest --repo-health-check True --repo-path <path of repo to be checked> --output-path <path for output report>
 The above command might not work based on characteristics of your system. 
 These pytest flags help:
     -  -c <()
     -  --noconftest
 
-At edx, the following command works for most of our repos::
+At edx, the following command works for most of our repos_::
     $ pytest -c <() --repo-health-check True --repo-path `pwd` --noconftest
 
 Contributing
