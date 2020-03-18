@@ -1,21 +1,25 @@
 # -*- coding: utf-8 -*-
-""" pytest plugin to test if specific repo follows standards"""
+"""
+pytest plugin to test if specific repo follows standards
+"""
 import os
 
 import pytest
 
 import yaml
+
+from collections import defaultdict
 import pdb
 
-session_data_holder_dict = {}
+session_data_holder_dict = defaultdict(dict)
 
 @pytest.fixture(scope="session")
-def data_holder():
+def all_results():
     return session_data_holder_dict
 
 def pytest_configure(config):
-    """ pytest hook used to add pytest_opynions install dir as place for
-        pytest to find tests
+    """
+    pytest hook used to add pytest_opynions install dir as place for pytest to find tests
     """
     file_dir = os.path.dirname(os.path.realpath(__file__))
     config.args.append(file_dir)
@@ -35,12 +39,19 @@ def pytest_addoption(parser):
         help="path of repo on which to perform tests"
     )
 
-    parser.addini('HELLO', 'Dummy pytest.ini setting')
     group.addoption(
         "--repo-health-check",
         action="store",
         dest='repo_health_check',
         default=False,
+        help="if true, only repo health checks will be run"
+    )
+
+    group.addoption(
+        "--output-path",
+        action="store",
+        dest='output_path',
+        default="repo_state.yaml",
         help="if true, only repo health checks will be run"
     )
 
@@ -65,7 +76,7 @@ def repo_health_check(request):
 
 def pytest_ignore_collect(path, config):
     """
-    pytest hook that determines in pytest looks at specific directory to collect tests
+    pytest hook that determines if pytest looks at specific directory to collect tests
     if repo_health_check is set to true:
         only tests in test directories in this plugin are collected
     """
@@ -82,8 +93,9 @@ def pytest_sessionfinish(session):
     """
     pytest hook used to collect results for tests and put into output file
     """
-    with open("repo_state.yaml", "w") as write_file:
-        yaml.dump(session_data_holder_dict, write_file)
+    if session.config.getoption("repo_health_check"):
+        with open(session.config.getoption("output_path"), "w") as write_file:
+            yaml.dump(dict(session_data_holder_dict), write_file)
     #TODO(jinder): decide of output file and output it
     # results_bag contains any new info stored by tests,
     # here I would parse through info in results bag and store it in either dict or dataframe

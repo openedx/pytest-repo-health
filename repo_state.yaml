@@ -3,6 +3,8 @@ makefile:
   has_upgrade_target: true
 openedx_yaml:
   is_parsable: true
+  oep-18: true
+  oep-2: true
   owner: jinder
 repo_structure:
   .travis.yml: true

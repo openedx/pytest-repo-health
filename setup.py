@@ -68,7 +68,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'opynions = pytest_opynions',
+            'opynions = opynions.pytest_opynions',
         ],
     },
 )
