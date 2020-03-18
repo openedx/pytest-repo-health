@@ -24,14 +24,18 @@ You can install "pytest-opynions" via `pip`_ from `PyPI`_::
 
 Usage
 -----
-Once installed, following commands are used to run tests_::
+Once installed, following commands are used to run tests::
+
     $ pytest --repo-health-check True --repo-path <path of repo to be checked> --output-path <path for output report>
+
 The above command might not work based on characteristics of your system. 
+
 These pytest flags help:
     -  -c <()
     -  --noconftest
 
-At edx, the following command works for most of our repos_::
+At edx, the following command works for most of our repos::
+
     $ pytest -c <() --repo-health-check True --repo-path `pwd` --noconftest
 
 Contributing
