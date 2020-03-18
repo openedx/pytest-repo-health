@@ -11,9 +11,8 @@ certifi==2019.11.28       # via -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.1              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
-codecov==2.0.17           # via -r requirements/travis.txt
+codecov==2.0.22           # via -r requirements/travis.txt
 coverage==5.0.4           # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
-decopatch==1.4.7          # via -r requirements/quality.txt, pytest-harvest
 diff-cover==2.6.0         # via -r requirements/dev.in
 distlib==0.3.0            # via -r requirements/travis.txt, virtualenv
 edx-lint==1.4.1           # via -r requirements/quality.txt
@@ -26,7 +25,6 @@ isort==4.3.21             # via -r requirements/quality.txt, pylint
 jinja2-pluralize==0.3.0   # via diff-cover
 jinja2==2.11.1            # via diff-cover, jinja2-pluralize
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
-makefun==1.7.0            # via -r requirements/quality.txt, decopatch, pytest-harvest
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via -r requirements/quality.txt, pylint
 more-itertools==8.2.0     # via -r requirements/quality.txt, pytest
@@ -44,11 +42,10 @@ pylint-plugin-utils==0.6  # via -r requirements/quality.txt, pylint-celery, pyli
 pylint==2.4.2             # via -r requirements/quality.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.6          # via -r requirements/quality.txt, -r requirements/travis.txt, packaging
 pytest-cov==2.8.1         # via -r requirements/quality.txt
-pytest-harvest==1.9.0     # via -r requirements/quality.txt
 pytest==5.4.1             # via -r requirements/quality.txt, pytest-cov
 pyyaml==5.3               # via -r requirements/quality.txt
 requests==2.23.0          # via -r requirements/travis.txt, codecov
-six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, diff-cover, edx-lint, makefun, packaging, pathlib2, pip-tools, pytest-harvest, tox, virtualenv
+six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, diff-cover, edx-lint, packaging, pathlib2, pip-tools, tox, virtualenv
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 toml==0.10.0              # via -r requirements/travis.txt, tox
 tox-battery==0.5.2        # via -r requirements/travis.txt
