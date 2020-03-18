@@ -13,7 +13,7 @@ def tox_ini(repo_path):
     full_path = repo_path + '/tox.ini'
     return get_file_content(full_path)
 
-def test_has_sections(tox_ini, all_results):
+def check_has_sections(tox_ini, all_results):
     """
     Test to check if makefile has an upgrade target
     """

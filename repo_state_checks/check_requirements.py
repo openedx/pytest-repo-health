@@ -23,7 +23,7 @@ def req_lines(repo_path):
 
     return req_lines
 
-def test_requires(req_lines, all_results):
+def check_requires(req_lines, all_results):
     """
     Test to find whether repo requires some key requirements
     """

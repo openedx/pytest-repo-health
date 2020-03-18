@@ -7,6 +7,9 @@ import os
 import pytest
 
 import yaml
+import pdb
+from pathlib import Path
+import py
 
 from collections import defaultdict
 
@@ -20,8 +23,11 @@ def pytest_configure(config):
     """
     pytest hook used to add pytest_opynions install dir as place for pytest to find tests
     """
-    file_dir = os.path.dirname(os.path.realpath(__file__))
+    file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
     config.args.append(file_dir)
+    # Change test prefix to check postfix
+    config._inicache['python_files'] = ['check_*.py']
+    config._inicache['python_functions'] = ['check_*']
     return config
 
 
@@ -79,12 +85,13 @@ def pytest_ignore_collect(path, config):
     if repo_health_check is set to true:
         only tests in test directories in this plugin are collected
     """
+    # if 'opynions' in str(path):
     if config.getoption("repo_health_check"):
         #TODO(jinder): name "tests_repo_state" not the best
-        if "tests_repo_state" not in str(path):
+        if "repo_state_checks" not in str(path):
             return True
     else:
-        if "tests_repo_state" in str(path):
+        if "repo_state_checks" in str(path):
             return True
     return False
 

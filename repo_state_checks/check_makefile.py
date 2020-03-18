@@ -15,13 +15,13 @@ def makefile(repo_path):
     return get_file_content(full_path)
 
 
-def test_makefile_exists(makefile, all_results):
+def check_makefile_exists(makefile, all_results):
     """
     Test to check if repo has Makefile
     """
     all_results[module_dict_key]['exists'] = bool(makefile)
 
-def test_has_upgrade(makefile, all_results):
+def check_has_upgrade(makefile, all_results):
     """
     Test to check if makefile has an upgrade target
     """
