@@ -6,7 +6,6 @@ import codecs
 
 import pytest
 import yaml
-import pdb
 
 from opynions import get_file_content
 # TODO(jinder): should I implement methods relaying on openedx.yaml being parsable?
@@ -37,8 +36,7 @@ def test_owner(openedx_yaml, all_results):
         all_results[module_dict_key]['owner'] = data['owner']
 
 def test_oep(openedx_yaml, all_results):
-    important_oeps = [2, 18]
-    pdb.set_trace()
+    important_oeps = [2, 7, 18, 30]
     data = yaml.load(openedx_yaml, Loader=yaml.Loader)
     if 'oeps' in data:
         oeps = data['oeps']

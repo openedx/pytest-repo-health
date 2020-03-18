@@ -5,16 +5,16 @@ openedx_yaml:
   is_parsable: true
   oep-18: true
   oep-2: true
+  oep-30:
+    reason: Doesn't handle any user information
+    state: false
+  oep-7: true
   owner: jinder
 repo_structure:
   .travis.yml: true
   Makefile: true
   README.rst: true
   has_python_files: true
-  has_section:
-    testenv: false
-    testenv:quality: true
-    tox: true
   openedx.yaml: true
   pylintrc: false
   requirements:
@@ -27,3 +27,12 @@ repo_structure:
     travis.in: true
   requirements_folder: true
   tox.ini: true
+requires:
+  django: false
+  nose: false
+  pytest: true
+tox_ini:
+  has_section:
+    testenv: false
+    testenv:quality: true
+    tox: true
