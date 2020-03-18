@@ -51,7 +51,7 @@ def pytest_addoption(parser):
         action="store",
         dest='output_path',
         default="repo_state.yaml",
-        help="if true, only repo health checks will be run"
+        help="path to where yaml file should be stored"
     )
 
 
@@ -95,7 +95,3 @@ def pytest_sessionfinish(session):
     if session.config.getoption("repo_health_check"):
         with open(session.config.getoption("output_path"), "w") as write_file:
             yaml.dump(dict(session_data_holder_dict), write_file)
-    #TODO(jinder): decide of output file and output it
-    # results_bag contains any new info stored by tests,
-    # here I would parse through info in results bag and store it in either dict or dataframe
-    # and save to file

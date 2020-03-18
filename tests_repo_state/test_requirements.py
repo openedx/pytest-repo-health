@@ -11,7 +11,9 @@ module_dict_key = 'requires'
 
 @pytest.fixture
 def req_lines(repo_path):
-    """Fixture containing the text content of req_files"""
+    """
+    Fixture containing the text content of req_files
+    """
     #TODO(jinder): make below work with inputs with both "/" at end and not
     files = glob.glob(repo_path + "/**/*.in", recursive=True)
     req_lines = []
@@ -21,7 +23,10 @@ def req_lines(repo_path):
 
     return req_lines
 
-def test_require_django(req_lines, all_results):
+def test_requires(req_lines, all_results):
+    """
+    Test to find whether repo requires some key requirements
+    """
     important_requirments = ["django", "pytest", "nose"]
     for req in important_requirments:
         all_results[module_dict_key][req] = False

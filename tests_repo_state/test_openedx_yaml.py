@@ -1,15 +1,10 @@
 from __future__ import unicode_literals
 
-import os
-import re
-import codecs
-
 import pytest
 import yaml
 
 from opynions import get_file_content
-# TODO(jinder): should I implement methods relaying on openedx.yaml being parsable?
-#Decision: require openedx.yaml to be parsable
+# Decision: require openedx.yaml to be parsable
 
 module_dict_key = "openedx_yaml"
 
