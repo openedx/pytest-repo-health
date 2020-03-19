@@ -2,14 +2,13 @@
 pytest-opynions
 ===============
 
-Opynions inspects a code repository and warns the user if that repository
+Opynions inspects a code repository and warns the user if the repository
 deviates from standards on how it should be organized.  It's
 a good complement for a `cookiecutter`_; the cookiecutter provides a good
 template for starting a repository with current best practices, and opynions
 helps it keep up with those practices as they evolve over time.
 
-Currently, the checks implemented in tests_repo_state are very edx specific.
-Moving forward, the goal is to allow each repo checked to define their own set of checks(not yet implemented).
+Currently, the checks implemented in repo_state_checks are very edx specific.
 
 
 This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
@@ -17,9 +16,12 @@ This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`
 Installation
 ------------
 
-You can install "pytest-opynions" via `pip`_ from `PyPI`_::
+For now, you need to git clone pytest-opynions from: git@github.com:jinder1s/pytest-opynions.git
+You can install by either:
 
-    $ pip install pytest-opynions
+    $ pip install -e .
+    or
+    $ python setup.py install
 
 
 Usage
@@ -28,9 +30,8 @@ Once installed, following commands are used to run tests::
 
     $ pytest --repo-health-check True --repo-path <path of repo to be checked> --output-path <path for output report>
 
-The above command might not work based on characteristics of your system. 
 
-These pytest flags might help:
+If you run into problems, these pytest flags might help::
     -  -c <()
     -  --noconftest
 
@@ -38,6 +39,8 @@ At edx, the following command works for most of our repos::
 
     $ pytest -c <() --repo-health-check True --repo-path `pwd` --noconftest
 
+Adding Custom Checks
+--------------------
 If you would like to add custom checks for your own repo, create a dir named "repo_state_checks" and place modules with checks inside of it. 
 
 Checks naming convention: 
@@ -45,8 +48,7 @@ Checks naming convention:
     python_files = "check_*.py"
 
 Plugin Enchancement path
------------------
-
+------------------------
 - Currently, the checks do not throw any kind of warning or error if check does not pass.
 - Documenting standard reqs/checks in each check better
 - create tests for this plugin(currently, you can run these checks on this repo, but no automated method for it)
