@@ -1,11 +1,11 @@
-import os
-
+"""
+ Checks whether repo requires some libraries
+"""
 import re
-import codecs
+import glob
 
 import pytest
 from opynions import get_file_lines
-import glob
 
 module_dict_key = 'requires'
 

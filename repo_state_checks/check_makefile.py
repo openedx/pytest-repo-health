@@ -1,4 +1,6 @@
-import os
+"""
+Checks to see if Makefile follows standards
+"""
 import re
 
 import pytest

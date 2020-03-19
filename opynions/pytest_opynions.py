@@ -3,14 +3,11 @@
 pytest plugin to test if specific repo follows standards
 """
 import os
+from collections import defaultdict
 
 import pytest
 
 import yaml
-from pathlib import Path
-import py
-
-from collections import defaultdict
 
 session_data_holder_dict = defaultdict(dict)
 
@@ -32,10 +29,10 @@ def pytest_configure(config):
         # add repo path so a repo can design their own checks inside a repo_state_checks dir
         repo_path = config.getoption("repo_path")
         config.args.append(repo_path)
-        
+
         # Change test prefix to check
-        config._inicache['python_files'] = ['check_*.py']
-        config._inicache['python_functions'] = ['check_*']
+        config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
+        config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
     return config
 
 
@@ -52,7 +49,7 @@ def pytest_addoption(parser):
         help="path of repo on which to perform tests"
     )
 
-    # Since pytest opynions modifies many pytest setting, this flag is necessary 
+    # Since pytest opynions modifies many pytest setting, this flag is necessary
     # to make sure pytest settings are only changed when health check is suppose to happen
     group.addoption(
         "--repo-health-check",

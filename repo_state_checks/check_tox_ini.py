@@ -1,3 +1,6 @@
+"""
+Checks tox.ini format
+"""
 import re
 
 import pytest
@@ -20,7 +23,7 @@ def check_has_sections(tox_ini, all_results):
     required_sections = [r'tox', r'testenv', r'testenv:quality']
     all_results[module_dict_key]['has_section'] = {}
     for section in required_sections:
-        regex_pattern = "\[" + section + "\]"
+        regex_pattern = r"\[" + section + r"\]"
         match = re.search(regex_pattern, tox_ini)
         all_results[module_dict_key]['has_section'][section] = False
         if match is not None:

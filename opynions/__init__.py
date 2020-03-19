@@ -1,3 +1,6 @@
+"""
+Enforce selected packaging guidelines.
+"""
 import codecs
 import os
 from configparser import ConfigParser
@@ -40,5 +43,5 @@ def get_file_lines(path):
 
 def get_file_names(path, file_type):
     path_pattern = path + "**/*." + file_type
-    files = [f for f in glob.glob(path_pattern, recursive=True)]
+    files = glob.glob(path_pattern, recursive=True)
     return files

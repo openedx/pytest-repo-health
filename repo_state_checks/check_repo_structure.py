@@ -1,12 +1,9 @@
 """
-Module to place general tests
+Checks to see if repo structure
 """
-from __future__ import unicode_literals
 
 import glob
 import os
-
-import pytest  # pylint: disable=unused-import
 
 module_dict_key = 'repo_structure'
 
@@ -37,7 +34,7 @@ def check_requirements(all_results, repo_path):
             # check if any files names filename were found
             if files:
                 all_results[module_dict_key]['requirements'][filename] = True
-    else: 
+    else:
         all_results[module_dict_key]['requirements_folder'] = False
         for filename in required_req_files:
             all_results[module_dict_key]['requirements'][filename] = False
