@@ -88,9 +88,9 @@ def repo_health_check(request):
 
 def pytest_ignore_collect(path, config):
     """
-    pytest hook that determines if pytest looks at specific directory to collect tests
+    pytest hook that determines if pytest looks at specific file to collect tests
     if repo_health_check is set to true:
-        only tests in test directories in this plugin are collected
+        only tests in test files with "repo_state_checks" in their path will be collected
     """
     if config.getoption("repo_health_check"):
         if "repo_state_checks" not in str(path):
