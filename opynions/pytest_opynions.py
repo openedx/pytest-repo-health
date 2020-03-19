@@ -22,11 +22,18 @@ def pytest_configure(config):
     """
     pytest hook used to add pytest_opynions install dir as place for pytest to find tests
     """
-    file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    config.args.append(file_dir)
-    # Change test prefix to check
-    config._inicache['python_files'] = ['check_*.py']
-    config._inicache['python_functions'] = ['check_*']
+
+    if config.getoption("repo_health_check"):
+        file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+        config.args.append(file_dir)
+
+        # add repo path so a repo can design their own checks inside a repo_state_checks dir
+        repo_path = config.getoption("repo_path")
+        config.args.append(repo_path)
+        
+        # Change test prefix to check
+        config._inicache['python_files'] = ['check_*.py']
+        config._inicache['python_functions'] = ['check_*']
     return config
 
 

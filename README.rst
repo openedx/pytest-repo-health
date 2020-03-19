@@ -38,6 +38,12 @@ At edx, the following command works for most of our repos::
 
     $ pytest -c <() --repo-health-check True --repo-path `pwd` --noconftest
 
+If you would like to add custom checks for your own repo, create a dir named "repo_state_checks" and place modules with checks inside of it. 
+
+Checks naming convention: 
+    python_functions = "check_*"
+    python_files = "check_*.py"
+
 Contributing
 ------------
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
