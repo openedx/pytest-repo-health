@@ -24,6 +24,8 @@ def pytest_configure(config):
     """
 
     if config.getoption("repo_health_check"):
+
+        # Add path to pytest-opynions dir so pytest knows where to look for checks
         file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         config.args.append(file_dir)
 
@@ -50,6 +52,8 @@ def pytest_addoption(parser):
         help="path of repo on which to perform tests"
     )
 
+    # Since pytest opynions modifies many pytest setting, this flag is necessary 
+    # to make sure pytest settings are only changed when health check is suppose to happen
     group.addoption(
         "--repo-health-check",
         action="store",

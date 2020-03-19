@@ -30,7 +30,7 @@ Once installed, following commands are used to run tests::
 
 The above command might not work based on characteristics of your system. 
 
-These pytest flags help:
+These pytest flags might help:
     -  -c <()
     -  --noconftest
 
@@ -43,6 +43,13 @@ If you would like to add custom checks for your own repo, create a dir named "re
 Checks naming convention: 
     python_functions = "check_*"
     python_files = "check_*.py"
+
+Plugin Enchancement path
+-----------------
+
+- Currently, the checks do not throw any kind of warning or error if check does not pass.
+- Documenting standard reqs/checks in each check better
+- create tests for this plugin(currently, you can run these checks on this repo, but no automated method for it)
 
 Contributing
 ------------
