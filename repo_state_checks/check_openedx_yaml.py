@@ -26,6 +26,8 @@ def parsed_data(openedx_yaml):
     """
     try:
         data = yaml.safe_load(openedx_yaml)
+        if data is None:
+            return {}
         return data
     except yaml.YAMLError:
         return {}

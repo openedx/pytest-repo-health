@@ -15,7 +15,7 @@ def req_lines(repo_path):
     Fixture containing the text content of req_files
     """
     #TODO(jinder): make below work with inputs with both "/" at end and not
-    files = glob.glob(repo_path + "/**/*.in", recursive=True)
+    files = glob.glob(repo_path + "/requirements/**/*.in", recursive=True)
     req_lines = []
     for file_path in files:
         lines = get_file_lines(file_path)

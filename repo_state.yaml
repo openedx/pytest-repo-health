@@ -27,6 +27,6 @@ requires:
   pytest: true
 tox_ini:
   has_section:
-    testenv: false
+    testenv: true
     testenv:quality: true
     tox: true
