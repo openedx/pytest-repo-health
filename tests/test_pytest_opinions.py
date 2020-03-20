@@ -10,7 +10,7 @@ import yaml
 def test_arguments_in_help(testdir):
     res = testdir.runpytest('--help')
     res.stdout.fnmatch_lines_random([
-        '*opynions*',
+        '*repo-health*',
         '*output-path*',
         '*repo-path*',
     ])
@@ -20,19 +20,19 @@ def test_no_report(testdir):
     Check to make sure report is not generated without --repo-health-check
     """
     testdir.runpytest()
-    assert not (testdir.tmpdir / 'repo_state.yaml').exists()
+    assert not (testdir.tmpdir / 'repo_health.yaml').exists()
 
 
 def test_create_report(testdir):
-    res = testdir.runpytest('--opynions')
-    assert (testdir.tmpdir / 'repo_state.yaml').exists()
+    res = testdir.runpytest('--repo-health')
+    assert (testdir.tmpdir / 'repo_health.yaml').exists()
 
 def test_report_content_has_required_module_keys(testdir):
     """
     eventuall this test should be removed and replaced by seperate tests for each check module
     """
-    res = testdir.runpytest('--opynions')
-    yaml_lines = (testdir.tmpdir / 'repo_state.yaml').read()
+    res = testdir.runpytest('--repo-health')
+    yaml_lines = (testdir.tmpdir / 'repo_health.yaml').read()
     output_dict = yaml.safe_load(yaml_lines)
     assert 'makefile' in output_dict.keys()
     assert 'openedx_yaml' in output_dict.keys()

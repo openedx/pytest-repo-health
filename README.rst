@@ -1,5 +1,5 @@
 ===============
-pytest-opynions
+pytest-repo-health
 ===============
 
 Opynions inspects a code repository and warns the user if the repository
@@ -16,7 +16,7 @@ This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`
 Installation
 ------------
 
-For now, you need to git clone pytest-opynions from: git@github.com:jinder1s/pytest-opynions.git
+For now, you need to git clone pytest-repo-health from: git@github.com:jinder1s/pytest-repo-health.git
 You can install by either:
 
     $ pip install -e .
@@ -107,7 +107,7 @@ refer to this `list of resources`_ if you need any assistance.
 .. _`GNU GPL v3.0`: http://www.gnu.org/licenses/gpl-3.0.txt
 .. _`Apache Software License 2.0`: http://www.apache.org/licenses/LICENSE-2.0
 .. _`cookiecutter-pytest-plugin`: https://github.com/pytest-dev/cookiecutter-pytest-plugin
-.. _`file an issue`: https://github.com/jinder1s/pytest-opynions/issues
+.. _`file an issue`: https://github.com/jinder1s/pytest-repo-health/issues
 .. _`pytest`: https://github.com/pytest-dev/pytest
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
@@ -115,20 +115,20 @@ refer to this `list of resources`_ if you need any assistance.
 
 -----
 
-.. image:: https://img.shields.io/pypi/v/pytest-opynions.svg
-    :target: https://pypi.org/project/pytest-opynions
+.. image:: https://img.shields.io/pypi/v/pytest-repo-health.svg
+    :target: https://pypi.org/project/pytest-repo-health
     :alt: PyPI version
 
-.. image:: https://img.shields.io/pypi/pyversions/pytest-opynions.svg
-    :target: https://pypi.org/project/pytest-opynions
+.. image:: https://img.shields.io/pypi/pyversions/pytest-repo-health.svg
+    :target: https://pypi.org/project/pytest-repo-health
     :alt: Python versions
 
-.. image:: https://travis-ci.org/jinder1s/pytest-opynions.svg?branch=master
-    :target: https://travis-ci.org/jinder1s/pytest-opynions
+.. image:: https://travis-ci.org/jinder1s/pytest-repo-health.svg?branch=master
+    :target: https://travis-ci.org/jinder1s/pytest-repo-health
     :alt: See Build Status on Travis CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/jinder1s/pytest-opynions?branch=master
-    :target: https://ci.appveyor.com/project/jinder1s/pytest-opynions/branch/master
+.. image:: https://ci.appveyor.com/api/projects/status/github/jinder1s/pytest-repo-health?branch=master
+    :target: https://ci.appveyor.com/project/jinder1s/pytest-repo-health/branch/master
     :alt: See Build Status on AppVeyor
 
 ----

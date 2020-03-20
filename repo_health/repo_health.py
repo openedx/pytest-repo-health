@@ -16,12 +16,12 @@ def all_results():
 
 def pytest_configure(config):
     """
-    pytest hook used to add pytest_opynions install dir as place for pytest to find tests
+    pytest hook used to add plugin install dir as place for pytest to find tests
     """
 
-    if config.getoption("opynions"):
+    if config.getoption("repo_health"):
 
-        # Add path to pytest-opynions dir so pytest knows where to look for checks
+        # Add path to pytest-repo-health dir so pytest knows where to look for checks
         file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         config.args.append(file_dir)
 
@@ -31,10 +31,10 @@ def pytest_configure(config):
             repo_path = os.getcwd()
         config.args.append(os.path.abspath(repo_path))
 
-        # in case opynions checks are in seperate repo
-        opynions_path = config.getoption("opynions_path")
-        if opynions_path is not None:
-            config.args.append(os.path.abspath(opynions_path))
+        # in case repo_health checks are in seperate repo
+        repo_health_path = config.getoption("repo_health_path")
+        if repo_health_path is not None:
+            config.args.append(os.path.abspath(repo_health_path))
 
         # Change test prefix to check
         config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
@@ -46,7 +46,7 @@ def pytest_addoption(parser):
     """
     pytest hook used to add command line options used by this plugin
     """
-    group = parser.getgroup('opynions')
+    group = parser.getgroup('repo_health')
     group.addoption(
         "--repo-path",
         action="store",
@@ -55,20 +55,20 @@ def pytest_addoption(parser):
         help="path of repo on which to perform tests"
     )
 
-        group.addoption(
-        "--opynions-path",
+    group.addoption(
+        "--repo-health-path",
         action="store",
-        dest='opynions_path',
+        dest='repo_health_path',
         default=None,
-        help="path of repo with opynions that need to be checked on repo_path"
+        help="path to repo with checks"
     )
 
-    # Since pytest opynions modifies many pytest settings, this flag is necessary
+    # Since pytest repo_health modifies many pytest settings, this flag is necessary
     # to make sure pytest settings are only changed when health checks run
     group.addoption(
-        "--opynions",
+        "--repo-health",
         action="store_true",
-        dest='opynions',
+        dest='repo_health',
         default=False,
         help="if true, only repository health checks will be run"
     )
@@ -77,7 +77,7 @@ def pytest_addoption(parser):
         "--output-path",
         action="store",
         dest='output_path',
-        default="repo_state.yaml",
+        default="repo_health.yaml",
         help="path to where yaml file should be stored"
     )
 
@@ -94,23 +94,23 @@ def repo_path(request):
     return path
 
 @pytest.fixture
-def opynions(request):
+def repo_health(request):
     """
     pytest fixture used to see if repo health check is being run
-    if opynions is set to true:
+    if repo_health is set to true:
         only repo health checks will be run
     else:
-        no opynions checks will be run, other tests may or may not be run
+        no repo_health checks will be run, other tests may or may not be run
     """
-    return request.config.option.opynions
+    return request.config.option.repo_health
 
 def pytest_ignore_collect(path, config):
     """
     pytest hook that determines if pytest looks at specific file to collect tests
-    if opynions is set to true:
+    if repo_health is set to true:
         only tests in test files with "repo_state_checks" in their path will be collected
     """
-    if config.getoption("opynions"):
+    if config.getoption("repo_health"):
         if "repo_state_checks" not in str(path):
             return True
     else:
@@ -122,6 +122,6 @@ def pytest_sessionfinish(session):
     """
     pytest hook used to collect results for tests and put into output file
     """
-    if session.config.getoption("opynions"):
+    if session.config.getoption("repo_health"):
         with open(session.config.getoption("output_path"), "w") as write_file:
             yaml.dump(dict(session_data_holder_dict), write_file)

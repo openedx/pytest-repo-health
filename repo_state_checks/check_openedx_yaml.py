@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 import pytest
 import yaml
 
-from opynions import get_file_content
+from repo_health import get_file_content
 # Decision: require openedx.yaml to be parsable
 
 module_dict_key = "openedx_yaml"

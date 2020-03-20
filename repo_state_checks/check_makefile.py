@@ -4,7 +4,7 @@ Checks to see if Makefile follows standards
 import re
 
 import pytest
-from opynions import get_file_content
+from repo_health import get_file_content
 
 
 module_dict_key = "makefile"

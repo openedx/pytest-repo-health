@@ -39,16 +39,16 @@ README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
 
 setup(
-    name='pytest-opynions',
+    name='pytest-repo-health',
     version='0.1.0',
     author='Manjinder Singh',
     author_email='msingh@edx.org',
     maintainer='Manjinder Singh',
     maintainer_email='msingh@edx.org',
-    url='https://github.com/jinder1s/pytest-opynions',
+    url='https://github.com/jinder1s/pytest-repo-health',
     description='A simple plugin to use with pytest',
     long_description=read('README.rst'),
-    py_modules=['pytest_opynions'],
+    py_modules=['repo_health'],
     python_requires=">=3.5",
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,

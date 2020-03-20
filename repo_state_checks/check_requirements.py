@@ -5,7 +5,7 @@ import re
 import glob
 
 import pytest
-from opynions import get_file_lines
+from repo_health import get_file_lines
 
 module_dict_key = 'requires'
 
