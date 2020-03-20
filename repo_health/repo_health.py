@@ -124,4 +124,4 @@ def pytest_sessionfinish(session):
     """
     if session.config.getoption("repo_health"):
         with open(session.config.getoption("output_path"), "w") as write_file:
-            yaml.dump(dict(session_data_holder_dict), write_file)
+            yaml.dump(dict(session_data_holder_dict), write_file, indent=4)
