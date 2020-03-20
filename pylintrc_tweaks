@@ -1,7 +1,0 @@
-# pylintrc tweaks for use with edx_lint.
-[MASTER]
-load-plugins = edx_lint.pylint
-
-[MESSAGES CONTROL]
-disable+ =
-    redefined-outer-name,

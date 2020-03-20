@@ -66,7 +66,7 @@
 [MASTER]
 ignore = 
 persistent = yes
-load-plugins = edx_lint.pylint
+load-plugins = edx_lint.pylint,pylint_django,pylint_celery
 
 [MESSAGES CONTROL]
 enable = 
@@ -354,7 +354,6 @@ disable =
 	using-cmp-argument,
 	xrange-builtin,
 	zip-builtin-not-iterating,
-	redefined-outer-name,
 
 [REPORTS]
 output-format = text
@@ -454,4 +453,4 @@ int-import-graph =
 [EXCEPTIONS]
 overgeneral-exceptions = Exception
 
-# 8f11890bd3a2f4a3400b15decb88e3e5825af96d
+# d784746e5ebe9eb66794d942ded84799d4f7f2fa
