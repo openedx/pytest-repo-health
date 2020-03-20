@@ -84,17 +84,17 @@ def repo_path(request):
 def opynions(request):
     """
     pytest fixture used to see if repo health check is being run
-    if repo_health_check is set to true:
+    if opynions is set to true:
         only repo health checks will be run
     else:
-        no repo health checks will be run, other tests may or may not be run
+        no opynions checks will be run, other tests may or may not be run
     """
     return request.config.option.opynions
 
 def pytest_ignore_collect(path, config):
     """
     pytest hook that determines if pytest looks at specific file to collect tests
-    if repo_health_check is set to true:
+    if opynions is set to true:
         only tests in test files with "repo_state_checks" in their path will be collected
     """
     if config.getoption("opynions"):
@@ -109,6 +109,6 @@ def pytest_sessionfinish(session):
     """
     pytest hook used to collect results for tests and put into output file
     """
-    if session.config.getoption("repo_health_check"):
+    if session.config.getoption("opynions"):
         with open(session.config.getoption("output_path"), "w") as write_file:
             yaml.dump(dict(session_data_holder_dict), write_file)
