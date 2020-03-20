@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 pytest plugin to test if specific repo follows standards
 """
@@ -20,7 +19,7 @@ def pytest_configure(config):
     pytest hook used to add pytest_opynions install dir as place for pytest to find tests
     """
 
-    if config.getoption("repo_health_check"):
+    if config.getoption("opynions"):
 
         # Add path to pytest-opynions dir so pytest knows where to look for checks
         file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
@@ -30,7 +29,7 @@ def pytest_configure(config):
         repo_path = config.getoption("repo_path")
         if repo_path is None:
             repo_path = os.getcwd()
-        config.args.append(repo_path)
+        config.args.append(os.path.abspath(repo_path))
 
         # Change test prefix to check
         config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
@@ -51,14 +50,14 @@ def pytest_addoption(parser):
         help="path of repo on which to perform tests"
     )
 
-    # Since pytest opynions modifies many pytest setting, this flag is necessary
-    # to make sure pytest settings are only changed when health check is suppose to happen
+    # Since pytest opynions modifies many pytest settings, this flag is necessary
+    # to make sure pytest settings are only changed when health check runs
     group.addoption(
-        "--repo-health-check",
+        "--opynions",
         action="store_true",
-        dest='repo_health_check',
+        dest='opynions',
         default=False,
-        help="if true, only repo health checks will be run"
+        help="if true, only repository health checks will be run"
     )
 
     group.addoption(
@@ -75,12 +74,14 @@ def repo_path(request):
     """
     pytest fixture to be used to get path to repo being tested
     """
-    if request.config.option.repo_path is None:
-        return os.getcwd()
-    return request.config.option.repo_path
+    path = request.config.option.repo_path
+    if path is None:
+        path = os.getcwd()
+    path = os.path.abspath(path)
+    return path
 
 @pytest.fixture
-def repo_health_check(request):
+def opynions(request):
     """
     pytest fixture used to see if repo health check is being run
     if repo_health_check is set to true:
@@ -88,7 +89,7 @@ def repo_health_check(request):
     else:
         no repo health checks will be run, other tests may or may not be run
     """
-    return request.config.option.repo_health_check
+    return request.config.option.opynions
 
 def pytest_ignore_collect(path, config):
     """
@@ -96,7 +97,7 @@ def pytest_ignore_collect(path, config):
     if repo_health_check is set to true:
         only tests in test files with "repo_state_checks" in their path will be collected
     """
-    if config.getoption("repo_health_check"):
+    if config.getoption("opynions"):
         if "repo_state_checks" not in str(path):
             return True
     else:

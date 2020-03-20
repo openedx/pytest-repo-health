@@ -42,6 +42,10 @@ def get_file_lines(path):
         return [line.strip() for line in f.readlines()]
 
 def get_file_names(path, file_type):
+    """
+    Get a list of files with given file_type in path's directory and its subdirectories
+    If the directory is large, this might take forever, so use with care
+    """
     path_pattern = path + "**/*." + file_type
     files = glob.glob(path_pattern, recursive=True)
     return files
