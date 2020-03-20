@@ -52,7 +52,7 @@ def pytest_addoption(parser):
         action="store",
         dest='repo_path',
         default=None,
-        help="path of repo on which to perform tests"
+        help="path of repository on which to perform tests"
     )
 
     group.addoption(
@@ -60,7 +60,7 @@ def pytest_addoption(parser):
         action="store",
         dest='repo_health_path',
         default=None,
-        help="path to repo with checks"
+        help="path to repository where the checks are located. Even with this set, plugin will check in current dir"
     )
 
     # Since pytest repo_health modifies many pytest settings, this flag is necessary
