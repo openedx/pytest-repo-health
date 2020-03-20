@@ -28,6 +28,8 @@ def pytest_configure(config):
 
         # add repo path so a repo can design their own checks inside a repo_state_checks dir
         repo_path = config.getoption("repo_path")
+        if repo_path is None:
+            repo_path = os.getcwd()
         config.args.append(repo_path)
 
         # Change test prefix to check
@@ -53,7 +55,7 @@ def pytest_addoption(parser):
     # to make sure pytest settings are only changed when health check is suppose to happen
     group.addoption(
         "--repo-health-check",
-        action="store",
+        action="store_true",
         dest='repo_health_check',
         default=False,
         help="if true, only repo health checks will be run"
@@ -73,6 +75,8 @@ def repo_path(request):
     """
     pytest fixture to be used to get path to repo being tested
     """
+    if request.config.option.repo_path is None:
+        return os.getcwd()
     return request.config.option.repo_path
 
 @pytest.fixture
