@@ -68,7 +68,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'opynions = opynions.opynions',
+            'repo_health = repo_health.repo_health',
         ],
     },
 )
