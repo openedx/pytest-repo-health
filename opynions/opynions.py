@@ -31,6 +31,11 @@ def pytest_configure(config):
             repo_path = os.getcwd()
         config.args.append(os.path.abspath(repo_path))
 
+        # in case opynions checks are in seperate repo
+        opynions_path = config.getoption("opynions_path")
+        if opynions_path is not None:
+            config.args.append(os.path.abspath(opynions_path))
+
         # Change test prefix to check
         config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
         config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
@@ -50,8 +55,16 @@ def pytest_addoption(parser):
         help="path of repo on which to perform tests"
     )
 
+        group.addoption(
+        "--opynions-path",
+        action="store",
+        dest='opynions_path',
+        default=None,
+        help="path of repo with opynions that need to be checked on repo_path"
+    )
+
     # Since pytest opynions modifies many pytest settings, this flag is necessary
-    # to make sure pytest settings are only changed when health check runs
+    # to make sure pytest settings are only changed when health checks run
     group.addoption(
         "--opynions",
         action="store_true",
