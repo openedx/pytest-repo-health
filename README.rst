@@ -1,17 +1,18 @@
-===============
+==================
 pytest-repo-health
-===============
+==================
 
-Opynions inspects a code repository and warns the user if the repository
+repo_health inspects a code repository and warns the user if the repository
 deviates from standards on how it should be organized.  It's
 a good complement for a `cookiecutter`_; the cookiecutter provides a good
-template for starting a repository with current best practices, and opynions
+template for starting a repository with current best practices, and repo_health
 helps it keep up with those practices as they evolve over time.
 
 Currently, the checks implemented in repo_state_checks are very edx specific.
 
 
-This `pytest`_ plugin was generated with `Cookiecutter`_ along with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
+This `pytest`_ plugin was generated with `Cookiecutter`_ along
+with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
 
 Installation
 ------------
@@ -41,9 +42,10 @@ At edx, the following command works for most of our repos::
 
 Adding Custom Checks
 --------------------
-If you would like to add custom checks for your own repo, create a dir named "repo_state_checks" and place modules with checks inside of it. 
+If you would like to add custom checks for your own repo, create a dir named "repo_state_checks" and place
+modules with checks inside of it.
 
-Checks naming convention: 
+Checks naming convention:
     python_functions = "check_*"
     python_files = "check_*.py"
 
@@ -77,13 +79,13 @@ Even though they were written with ``edx-platform`` in mind, the guidelines
 should be followed for Open edX code in general.
 
 The pull request description template should be automatically applied if you are creating a pull request from GitHub.  Otherwise you
-can find it it at `PULL_REQUEST_TEMPLATE.md <https://github.com/edx/opynions/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_
+can find it it at `PULL_REQUEST_TEMPLATE.md <https://github.com/edx/repo_health/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_
 
 Issues
 ------
 
 The issue report template should be automatically applied if you are creating an issue on GitHub as well.  Otherwise you
-can find it at `ISSUE_TEMPLATE.md <https://github.com/edx/opynions/blob/master/.github/ISSUE_TEMPLATE.md>`_
+can find it at `ISSUE_TEMPLATE.md <https://github.com/edx/repo_health/blob/master/.github/ISSUE_TEMPLATE.md>`_
 
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
@@ -130,5 +132,3 @@ refer to this `list of resources`_ if you need any assistance.
 .. image:: https://ci.appveyor.com/api/projects/status/github/jinder1s/pytest-repo-health?branch=master
     :target: https://ci.appveyor.com/project/jinder1s/pytest-repo-health/branch/master
     :alt: See Build Status on AppVeyor
-
-----

@@ -26,16 +26,3 @@ def test_no_report(testdir):
 def test_create_report(testdir):
     res = testdir.runpytest('--repo-health')
     assert (testdir.tmpdir / 'repo_health.yaml').exists()
-
-def test_report_content_has_required_module_keys(testdir):
-    """
-    eventuall this test should be removed and replaced by seperate tests for each check module
-    """
-    res = testdir.runpytest('--repo-health')
-    yaml_lines = (testdir.tmpdir / 'repo_health.yaml').read()
-    output_dict = yaml.safe_load(yaml_lines)
-    assert 'makefile' in output_dict.keys()
-    assert 'openedx_yaml' in output_dict.keys()
-    assert 'repo_structure' in output_dict.keys()
-    assert 'requires' in output_dict.keys()
-    assert 'tox_ini' in output_dict.keys()
