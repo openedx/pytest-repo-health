@@ -20,8 +20,8 @@ pytest-repo-health
     :alt: See Build Status on AppVeyor
 ----
 
-pytest-repo-health inspects a code repository and warns the user if the repository
-deviates from standards on how it should be organized.  It's
+pytest-repo-health inspects a code repository and outputs a report with info on whether the repository
+follows standards as defined by checks.  It's
 a good complement for a `cookiecutter`_; the cookiecutter provides a good
 template for starting a repository with current best practices, and pytest-repo-health
 helps it keep up with those practices as they evolve over time.
@@ -43,7 +43,7 @@ You can install by either:
 
 Usage
 -----
-Once installed, following command is used to run tests::
+Once installed, following command is used to run checks::
 
     $ pytest --repo-health-check True --repo-path <path of repo to be checked> --output-path <path for output report>
 
@@ -51,7 +51,7 @@ Once installed, following command is used to run tests::
 If you run into problems, these pytest flags might help::
     -  -c file: load configuration from `file` instead of trying to locate one of the
                         implicit configuration files. Helpful if invocation dir defines "add-opts" in one of its files.
-    -  --noconftest: Don't load any conftest.py files. In case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
+    -  --noconftest: Don't load any conftest.py files. Helpful in case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
 
 At edX, the following command works for most of our repos::
 
@@ -59,7 +59,7 @@ At edX, the following command works for most of our repos::
 
 Adding Custom Checks
 --------------------
-If you would like to add custom checks for your own repo, create a dir named "repo_state_checks" and place
+If you would like to add custom checks for your own repo, create a dir named "repo_health" and place
 modules with checks inside of it.
 
 Checks naming convention:
@@ -69,7 +69,7 @@ Checks naming convention:
 Checks Discovery
 ----------------
 Pytest will look for checks in directories located in these places:
-- Dir of pytest envocation(so current dir)
+- Dir of pytest invocation(so current dir)
 - Dir where pytest-repo-health is installed
 - Dir specified by --repo-health-path flag in pytest invocation
 
