@@ -1,5 +1,6 @@
 """
-Enforce selected packaging guidelines.
+Plugin configures pytest to run repo health checks on a code repository. Plugin takes care of gathering checks, runing checks,
+and outputing report based on data gathered during checks.
 """
 import codecs
 import os

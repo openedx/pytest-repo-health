@@ -1,5 +1,5 @@
 """
-Tests to make sure pytest_opinions functions correctly
+Tests to make sure pytest-repo-health plugin functions correctly
 """
 
 import pytest

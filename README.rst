@@ -2,13 +2,29 @@
 pytest-repo-health
 ==================
 
-repo_health inspects a code repository and warns the user if the repository
+
+.. image:: https://img.shields.io/pypi/v/pytest-repo-health.svg
+    :target: https://pypi.org/project/pytest-repo-health
+    :alt: PyPI version
+
+.. image:: https://img.shields.io/pypi/pyversions/pytest-repo-health.svg
+    :target: https://pypi.org/project/pytest-repo-health
+    :alt: Python versions
+
+.. image:: https://travis-ci.org/jinder1s/pytest-repo-health.svg?branch=master
+    :target: https://travis-ci.org/jinder1s/pytest-repo-health
+    :alt: See Build Status on Travis CI
+
+.. image:: https://ci.appveyor.com/api/projects/status/github/jinder1s/pytest-repo-health?branch=master
+    :target: https://ci.appveyor.com/project/jinder1s/pytest-repo-health/branch/master
+    :alt: See Build Status on AppVeyor
+----
+
+pytest-repo-health inspects a code repository and warns the user if the repository
 deviates from standards on how it should be organized.  It's
 a good complement for a `cookiecutter`_; the cookiecutter provides a good
-template for starting a repository with current best practices, and repo_health
+template for starting a repository with current best practices, and pytest-repo-health
 helps it keep up with those practices as they evolve over time.
-
-Currently, the checks implemented in repo_state_checks are very edx specific.
 
 
 This `pytest`_ plugin was generated with `Cookiecutter`_ along
@@ -27,16 +43,17 @@ You can install by either:
 
 Usage
 -----
-Once installed, following commands are used to run tests::
+Once installed, following command is used to run tests::
 
     $ pytest --repo-health-check True --repo-path <path of repo to be checked> --output-path <path for output report>
 
 
 If you run into problems, these pytest flags might help::
-    -  -c <()
-    -  --noconftest
+    -  -c file: load configuration from `file` instead of trying to locate one of the
+                        implicit configuration files. Helpful if invocation dir defines "add-opts" in one of its files.
+    -  --noconftest: Don't load any conftest.py files. In case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
 
-At edx, the following command works for most of our repos::
+At edX, the following command works for most of our repos::
 
     $ pytest -c <() --repo-health-check True --repo-path `pwd` --noconftest
 
@@ -122,21 +139,3 @@ refer to this `list of resources`_ if you need any assistance.
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project
-
------
-
-.. image:: https://img.shields.io/pypi/v/pytest-repo-health.svg
-    :target: https://pypi.org/project/pytest-repo-health
-    :alt: PyPI version
-
-.. image:: https://img.shields.io/pypi/pyversions/pytest-repo-health.svg
-    :target: https://pypi.org/project/pytest-repo-health
-    :alt: Python versions
-
-.. image:: https://travis-ci.org/jinder1s/pytest-repo-health.svg?branch=master
-    :target: https://travis-ci.org/jinder1s/pytest-repo-health
-    :alt: See Build Status on Travis CI
-
-.. image:: https://ci.appveyor.com/api/projects/status/github/jinder1s/pytest-repo-health?branch=master
-    :target: https://ci.appveyor.com/project/jinder1s/pytest-repo-health/branch/master
-    :alt: See Build Status on AppVeyor
