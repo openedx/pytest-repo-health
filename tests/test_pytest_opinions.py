@@ -17,7 +17,7 @@ def test_arguments_in_help(testdir):
 
 def test_no_report(testdir):
     """
-    Check to make sure report is not generated without --repo-health-check
+    Check to make sure report is not generated without --repo-health
     """
     testdir.runpytest()
     assert not (testdir.tmpdir / 'repo_health.yaml').exists()

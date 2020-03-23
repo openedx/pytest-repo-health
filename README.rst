@@ -49,6 +49,14 @@ Checks naming convention:
     python_functions = "check_*"
     python_files = "check_*.py"
 
+Checks Discovery
+----------------
+Pytest will look for checks in directories located in these places:
+- Dir of pytest envocation(so current dir)
+- Dir where pytest-repo-health is installed
+- Dir specified by --repo-health-path flag in pytest invocation
+
+
 Plugin Enchancement path
 ------------------------
 - Currently, the checks do not throw any kind of warning or error if check does not pass.
