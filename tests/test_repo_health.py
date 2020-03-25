@@ -2,10 +2,6 @@
 Tests to make sure pytest-repo-health plugin functions correctly
 """
 
-import pytest
-import os
-import yaml
-
 
 def test_arguments_in_help(testdir):
     res = testdir.runpytest('--help')
@@ -24,5 +20,5 @@ def test_no_report(testdir):
 
 
 def test_create_report(testdir):
-    res = testdir.runpytest('--repo-health')
+    testdir.runpytest('--repo-health')
     assert (testdir.tmpdir / 'repo_health.yaml').exists()

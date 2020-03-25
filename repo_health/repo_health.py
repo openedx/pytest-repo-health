@@ -26,7 +26,7 @@ def pytest_configure(config):
         config.args.append(file_dir)
 
         # add repo path so a repo can design their own checks inside a repo_state_checks dir
-        repo_path = config.getoption("repo_path")
+        repo_path = config.getoption("repo_path")  # pylint: disable=redefined-outer-name
         if repo_path is None:
             repo_path = os.getcwd()
         config.args.append(os.path.abspath(repo_path))
@@ -52,7 +52,7 @@ def pytest_addoption(parser):
         action="store",
         dest='repo_path',
         default=None,
-        help="path of repository on which to perform tests"
+        help="path of repository on which to perform checks"
     )
 
     group.addoption(
