@@ -1,5 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# pylint: disable= missing-module-docstring
 
 import os
 import codecs
@@ -13,7 +12,6 @@ def read(fname):
 def load_requirements(*requirements_paths):
     """
     Load all requirements from the specified requirements files.
-
     Returns:
         list: Requirements file relative path strings
     """
@@ -26,6 +24,7 @@ def load_requirements(*requirements_paths):
     return list(requirements)
 
 
+
 def is_requirement(line):
     """
     Return True if the requirement line is a package requirement.
@@ -35,20 +34,22 @@ def is_requirement(line):
     """
     return line and not line.startswith(('-r', '#', '-e', 'git+', '-c'))
 
+
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
 
+
 setup(
-    name='pytest-opynions',
+    name='pytest-repo-health',
     version='0.1.0',
     author='Manjinder Singh',
     author_email='msingh@edx.org',
     maintainer='Manjinder Singh',
     maintainer_email='msingh@edx.org',
-    url='https://github.com/jinder1s/pytest-opynions',
+    url='https://github.com/jinder1s/pytest-repo-health',
     description='A simple plugin to use with pytest',
     long_description=read('README.rst'),
-    py_modules=['pytest_opynions'],
+    py_modules=['repo_health.repo_health'],
     python_requires=">=3.5",
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,
@@ -68,7 +69,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'opynions = pytest_opynions',
+            'repo_health = repo_health.repo_health',
         ],
     },
 )
