@@ -18,6 +18,7 @@ pytest-repo-health
 .. image:: https://ci.appveyor.com/api/projects/status/github/jinder1s/pytest-repo-health?branch=master
     :target: https://ci.appveyor.com/project/jinder1s/pytest-repo-health/branch/master
     :alt: See Build Status on AppVeyor
+
 ----
 
 pytest-repo-health inspects a code repository and outputs a report with info on whether the repository

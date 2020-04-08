@@ -1,8 +1,21 @@
 # pylint: disable= missing-module-docstring
 
 import os
+import re
 import codecs
 from setuptools import setup
+
+def get_version(*file_paths):
+    """
+    Extract the version string from the file at the given relative path fragments.
+    """
+    filename = os.path.join(os.path.dirname(__file__), *file_paths)
+    version_file = open(filename).read()
+    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
+                              version_file, re.M)
+    if version_match:
+        return version_match.group(1)
+    raise RuntimeError('Unable to find version string.')
 
 
 def read(fname):
@@ -37,11 +50,11 @@ def is_requirement(line):
 
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
-
+VERSION = get_version('plugin', '__init__.py')
 
 setup(
     name='pytest-repo-health',
-    version='0.1.0',
+    version=VERSION,
     author='Manjinder Singh',
     author_email='msingh@edx.org',
     maintainer='Manjinder Singh',
@@ -49,7 +62,7 @@ setup(
     url='https://github.com/jinder1s/pytest-repo-health',
     description='A simple plugin to use with pytest',
     long_description=read('README.rst'),
-    py_modules=['repo_health.repo_health'],
+    py_modules=['plugin.plugin'],
     python_requires=">=3.5",
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,
@@ -69,7 +82,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'repo_health = repo_health.repo_health',
+            'plugin = plugin.plugin',
         ],
     },
 )
