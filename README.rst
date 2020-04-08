@@ -11,12 +11,12 @@ pytest-repo-health
     :target: https://pypi.org/project/pytest-repo-health
     :alt: Python versions
 
-.. image:: https://travis-ci.org/jinder1s/pytest-repo-health.svg?branch=master
-    :target: https://travis-ci.org/jinder1s/pytest-repo-health
+.. image:: https://travis-ci.org/edx/pytest-repo-health.svg?branch=master
+    :target: https://travis-ci.org/edx/pytest-repo-health
     :alt: See Build Status on Travis CI
 
-.. image:: https://ci.appveyor.com/api/projects/status/github/jinder1s/pytest-repo-health?branch=master
-    :target: https://ci.appveyor.com/project/jinder1s/pytest-repo-health/branch/master
+.. image:: https://ci.appveyor.com/api/projects/status/github/edx/pytest-repo-health?branch=master
+    :target: https://ci.appveyor.com/project/edx/pytest-repo-health/branch/master
     :alt: See Build Status on AppVeyor
 
 ----
@@ -34,12 +34,9 @@ with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
 Installation
 ------------
 
-For now, you need to git clone pytest-repo-health from: git@github.com:jinder1s/pytest-repo-health.git
-You can install by either:
-
-    $ pip install -e .
-    or
-    $ python setup.py install
+For now, you need to git clone pytest-repo-health from: ``git@github.com:edx/pytest-repo-health.git``
+You can install by running ``make requirements`` and then `pip install -e .`
+in a Python 3.5+ virtualenv.
 
 
 Usage
@@ -75,7 +72,7 @@ Pytest will look for checks in directories located in these places:
 - Dir specified by --repo-health-path flag in pytest invocation
 
 
-Plugin Enchancement path
+Plugin Enhancement path
 ------------------------
 - Currently, the checks do not throw any kind of warning or error if check does not pass.
 - Documenting standard reqs/checks in each check better
@@ -105,13 +102,13 @@ Even though they were written with ``edx-platform`` in mind, the guidelines
 should be followed for Open edX code in general.
 
 The pull request description template should be automatically applied if you are creating a pull request from GitHub.  Otherwise you
-can find it it at `PULL_REQUEST_TEMPLATE.md <https://github.com/edx/repo_health/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_
+can find it it at `PULL_REQUEST_TEMPLATE.md <https://github.com/edx/pytest-repo-health/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_
 
 Issues
 ------
 
 The issue report template should be automatically applied if you are creating an issue on GitHub as well.  Otherwise you
-can find it at `ISSUE_TEMPLATE.md <https://github.com/edx/repo_health/blob/master/.github/ISSUE_TEMPLATE.md>`_
+can find it at `ISSUE_TEMPLATE.md <https://github.com/edx/pytest-repo-health/blob/master/.github/ISSUE_TEMPLATE.md>`_
 
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
@@ -135,7 +132,7 @@ refer to this `list of resources`_ if you need any assistance.
 .. _`GNU GPL v3.0`: http://www.gnu.org/licenses/gpl-3.0.txt
 .. _`Apache Software License 2.0`: http://www.apache.org/licenses/LICENSE-2.0
 .. _`cookiecutter-pytest-plugin`: https://github.com/pytest-dev/cookiecutter-pytest-plugin
-.. _`file an issue`: https://github.com/jinder1s/pytest-repo-health/issues
+.. _`file an issue`: https://github.com/edx/pytest-repo-health/issues
 .. _`pytest`: https://github.com/pytest-dev/pytest
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
