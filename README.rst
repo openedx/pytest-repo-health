@@ -46,7 +46,7 @@ Usage
 -----
 Once installed, following command is used to run checks::
 
-    $ pytest --repo-health-check True --repo-path <path of repo to be checked> --output-path <path for output report>
+    $ pytest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests> 
 
 
 If you run into problems, these pytest flags might help::
@@ -56,7 +56,7 @@ If you run into problems, these pytest flags might help::
 
 At edX, the following command works for most of our repos::
 
-    $ pytest -c <() --repo-health-check True --repo-path `pwd` --noconftest
+    $ pytest -c <() --noconftest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests> 
 
 Adding Custom Checks
 --------------------
