@@ -8,6 +8,7 @@ import pytest
 
 import yaml
 
+
 session_data_holder_dict = defaultdict(dict)
 
 @pytest.fixture(scope="session")
@@ -117,6 +118,16 @@ def pytest_ignore_collect(path, config):
         if "repo_health" in str(path):
             return True
     return False
+
+def pytest_collection_modifyitems(session, config, items):
+    # TODO(jinder): add: and session.config.getoption("repo_health_metadata")
+    if session.config.getoption("repo_health"):
+        checks_metadata = {}
+        for item in items:
+            if '__pytest_repo_health__' in dir(item._obj):
+                checks_metadata[item.name] = item._obj.__pytest_repo_health__
+        with open("metadata.yaml", "w") as write_file:
+            yaml.dump(checks_metadata, write_file, indent=4)
 
 def pytest_sessionfinish(session):
     """
