@@ -125,13 +125,14 @@ def pytest_collection_modifyitems(session, config, items):
         checks_metadata = {}
         for item in items:
             if '__pytest_repo_health__' in dir(item._obj):
+                module_name = item.parent.name
                 if item.parent.name not in checks_metadata.keys():
-                    checks_metadata[item.parent.name] = {}
-                    checks_metadata[item.parent.name]['module_doc_string'] = item.parent._obj.__doc__.strip()
-                checks_metadata[item.parent.name][item.name] = item._obj.__pytest_repo_health__
-                checks_metadata[item.parent.name][item.name]["doc_string"] = item._obj.__doc__.strip()
+                    checks_metadata[module_name] = {'module_doc_string':item.parent._obj.__doc__.strip()}
+                checks_metadata[module_name][item.name] = item._obj.__pytest_repo_health__
+                checks_metadata[module_name][item.name]["doc_string"] = item._obj.__doc__.strip()
         with open("metadata.yaml", "w") as write_file:
             yaml.dump(checks_metadata, write_file, indent=4)
+
 
 def pytest_sessionfinish(session):
     """

@@ -1,7 +1,7 @@
 """
 Plugin configures pytest to run repo health checks on a code repository.
-Plugin takes care of gathering checks, runing checks,
-and outputing report based on data gathered during checks.
+Plugin takes care of gathering checks, running checks,
+and outputting report based on data gathered during checks.
 """
 
 
