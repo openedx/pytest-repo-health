@@ -1,7 +1,7 @@
 """
 Tests to make sure pytest-repo-health plugin functions correctly
 """
-
+import pdb
 
 def test_arguments_in_help(testdir):
     res = testdir.runpytest('--help')
@@ -22,3 +22,13 @@ def test_no_report(testdir):
 def test_create_report(testdir):
     testdir.runpytest('--repo-health')
     assert (testdir.tmpdir / 'repo_health.yaml').exists()
+
+def test_new(misc_testdir):
+    tmpdir = misc_testdir.tmpdir
+    testdir.runpytest('--repo-health')
+
+    pdb.set_trace()
+    pass
+
+def check_blaw():
+    pass
