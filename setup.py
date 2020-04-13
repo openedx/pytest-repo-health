@@ -50,7 +50,7 @@ def is_requirement(line):
 
 README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
-VERSION = get_version('plugin', '__init__.py')
+VERSION = get_version('pytest_repo_health', '__init__.py')
 
 setup(
     name='pytest-repo-health',
@@ -60,7 +60,7 @@ setup(
     url='https://github.com/edX/pytest-repo-health',
     description='A pytest plugin to report on repository standards conformance',
     long_description=read('README.rst'),
-    py_modules=['plugin.plugin'],
+    py_modules=['pytest_repo_health.plugin'],
     python_requires=">=3.5",
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,
@@ -80,7 +80,7 @@ setup(
     ],
     entry_points={
         'pytest11': [
-            'plugin = plugin.plugin',
+            'plugin = pytest_repo_health.plugin',
         ],
     },
 )
