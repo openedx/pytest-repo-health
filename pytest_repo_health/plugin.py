@@ -7,6 +7,7 @@ from collections import defaultdict
 import pytest
 
 import yaml
+import pdb
 
 
 session_data_holder_dict = defaultdict(dict)
@@ -125,7 +126,11 @@ def pytest_collection_modifyitems(session, config, items):
         checks_metadata = {}
         for item in items:
             if '__pytest_repo_health__' in dir(item._obj):
-                checks_metadata[item.name] = item._obj.__pytest_repo_health__
+                if item.parent.name not in checks_metadata.keys():
+                    checks_metadata[item.parent.name] = {}
+                    checks_metadata[item.parent.name]['module_doc_string'] = item.parent._obj.__doc__.strip()
+                checks_metadata[item.parent.name][item.name] = item._obj.__pytest_repo_health__
+                checks_metadata[item.parent.name][item.name]["doc_string"] = item._obj.__doc__.strip()
         with open("metadata.yaml", "w") as write_file:
             yaml.dump(checks_metadata, write_file, indent=4)
 
