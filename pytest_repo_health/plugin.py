@@ -7,7 +7,6 @@ from collections import defaultdict
 import pytest
 
 import yaml
-import pdb
 
 
 session_data_holder_dict = defaultdict(dict)
