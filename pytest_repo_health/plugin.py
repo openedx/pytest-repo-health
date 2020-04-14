@@ -114,9 +114,6 @@ def pytest_ignore_collect(path, config):
     if config.getoption("repo_health"):
         if "/repo_health" not in str(path):
             return True
-    else:
-        if "/repo_health" in str(path):
-            return True
     return False
 
 def pytest_collection_modifyitems(session, config, items):
