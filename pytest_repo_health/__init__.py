@@ -53,7 +53,7 @@ def add_key_to_metadata(output_key):
     def health_metadata_decorator(func):
         """Add metadata to function documenting the output keys it generates."""
         func.__pytest_repo_health__ = {
-            'output_keys': {output_key:func.__doc__}
+            'output_keys': {output_key:func.__doc__.strip()}
         }
         return func
     return health_metadata_decorator
