@@ -112,10 +112,7 @@ def pytest_ignore_collect(path, config):
         only tests in test files with "repo_state_checks" in their path will be collected
     """
     if config.getoption("repo_health"):
-        if "repo_health" not in str(path):
-            return True
-    else:
-        if "repo_health" in str(path):
+        if "/repo_health" not in str(path):
             return True
     return False
 
