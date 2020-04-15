@@ -82,6 +82,14 @@ def pytest_addoption(parser):
         help="path to where yaml file should be stored"
     )
 
+    group.addoption(
+        "--repo-health-metadata",
+        action="store_true",
+        dest='repo_health_metadata',
+        default=False,
+        help="if true, plugin will collect repo health metadata from each check"
+    )
+
 
 @pytest.fixture
 def repo_path(request):
@@ -123,8 +131,7 @@ def pytest_collection_modifyitems(session, config, items):
     pytest hook, post-collection: Read output key metadata from checks
     and dump to metadata.yaml in current working directory.
     """
-    # TODO(jinder): add: and session.config.getoption("repo_health_metadata")
-    if config.getoption("repo_health"):
+    if config.getoption("repo_health") and config.getoption("repo_health_metadata"):
         checks_metadata = {}
         for item in items:
             item_meta = item.function.__dict__.get('pytest_repo_health')
