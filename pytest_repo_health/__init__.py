@@ -37,3 +37,23 @@ def health_metadata(parent_path, output_keys):
         }
         return func
     return health_metadata_decorator
+
+def add_key_to_metadata(output_key):
+    """
+    Designed for checks which only define one key
+
+    The decorator will assume the docstring for function is the docstring for key
+    and will add this info into func.__pytest_repo_health__
+
+    Warning: output_key has to be hashable, currectly assumed to be a tuple with each level listed:
+    key = (first_key, second_key, final_key)
+    """
+    # Build full path for each output key, based on the parent path.
+
+    def health_metadata_decorator(func):
+        """Add metadata to function documenting the output keys it generates."""
+        func.__dict__['pytest_repo_health'] = {
+            'output_keys': {output_key:func.__doc__.strip()}
+        }
+        return func
+    return health_metadata_decorator
