@@ -116,17 +116,24 @@ def pytest_ignore_collect(path, config):
             return True
     return False
 
+# Unused argument "session", but pylint complains if it is renamed "_session"
+# pylint: disable=unused-argument
 def pytest_collection_modifyitems(session, config, items):
+    """
+    pytest hook, post-collection: Read output key metadata from checks
+    and dump to metadata.yaml in current working directory.
+    """
     # TODO(jinder): add: and session.config.getoption("repo_health_metadata")
-    if session.config.getoption("repo_health"):
+    if config.getoption("repo_health"):
         checks_metadata = {}
         for item in items:
-            if '__pytest_repo_health__' in dir(item._obj):
+            item_meta = item.function.__dict__.get('pytest_repo_health')
+            if item_meta is not None:
                 module_name = item.parent.name
                 if item.parent.name not in checks_metadata.keys():
-                    checks_metadata[module_name] = {'module_doc_string':item.parent._obj.__doc__.strip()}
-                checks_metadata[module_name][item.name] = item._obj.__pytest_repo_health__
-                checks_metadata[module_name][item.name]["doc_string"] = item._obj.__doc__.strip()
+                    checks_metadata[module_name] = {'module_doc_string':item.parent.module.__doc__.strip()}
+                checks_metadata[module_name][item.name] = item_meta
+                checks_metadata[module_name][item.name]["doc_string"] = item.function.__doc__.strip()
         with open("metadata.yaml", "w") as write_file:
             yaml.dump(checks_metadata, write_file, indent=4)
 

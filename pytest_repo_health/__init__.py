@@ -32,7 +32,7 @@ def health_metadata(parent_path, output_keys):
 
     def health_metadata_decorator(func):
         """Add metadata to function documenting the output keys it generates."""
-        func.__pytest_repo_health__ = {
+        func.__dict__['pytest_repo_health'] = {
             'output_keys': expanded_output_keys
         }
         return func
