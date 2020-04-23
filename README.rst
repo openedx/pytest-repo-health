@@ -72,6 +72,18 @@ Pytest will look for checks in directories located in these places:
 - Dir specified by --repo-health-path flag in pytest invocation
 
 
+Args
+----
+  --repo-health: this arg needs to be present for plugin to do anything
+
+  --repo-path <dir path> : the path to dir on which to perform checks. If not preset, checks will be performed on current dir
+
+  --repo-health-path <dir path>: path to where checks are located. If not preset, plugin will look for checks in current repo
+
+  --output-path <file path> : path to where to save resulting checks report
+
+  --repo-health-metadata: if the is present, plugin will collect metadata(docs) from checks and output them as a metadata.yaml file
+
 Plugin Enhancement path
 ------------------------
 - Currently, the checks do not throw any kind of warning or error if check does not pass.
