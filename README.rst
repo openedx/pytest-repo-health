@@ -47,9 +47,10 @@ Once installed, following command is used to run checks::
 
 
 If you run into problems, these pytest flags might help::
-    -  -c file: load configuration from `file` instead of trying to locate one of the
+
+    -c file: load configuration from `file` instead of trying to locate one of the
                         implicit configuration files. Helpful if invocation dir defines "add-opts" in one of its files.
-    -  --noconftest: Don't load any conftest.py files. Helpful in case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
+    --noconftest: Don't load any conftest.py files. Helpful in case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
 
 At edX, the following command works for most of our repos::
 
@@ -61,8 +62,9 @@ If you would like to add custom checks for your own repo, create a dir named "re
 modules with checks inside of it.
 
 Checks naming convention:
-    python_functions = "check_*"
-    python_files = "check_*.py"
+
+- python_functions = "check_*"
+- python_files = "check_*.py"
 
 Checks Discovery
 ----------------
@@ -74,6 +76,8 @@ Pytest will look for checks in directories located in these places:
 
 Args
 ----
+Arguments added by plugin::
+
   --repo-health: this arg needs to be present for plugin to do anything
 
   --repo-path <dir path> : the path to dir on which to perform checks. If not preset, checks will be performed on current dir
