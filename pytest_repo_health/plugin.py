@@ -3,6 +3,7 @@ pytest plugin to test if specific repo follows standards
 """
 import os
 from collections import defaultdict
+import datetime
 
 import pytest
 
@@ -10,6 +11,7 @@ import yaml
 
 
 session_data_holder_dict = defaultdict(dict)
+session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
 
 @pytest.fixture(scope="session")
 def all_results():
