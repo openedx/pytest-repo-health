@@ -10,27 +10,27 @@ attrs==19.3.0             # via -r requirements/quality.txt, pytest
 certifi==2020.4.5.1       # via -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/travis.txt, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
-click==7.1.1              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
+click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
 codecov==2.0.22           # via -r requirements/travis.txt
-coverage==5.0.4           # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
-diff-cover==2.6.0         # via -r requirements/dev.in
+coverage==5.1             # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
+diff-cover==2.6.1         # via -r requirements/dev.in
 distlib==0.3.0            # via -r requirements/travis.txt, virtualenv
 edx-lint==1.4.1           # via -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
 idna==2.9                 # via -r requirements/travis.txt, requests
 importlib-metadata==1.6.0  # via -r requirements/quality.txt, -r requirements/travis.txt, importlib-resources, pluggy, pytest, tox, virtualenv
-importlib-resources==1.4.0  # via -r requirements/travis.txt, virtualenv
+importlib-resources==1.5.0  # via -r requirements/travis.txt, virtualenv
 inflect==3.0.2            # via jinja2-pluralize
 isort==4.3.21             # via -r requirements/quality.txt, pylint
 jinja2-pluralize==0.3.0   # via diff-cover
-jinja2==2.11.1            # via diff-cover, jinja2-pluralize
+jinja2==2.11.2            # via diff-cover, jinja2-pluralize
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via -r requirements/quality.txt, pylint
 more-itertools==8.2.0     # via -r requirements/quality.txt, pytest
 packaging==20.3           # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 pathlib2==2.3.5           # via -r requirements/quality.txt, pytest
-pip-tools==4.5.1          # via -r requirements/pip-tools.txt
+pip-tools==5.1.2          # via -r requirements/pip-tools.txt
 pluggy==0.13.1            # via -r requirements/quality.txt, -r requirements/travis.txt, diff-cover, pytest, tox
 py==1.8.1                 # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 pycodestyle==2.5.0        # via -r requirements/quality.txt
@@ -49,10 +49,13 @@ six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/q
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 toml==0.10.0              # via -r requirements/travis.txt, tox
 tox-battery==0.5.2        # via -r requirements/travis.txt
-tox==3.14.6               # via -r requirements/travis.txt, tox-battery
+tox==3.15.0               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
-urllib3==1.25.8           # via -r requirements/travis.txt, requests
-virtualenv==20.0.16       # via -r requirements/travis.txt, tox
+urllib3==1.25.9           # via -r requirements/travis.txt, requests
+virtualenv==20.0.20       # via -r requirements/travis.txt, tox
 wcwidth==0.1.9            # via -r requirements/quality.txt, pytest
 wrapt==1.11.2             # via -r requirements/quality.txt, astroid
 zipp==1.2.0               # via -r requirements/quality.txt, -r requirements/travis.txt, importlib-metadata, importlib-resources
+
+# The following packages are considered to be unsafe in a requirements file:
+# pip
