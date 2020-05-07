@@ -5,7 +5,7 @@
 #    make upgrade
 #
 attrs==19.3.0             # via -r requirements/base.txt, pytest
-coverage==5.0.4           # via pytest-cov
+coverage==5.1             # via pytest-cov
 importlib-metadata==1.6.0  # via -r requirements/base.txt, pluggy, pytest
 more-itertools==8.2.0     # via -r requirements/base.txt, pytest
 packaging==20.3           # via -r requirements/base.txt, pytest
