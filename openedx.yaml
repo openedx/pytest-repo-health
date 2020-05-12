@@ -1,7 +1,9 @@
 # openedx.yaml
 
 ---
-owner: jinder
+owner: 
+    type: team
+    name: archbom
 nick: pytest-repo-health
 tags:
     - tools
