@@ -26,7 +26,8 @@ deploy:
   user: edx
   distributions: sdist bdist_wheel
   on:
+    tags: true
     python: 3.5
-    condition: '$TOXENV = quality'
+    condition: '$TOX_ENV = quality'
   password:
     secure: k8GGw+XjP9jIHRDjFkSe4vuHpBFxoVl2E4rWeXcCDyDncnQOGkR0I5I8XK4lEfs1Cx9Wz12cjkzIpTD7J4cO/Kguf7UOngAy1yAZytOuvS2JqUdsbI/TVVFf6mRS/+wz/yfzgFAr/8GCDWoLGat3PwZ3sE6vulK+y0dLlcmApVU50zYJTxyFEoNgMHiTTu95vaZ0+8H+KKUXjGKVp7MPpcH3ojMO/BiNpjP9cISW4D7Xpr3sgfhGXkMVuvnMVHRv5m76tCG5slRWRDuqpqHYdrOURQRAu2/Uit4I/QBVahFYt5FLL1eoJUAytcq7if4pJkeRolD6iqU0GIrSbPyyoUHLgitWswygj1x1KekJ3ICAR6/P7Ui6PJhrYhDzVZIh5TXaUZTS3VgNbBDkKLtaiyLlir7HTxkfMfJuvrx8VuCE1KtF9vQXr4zre5IDPV6ZePfrHiQOl1NXBRaDMKuDe2OKpgbfBl9XO+Nk3aSGpmcLgbCeR2CaweRMELn3W9AATVQyzOM40Nd+eVaNLy3yI4Iw21GFQ3UbGuis8CXIY/fn5SmR1BsD5IdtPYekgOq75siMPsyPjnbXvmwxnLAt1qUxUtLlsA77wqoJ11KB1JZMoBa6b1hFPK2AfRjz4EZxKas+a8Ku+QvMufh6Cqe1KlEsIVYS++KF9SW+05L6hDU=
