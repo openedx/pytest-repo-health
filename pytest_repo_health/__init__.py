@@ -5,7 +5,7 @@ and outputting report based on data gathered during checks.
 """
 
 
-__version__ = "0.1.0"
+__version__ = "1.0.0"
 
 def health_metadata(parent_path, output_keys):
     """
