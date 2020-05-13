@@ -26,7 +26,6 @@ deploy:
   user: edx
   distributions: sdist bdist_wheel
   on:
-    tags: true
     python: 3.5
     condition: '$TOXENV = quality'
   password:
