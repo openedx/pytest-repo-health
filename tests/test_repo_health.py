@@ -2,7 +2,6 @@
 Tests to make sure pytest-repo-health plugin functions correctly
 """
 
-
 def test_arguments_in_help(testdir):
     res = testdir.runpytest('--help')
     res.stdout.fnmatch_lines_random([
