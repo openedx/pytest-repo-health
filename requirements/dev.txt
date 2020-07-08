@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-appdirs==1.4.3            # via -r requirements/travis.txt, virtualenv
+appdirs==1.4.4            # via -r requirements/travis.txt, virtualenv
 astroid==2.3.3            # via -r requirements/quality.txt, pylint, pylint-celery
 attrs==19.3.0             # via -r requirements/quality.txt, pytest
 certifi==2020.4.5.1       # via -r requirements/travis.txt, requests
@@ -33,7 +33,7 @@ pathlib2==2.3.5           # via -r requirements/quality.txt, pytest
 pip-tools==5.1.2          # via -r requirements/pip-tools.txt
 pluggy==0.13.1            # via -r requirements/quality.txt, -r requirements/travis.txt, diff-cover, pytest, tox
 py==1.8.1                 # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
-pycodestyle==2.5.0        # via -r requirements/quality.txt
+pycodestyle==2.6.0        # via -r requirements/quality.txt
 pydocstyle==5.0.2         # via -r requirements/quality.txt
 pygments==2.6.1           # via diff-cover
 pylint-celery==0.3        # via -r requirements/quality.txt, edx-lint
@@ -42,7 +42,7 @@ pylint-plugin-utils==0.6  # via -r requirements/quality.txt, pylint-celery, pyli
 pylint==2.4.2             # via -r requirements/quality.txt, edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.7          # via -r requirements/quality.txt, -r requirements/travis.txt, packaging
 pytest-cov==2.8.1         # via -r requirements/quality.txt
-pytest==5.4.1             # via -r requirements/quality.txt, pytest-cov
+pytest==5.4.2             # via -r requirements/quality.txt, pytest-cov
 pyyaml==5.3.1             # via -r requirements/quality.txt
 requests==2.23.0          # via -r requirements/travis.txt, codecov
 six==1.14.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, diff-cover, edx-lint, packaging, pathlib2, pip-tools, tox, virtualenv
