@@ -6,8 +6,10 @@ from collections import defaultdict
 import datetime
 
 import pytest
-
 import yaml
+
+from fixtures.git import git_repo
+from fixtures.github import github_repo
 
 
 session_data_holder_dict = defaultdict(dict)

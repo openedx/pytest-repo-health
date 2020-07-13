@@ -1,5 +1,7 @@
 # Core requirements for using this application
 -c constraints.txt
 
+github.py                 # GitHub API bindings for the GitHub repository data fixtures
+GitPython                 # Python wrapper for the git binary, for the git repository data fixtures
 pytest                    # Framework used to find and execute each "opynion"
-pyyaml
+pyyaml                    # For saving the collected data in a YAML file

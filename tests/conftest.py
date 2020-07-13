@@ -3,7 +3,7 @@ conftest used to run tests on pytest-repo-health plugin
 """
 import pytest
 
-pytest_plugins = 'pytester'
+pytest_plugins = ['pytester']
 
 
 FILE = """
