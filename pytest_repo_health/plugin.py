@@ -8,16 +8,17 @@ import datetime
 import pytest
 import yaml
 
-from fixtures.git import git_repo
-from fixtures.github import github_repo
+from .fixtures.git import git_repo
 
 
 session_data_holder_dict = defaultdict(dict)
 session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
 
+
 @pytest.fixture(scope="session")
 def all_results():
     return session_data_holder_dict
+
 
 def pytest_configure(config):
     """
@@ -30,13 +31,13 @@ def pytest_configure(config):
         file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         config.args.append(file_dir)
 
-        # add repo path so a repo can design their own checks inside a repo_state_checks dir
+        # add repo path so a repo can design their own checks inside a repo_health dir
         repo_path = config.getoption("repo_path")  # pylint: disable=redefined-outer-name
         if repo_path is None:
             repo_path = os.getcwd()
         config.args.append(os.path.abspath(repo_path))
 
-        # in case repo_health checks are in seperate repo
+        # in case repo_health checks are in separate repo
         repo_health_path = config.getoption("repo_health_path")
         if repo_health_path is not None:
             config.args.append(os.path.abspath(repo_health_path))
@@ -95,7 +96,7 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture
+@pytest.fixture(scope="session")
 def repo_path(request):
     """
     pytest fixture to be used to get path to repo being tested
@@ -105,6 +106,7 @@ def repo_path(request):
         path = os.getcwd()
     path = os.path.abspath(path)
     return path
+
 
 @pytest.fixture
 def repo_health(request):
@@ -117,16 +119,18 @@ def repo_health(request):
     """
     return request.config.option.repo_health
 
+
 def pytest_ignore_collect(path, config):
     """
     pytest hook that determines if pytest looks at specific file to collect tests
     if repo_health is set to true:
-        only tests in test files with "repo_state_checks" in their path will be collected
+        only tests in test files with "repo_health" in their path will be collected
     """
     if config.getoption("repo_health"):
         if "/repo_health" not in str(path):
             return True
     return False
+
 
 # Unused argument "session", but pylint complains if it is renamed "_session"
 # pylint: disable=unused-argument
