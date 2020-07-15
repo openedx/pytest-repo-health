@@ -49,7 +49,7 @@ six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/q
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 toml==0.10.1              # via -r requirements/travis.txt, tox
 tox-battery==0.6.1        # via -r requirements/travis.txt
-tox==3.16.1               # via -r requirements/travis.txt, tox-battery
+tox==3.17.0               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 urllib3==1.25.9           # via -r requirements/travis.txt, requests
 virtualenv==20.0.26       # via -r requirements/travis.txt, tox
