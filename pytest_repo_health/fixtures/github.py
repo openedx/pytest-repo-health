@@ -25,7 +25,7 @@ def github_client():
 
 
 @pytest.fixture
-async def github_repo(git_origin_url, github_client, loop):
+async def github_repo(git_origin_url, github_client, loop):  # pylint: disable=redefined-outer-name, unused-argument
     """
     A fixture to fetch information from the GitHub API about the examined repository.
     Because github.py uses aiohttp, any checks using this fixture must be declared
