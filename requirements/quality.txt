@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.6.2            # via -r requirements/test.txt, github.py
+aiohttp==3.6.2            # via -r requirements/test.txt, github.py, pytest-aiohttp
 astroid==2.3.3            # via pylint, pylint-celery
 async-timeout==3.0.1      # via -r requirements/test.txt, aiohttp
 attrs==19.3.0             # via -r requirements/test.txt, aiohttp, pytest
@@ -35,8 +35,9 @@ pylint-django==2.0.11     # via edx-lint
 pylint-plugin-utils==0.6  # via pylint-celery, pylint-django
 pylint==2.4.4             # via edx-lint, pylint-celery, pylint-django, pylint-plugin-utils
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
+pytest-aiohttp==0.3.0     # via -r requirements/test.txt
 pytest-cov==2.10.0        # via -r requirements/test.txt
-pytest==5.4.3             # via -r requirements/test.txt, pytest-cov
+pytest==5.4.3             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
 pyyaml==5.3.1             # via -r requirements/test.txt
 six==1.15.0               # via -r requirements/test.txt, astroid, edx-lint, packaging, pathlib2
 smmap==3.0.4              # via -r requirements/test.txt, gitdb

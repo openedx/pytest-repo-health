@@ -8,7 +8,8 @@ import datetime
 import pytest
 import yaml
 
-from .fixtures.git import git_repo  # pylint: disable=unused-import
+from .fixtures.git import git_origin_url, git_repo  # pylint: disable=unused-import
+from .fixtures.github import github_client, github_repo  # pylint: disable=unused-import
 
 
 session_data_holder_dict = defaultdict(dict)

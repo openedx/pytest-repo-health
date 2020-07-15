@@ -18,3 +18,20 @@ def git_repo(repo_path):
     if path.is_dir():
         return Repo(repo_path)
     return None
+
+
+@pytest.fixture(scope="session")
+def git_origin_url(git_repo):
+    """
+    A fixture to fetch the URL of the online hosting for this repository.  Yields
+    None if there is no origin defined for it, or if the target directory isn't
+    even a git repository.
+    """
+    if git_repo is None:
+        return None
+    try:
+        origin = git_repo.remotes.origin
+    except ValueError:
+        # This local repository isn't linked to an online origin
+        return None
+    return origin.url
