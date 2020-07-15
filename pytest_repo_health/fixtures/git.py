@@ -21,7 +21,7 @@ def git_repo(repo_path):
 
 
 @pytest.fixture(scope="session")
-def git_origin_url(git_repo):
+def git_origin_url(git_repo):  # pylint: disable=redefined-outer-name
     """
     A fixture to fetch the URL of the online hosting for this repository.  Yields
     None if there is no origin defined for it, or if the target directory isn't
