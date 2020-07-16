@@ -3,7 +3,7 @@
 import os
 import re
 import codecs
-from setuptools import setup
+from setuptools import find_packages, setup
 
 def get_version(*file_paths):
     """
@@ -60,7 +60,7 @@ setup(
     url='https://github.com/edX/pytest-repo-health',
     description='A pytest plugin to report on repository standards conformance',
     long_description=read('README.rst'),
-    py_modules=['pytest_repo_health.plugin'],
+    packages=find_packages(exclude=["tests"]),
     python_requires=">=3.5",
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,

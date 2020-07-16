@@ -5,7 +5,8 @@ and outputting report based on data gathered during checks.
 """
 
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
+
 
 def health_metadata(parent_path, output_keys):
     """
@@ -29,7 +30,6 @@ def health_metadata(parent_path, output_keys):
         key_path = tuple(parent_path + key_more)
         expanded_output_keys[key_path] = v
 
-
     def health_metadata_decorator(func):
         """Add metadata to function documenting the output keys it generates."""
         func.__dict__['pytest_repo_health'] = {
@@ -37,6 +37,7 @@ def health_metadata(parent_path, output_keys):
         }
         return func
     return health_metadata_decorator
+
 
 def add_key_to_metadata(output_key):
     """

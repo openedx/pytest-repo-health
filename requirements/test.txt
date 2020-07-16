@@ -4,18 +4,31 @@
 #
 #    make upgrade
 #
-attrs==19.3.0             # via -r requirements/base.txt, pytest
+aiohttp==3.6.2            # via -r requirements/base.txt, github.py, pytest-aiohttp
+async-timeout==3.0.1      # via -r requirements/base.txt, aiohttp
+attrs==19.3.0             # via -r requirements/base.txt, aiohttp, pytest
+chardet==3.0.4            # via -r requirements/base.txt, aiohttp
 coverage==5.2             # via pytest-cov
+gitdb==4.0.5              # via -r requirements/base.txt, gitpython
+github.py==0.5.0          # via -r requirements/base.txt
+gitpython==3.1.7          # via -r requirements/base.txt
+idna-ssl==1.1.0           # via -r requirements/base.txt, aiohttp
+idna==2.10                # via -r requirements/base.txt, idna-ssl, yarl
 importlib-metadata==1.7.0  # via -r requirements/base.txt, pluggy, pytest
 more-itertools==8.4.0     # via -r requirements/base.txt, pytest
+multidict==4.7.6          # via -r requirements/base.txt, aiohttp, yarl
 packaging==20.4           # via -r requirements/base.txt, pytest
 pathlib2==2.3.5           # via -r requirements/base.txt, pytest
 pluggy==0.13.1            # via -r requirements/base.txt, pytest
 py==1.9.0                 # via -r requirements/base.txt, pytest
 pyparsing==2.4.7          # via -r requirements/base.txt, packaging
+pytest-aiohttp==0.3.0     # via -r requirements/base.txt
 pytest-cov==2.10.0        # via -r requirements/test.in
-pytest==5.4.3             # via -r requirements/base.txt, pytest-cov
+pytest==5.4.3             # via -r requirements/base.txt, pytest-aiohttp, pytest-cov
 pyyaml==5.3.1             # via -r requirements/base.txt
 six==1.15.0               # via -r requirements/base.txt, packaging, pathlib2
+smmap==3.0.4              # via -r requirements/base.txt, gitdb
+typing-extensions==3.7.4.2  # via -r requirements/base.txt, aiohttp
 wcwidth==0.2.5            # via -r requirements/base.txt, pytest
+yarl==1.4.2               # via -r requirements/base.txt, aiohttp
 zipp==1.2.0               # via -r requirements/base.txt, importlib-metadata

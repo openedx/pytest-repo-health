@@ -4,16 +4,29 @@
 #
 #    make upgrade
 #
-attrs==19.3.0             # via pytest
+aiohttp==3.6.2            # via github.py, pytest-aiohttp
+async-timeout==3.0.1      # via aiohttp
+attrs==19.3.0             # via aiohttp, pytest
+chardet==3.0.4            # via aiohttp
+gitdb==4.0.5              # via gitpython
+github.py==0.5.0          # via -r requirements/base.in
+gitpython==3.1.7          # via -r requirements/base.in
+idna-ssl==1.1.0           # via aiohttp
+idna==2.10                # via idna-ssl, yarl
 importlib-metadata==1.7.0  # via pluggy, pytest
 more-itertools==8.4.0     # via pytest
+multidict==4.7.6          # via aiohttp, yarl
 packaging==20.4           # via pytest
 pathlib2==2.3.5           # via pytest
 pluggy==0.13.1            # via pytest
 py==1.9.0                 # via pytest
 pyparsing==2.4.7          # via packaging
-pytest==5.4.3             # via -r requirements/base.in
+pytest-aiohttp==0.3.0     # via -r requirements/base.in
+pytest==5.4.3             # via -r requirements/base.in, pytest-aiohttp
 pyyaml==5.3.1             # via -r requirements/base.in
 six==1.15.0               # via packaging, pathlib2
+smmap==3.0.4              # via gitdb
+typing-extensions==3.7.4.2  # via aiohttp
 wcwidth==0.2.5            # via pytest
+yarl==1.4.2               # via aiohttp
 zipp==1.2.0               # via importlib-metadata
