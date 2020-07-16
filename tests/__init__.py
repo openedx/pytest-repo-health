@@ -5,7 +5,7 @@ from pathlib import Path
 
 PYTEST_INI = """
 [pytest]
-addopts = -vv --repo-health --repo-health-path {checks_path} --repo-path {repo_path}
+addopts = --repo-health --repo-health-path {checks_path} --repo-path {repo_path}
 """
 
 
