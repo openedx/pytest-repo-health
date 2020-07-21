@@ -4,8 +4,9 @@ Fixtures for getting information about a repository hosted on GitHub.
 import os
 import re
 
-import github
 import pytest
+from github import GitHub
+from github.errors import GitHubError
 
 URL_PATTERN = r"github.com[/:](?P<org_name>[^/]+)/(?P<repo_name>[^/\.]+)"
 
@@ -21,7 +22,7 @@ def github_client():
     except KeyError:
         raise Exception("To use any of the GitHub fixtures, you must set the GITHUB_TOKEN environment variable "
                         "to contain a GitHub personal access token.")
-    return github.GitHub(token)
+    return GitHub(token)
 
 
 @pytest.fixture
@@ -29,7 +30,8 @@ async def github_repo(git_origin_url, github_client, loop):  # pylint: disable=r
     """
     A fixture to fetch information from the GitHub API about the examined repository.
     Because github.py uses aiohttp, any checks using this fixture must be declared
-    via ``async def``.
+    via ``async def``.  Returns ``None`` if there is an error fetching data from
+    GitHub (such as a network failure or GitHub internal error).
     """
     if git_origin_url is None:
         # There isn't an origin for this repository or directory
@@ -40,4 +42,7 @@ async def github_repo(git_origin_url, github_client, loop):  # pylint: disable=r
         return None
     org_name = match.group("org_name")
     repo_name = match.group("repo_name")
-    return await github_client.fetch_repository(org_name, repo_name)
+    try:
+        return await github_client.fetch_repository(org_name, repo_name)
+    except GitHubError:
+        return None

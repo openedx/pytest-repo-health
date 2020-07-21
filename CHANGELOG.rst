@@ -16,6 +16,14 @@ Unreleased
 
 *
 
+[1.1.1] - 2020-07-21
+~~~~~~~~~~~~~~~~~~~~
+
+Fixed
+_____
+
+* Gracefully handle errors in fetching data from GitHub
+
 [1.1.0] - 2020-07-16
 ~~~~~~~~~~~~~~~~~~~~
 
