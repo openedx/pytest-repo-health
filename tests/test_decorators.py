@@ -19,6 +19,5 @@ def check_test_collection(all_results):
 def test_decorator(testdir):
     result = run_checks(testdir, test_collection=TEST_COLLECTION)
     print(result.stdout.str())
-    pdb.set_trace()
     result.assert_outcomes(passed=1)
     assert (testdir.tmpdir / 'repo_health.yaml').exists()
