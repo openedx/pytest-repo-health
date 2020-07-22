@@ -147,7 +147,8 @@ def pytest_collection_modifyitems(session, config, items):
             if item_meta is not None:
                 module_name = item.parent.name
                 if item.parent.name not in checks_metadata.keys():
-                    checks_metadata[module_name] = {'module_doc_string':item.parent.module.__doc__.strip()}
+                    if item.parent.module.__doc__ is not None:
+                        checks_metadata[module_name] = {'module_doc_string':item.parent.module.__doc__.strip()}
                 checks_metadata[module_name][item.name] = item_meta
                 checks_metadata[module_name][item.name]["doc_string"] = item.function.__doc__.strip()
         with open("metadata.yaml", "w") as write_file:
