@@ -9,7 +9,7 @@ import pdb
 TEST_COLLECTION = """
 from pytest_repo_health import health_metadata
 
-@health_metadata('parent', {"Yes": "NAN", "True": "NAN"})
+@health_metadata(['parent'], {"Yes": "NAN", "True": "NAN"})
 def check_test_collection(all_results):
     all_results["Yes"] = "NOOOO"
     all_results["True"] = "FFFFFAAALLSE"
