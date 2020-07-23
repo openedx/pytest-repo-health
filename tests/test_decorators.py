@@ -4,7 +4,6 @@ Tests to make sure health_metadata and add_key_to_metadata decorators function c
 
 from . import run_checks
 import yaml
-import pdb
 
 
 TEST_HEALTH_METADATA = """

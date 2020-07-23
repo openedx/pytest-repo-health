@@ -7,7 +7,6 @@ import datetime
 
 import pytest
 import yaml
-import pdb
 
 from .fixtures.git import git_origin_url, git_repo  # pylint: disable=unused-import
 from .fixtures.github import github_client, github_repo  # pylint: disable=unused-import
