@@ -7,8 +7,6 @@ and outputting report based on data gathered during checks.
 
 __version__ = "1.1.1"
 
-from functools import wraps
-
 
 def health_metadata(parent_path, output_keys):
     """
@@ -23,8 +21,6 @@ def health_metadata(parent_path, output_keys):
 
     Each output-key value is a dictionary containing documentation of that key
     under the key ``'doc'``.
-
-    ``output_keys`` is passed to the target fuction as keyword argument.
     """
     # Build full path for each output key, based on the parent path.
     expanded_output_keys = {}
@@ -36,17 +32,10 @@ def health_metadata(parent_path, output_keys):
 
     def health_metadata_decorator(func):
         """Add metadata to function documenting the output keys it generates."""
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            """
-            Pass `output_keys` as keyword argument to the function
-            """
-            kwargs['output_keys'] = output_keys
-            func(*args, **kwargs)
-        wrapper.__dict__['pytest_repo_health'] = {
+        func.__dict__['pytest_repo_health'] = {
             'output_keys': expanded_output_keys
         }
-        return wrapper
+        return func
     return health_metadata_decorator
 
 
