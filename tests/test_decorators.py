@@ -60,7 +60,7 @@ def test_add_key_to_metadata(testdir):
     metadata_yaml_path = testdir.tmpdir / 'metadata.yaml'
     assert (metadata_yaml_path).exists()
     # converting metadata_yaml_path to str cause pathlib doesn't work will with open in python 3.5
-    with open(metadata_yaml_path) as y_f:
+    with open(str(metadata_yaml_path)) as y_f:
         content = yaml.load(y_f)
         # name based on kwrg input to run_checks funtion
         assert "check_test_add_key_to_metadata.py" in content.keys()
