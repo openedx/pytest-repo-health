@@ -139,17 +139,30 @@ def pytest_collection_modifyitems(session, config, items):
     """
     pytest hook, post-collection: Read output key metadata from checks
     and dump to metadata.yaml in current working directory.
+
+    Arguments:
+        - session:  the pytest session object
+        - config: pytest config object
+        - items: list of item objects: one item: a basic test invocation item
     """
     if config.getoption("repo_health") and config.getoption("repo_health_metadata"):
         checks_metadata = {}
         for item in items:
-            item_meta = item.function.__dict__.get('pytest_repo_health')
+            # check to see item has any metadata related to pytest_repo_health
+            item_meta = item.function.__dict__.get('pytest_repo_health', None)
             if item_meta is not None:
+                # store all data based for one module in its dict
                 module_name = item.parent.name
                 if item.parent.name not in checks_metadata.keys():
-                    checks_metadata[module_name] = {'module_doc_string':item.parent.module.__doc__.strip()}
+                    checks_metadata[module_name] = {}
+                    # add modules docstring to data if present
+                    if item.parent.module.__doc__ is not None:
+                        checks_metadata[module_name]['module_doc_string'] = item.parent.module.__doc__.strip()
+                # Add function metadata to module dict
                 checks_metadata[module_name][item.name] = item_meta
-                checks_metadata[module_name][item.name]["doc_string"] = item.function.__doc__.strip()
+                # add doc string if function also has doc string
+                if item.function.__doc__ is not None:
+                    checks_metadata[module_name][item.name]["doc_string"] = item.function.__doc__.strip()
         with open("metadata.yaml", "w") as write_file:
             yaml.dump(checks_metadata, write_file, indent=4)
 
