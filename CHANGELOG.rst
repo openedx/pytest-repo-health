@@ -14,7 +14,10 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-*
+Removed
+_______
+
+* Support for Python 3.5.  Versions 3.5.3 and above will likely still work for now, but they are no longer being tested; this lets us upgrade some dependencies and avoid confusion when aiohttp fails to install under 3.5.2 and below.  Python 3.5 reaches EOL in 1.5 months anyway.
 
 [1.1.1] - 2020-07-21
 ~~~~~~~~~~~~~~~~~~~~
