@@ -8,7 +8,7 @@ matrix:
     env: TOX_ENV=py37
   - python: 3.8
     env: TOX_ENV=py38
-  - python: 3.5
+  - python: 3.6
     env: TOX_ENV=quality
 install:
 - pip install -r requirements/travis.txt
