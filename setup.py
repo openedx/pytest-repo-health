@@ -5,12 +5,14 @@ import os
 import re
 import sys
 from setuptools import find_packages, setup
+from pathlib import Path
 
 
 def get_version(*file_paths):
     """
     Extract the version string from the file at the given relative path fragments.
     """
+    # TODO(jinder): can this be done with Path
     filename = os.path.join(os.path.dirname(__file__), *file_paths)
     version_file = open(filename).read()
     version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
@@ -21,7 +23,7 @@ def get_version(*file_paths):
 
 
 def read(fname):
-    file_path = os.path.join(os.path.dirname(__file__), fname)
+    file_path = Path(__file__).parent / fname
     return codecs.open(file_path, encoding='utf-8').read()
 
 
@@ -50,8 +52,8 @@ def is_requirement(line):
     return line and not line.startswith(('-r', '#', '-e', 'git+', '-c'))
 
 
-README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
+README = (Path(__file__).parent / 'README.rst').read_text()
+CHANGELOG = (Path(__file__) / 'CHANGELOG.rst').read_text()
 VERSION = get_version('pytest_repo_health', '__init__.py')
 
 if sys.argv[-1] == 'tag':

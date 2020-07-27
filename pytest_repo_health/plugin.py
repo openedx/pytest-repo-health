@@ -1,12 +1,12 @@
 """
 pytest plugin to test if specific repo follows standards
 """
-import os
 from collections import defaultdict
 import datetime
 
 import pytest
 import yaml
+from pathlib import Path
 
 from .fixtures.git import git_origin_url, git_repo  # pylint: disable=unused-import
 from .fixtures.github import github_client, github_repo  # pylint: disable=unused-import
@@ -28,20 +28,20 @@ def pytest_configure(config):
 
     if config.getoption("repo_health"):
 
-        # Add path to pytest-repo-health dir so pytest knows where to look for checks
-        file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+        # Add path to pytest-repo-health dir(which is two levels up from this file) so pytest knows where to look for checks
+        file_dir = Path(__file__).resolve().parents[1]
         config.args.append(file_dir)
 
         # add repo path so a repo can design their own checks inside a repo_health dir
-        repo_path = config.getoption("repo_path")  # pylint: disable=redefined-outer-name
+        repo_path = Path(config.getoption("repo_path")).resolve()  # pylint: disable=redefined-outer-name
         if repo_path is None:
-            repo_path = os.getcwd()
-        config.args.append(os.path.abspath(repo_path))
+            repo_path = Path.cwd()
+        config.args.append(repo_path)
 
         # in case repo_health checks are in separate repo
-        repo_health_path = config.getoption("repo_health_path")
+        repo_health_path = Path(config.getoption("repo_health_path")).resolve()
         if repo_health_path is not None:
-            config.args.append(os.path.abspath(repo_health_path))
+            config.args.append(repo_health_path)
 
         # Change test prefix to check
         config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
@@ -102,10 +102,9 @@ def repo_path(request):
     """
     pytest fixture to be used to get path to repo being tested
     """
-    path = request.config.option.repo_path
+    path = Path(request.config.option.repo_path).resolve()
     if path is None:
-        path = os.getcwd()
-    path = os.path.abspath(path)
+        path = Path.cwd()
     return path
 
 
