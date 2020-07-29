@@ -23,6 +23,7 @@ idna-ssl==1.1.0           # via -r requirements/test.txt, aiohttp
 idna==2.10                # via -r requirements/test.txt, idna-ssl, requests, yarl
 imagesize==1.2.0          # via sphinx
 importlib-metadata==1.7.0  # via -r requirements/test.txt, pluggy, pytest, stevedore
+iniconfig==1.0.0          # via -r requirements/test.txt, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
 more-itertools==8.4.0     # via -r requirements/test.txt, pytest
@@ -35,7 +36,7 @@ pygments==2.6.1           # via doc8, readme-renderer, sphinx
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-aiohttp==0.3.0     # via -r requirements/test.txt
 pytest-cov==2.10.0        # via -r requirements/test.txt
-pytest==5.4.3             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
+pytest==6.0.0             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
 pytz==2020.1              # via babel
 pyyaml==5.3.1             # via -r requirements/test.txt
 readme-renderer==26.0     # via -r requirements/doc.in
@@ -52,9 +53,9 @@ sphinxcontrib-jsmath==1.0.1  # via sphinx
 sphinxcontrib-qthelp==1.0.3  # via sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via sphinx
 stevedore==3.2.0          # via doc8
+toml==0.10.1              # via -r requirements/test.txt, pytest
 typing-extensions==3.7.4.2  # via -r requirements/test.txt, aiohttp, yarl
 urllib3==1.25.10          # via requests
-wcwidth==0.2.5            # via -r requirements/test.txt, pytest
 webencodings==0.5.1       # via bleach
 yarl==1.5.0               # via -r requirements/test.txt, aiohttp
 zipp==3.1.0               # via -r requirements/test.txt, importlib-metadata

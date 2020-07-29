@@ -15,6 +15,7 @@ gitpython==3.1.7          # via -r requirements/base.txt
 idna-ssl==1.1.0           # via -r requirements/base.txt, aiohttp
 idna==2.10                # via -r requirements/base.txt, idna-ssl, yarl
 importlib-metadata==1.7.0  # via -r requirements/base.txt, pluggy, pytest
+iniconfig==1.0.0          # via -r requirements/base.txt, pytest
 more-itertools==8.4.0     # via -r requirements/base.txt, pytest
 multidict==4.7.6          # via -r requirements/base.txt, aiohttp, yarl
 packaging==20.4           # via -r requirements/base.txt, pytest
@@ -23,11 +24,11 @@ py==1.9.0                 # via -r requirements/base.txt, pytest
 pyparsing==2.4.7          # via -r requirements/base.txt, packaging
 pytest-aiohttp==0.3.0     # via -r requirements/base.txt
 pytest-cov==2.10.0        # via -r requirements/test.in
-pytest==5.4.3             # via -r requirements/base.txt, pytest-aiohttp, pytest-cov
+pytest==6.0.0             # via -r requirements/base.txt, pytest-aiohttp, pytest-cov
 pyyaml==5.3.1             # via -r requirements/base.txt
 six==1.15.0               # via -r requirements/base.txt, packaging
 smmap==3.0.4              # via -r requirements/base.txt, gitdb
+toml==0.10.1              # via -r requirements/base.txt, pytest
 typing-extensions==3.7.4.2  # via -r requirements/base.txt, aiohttp, yarl
-wcwidth==0.2.5            # via -r requirements/base.txt, pytest
 yarl==1.5.0               # via -r requirements/base.txt, aiohttp
 zipp==3.1.0               # via -r requirements/base.txt, importlib-metadata
