@@ -14,7 +14,15 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-[2.0.0] - 2020-07-21
+[2.0.1] - 2020-08-12
+~~~~~~~~~~~~~~~~~~~~
+
+Fixed
+_____
+
+* Fixed uploads to PyPI from Travis CI
+
+[2.0.0] - 2020-08-12
 ~~~~~~~~~~~~~~~~~~~~
 
 Removed
