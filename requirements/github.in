@@ -55,4 +55,4 @@
 
 # GitHub API bindings for the GitHub repository data fixtures
 # The PyPI release (0.5.0) chokes on parsing a repo's code of conduct
-git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py
+git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140

@@ -20,7 +20,7 @@ distlib==0.3.1            # via -r requirements/travis.txt, virtualenv
 edx-lint==1.5.0           # via -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
 gitdb==4.0.5              # via -r requirements/quality.txt, gitpython
-git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py  # via -r requirements/quality.txt
+git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/quality.txt
 gitpython==3.1.7          # via -r requirements/quality.txt
 idna-ssl==1.1.0           # via -r requirements/quality.txt, aiohttp
 idna==2.10                # via -r requirements/quality.txt, -r requirements/travis.txt, idna-ssl, requests, yarl

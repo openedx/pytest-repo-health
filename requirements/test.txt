@@ -10,7 +10,7 @@ attrs==19.3.0             # via -r requirements/base.txt, aiohttp, pytest
 chardet==3.0.4            # via -r requirements/base.txt, aiohttp
 coverage==5.2.1           # via pytest-cov
 gitdb==4.0.5              # via -r requirements/base.txt, gitpython
-git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py  # via -r requirements/base.txt
+git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/base.txt
 gitpython==3.1.7          # via -r requirements/base.txt
 idna-ssl==1.1.0           # via -r requirements/base.txt, aiohttp
 idna==2.10                # via -r requirements/base.txt, idna-ssl, yarl
