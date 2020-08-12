@@ -14,10 +14,19 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.0.0] - 2020-07-21
+~~~~~~~~~~~~~~~~~~~~
+
 Removed
 _______
 
-* Support for Python 3.5.  Versions 3.5.3 and above will likely still work for now, but they are no longer being tested; this lets us upgrade some dependencies and avoid confusion when aiohttp fails to install under 3.5.2 and below.  Python 3.5 reaches EOL in 1.5 months anyway.
+* Support for Python 3.5.  Versions 3.5.3 and above will likely still work for now, but they are no longer being tested; this lets us upgrade some dependencies and avoid confusion when aiohttp fails to install under 3.5.2 and below.  Python 3.5 reaches EOL in 1 month anyway.
+
+Fixed
+_____
+
+* Recent versions of github.py installed from source control are now supported (and recommended if you want to inspect a repository's code of conduct, as 0.5.0 has a bug that throws an exception when attempting this).
+* Checks can now be run on a ``.github`` repository (the regular expression used to parse out the organization and repository names didn't work with this before)
 
 [1.1.1] - 2020-07-21
 ~~~~~~~~~~~~~~~~~~~~

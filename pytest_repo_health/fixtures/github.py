@@ -5,10 +5,15 @@ import os
 import re
 
 import pytest
-from github import GitHub
+try:
+    # github.py > 0.5.0
+    from github import Client
+except ImportError:
+    # github.py 0.5.0
+    from github import GitHub as Client
 from github.errors import GitHubError
 
-URL_PATTERN = r"github.com[/:](?P<org_name>[^/]+)/(?P<repo_name>[^/\.]+)"
+URL_PATTERN = r"github.com[/:](?P<org_name>[^/]+)/(?P<repo_name>[^/]+).git"
 
 
 @pytest.fixture(scope="session")
@@ -22,7 +27,7 @@ def github_client():
     except KeyError:
         raise Exception("To use any of the GitHub fixtures, you must set the GITHUB_TOKEN environment variable "
                         "to contain a GitHub personal access token.")
-    return GitHub(token)
+    return Client(token)
 
 
 @pytest.fixture
