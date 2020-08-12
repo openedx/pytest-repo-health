@@ -58,7 +58,7 @@ smmap==3.0.4              # via -r requirements/quality.txt, gitdb
 snowballstemmer==2.0.0    # via -r requirements/quality.txt, pydocstyle
 toml==0.10.1              # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 tox-battery==0.6.1        # via -r requirements/travis.txt
-tox==3.18.1               # via -r requirements/travis.txt, tox-battery
+tox==3.19.0               # via -r requirements/travis.txt, tox-battery
 typed-ast==1.4.1          # via -r requirements/quality.txt, astroid
 typing-extensions==3.7.4.2  # via -r requirements/quality.txt, aiohttp, yarl
 urllib3==1.25.10          # via -r requirements/travis.txt, requests
