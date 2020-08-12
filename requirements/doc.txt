@@ -17,7 +17,7 @@ doc8==0.8.1               # via -r requirements/doc.in
 docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx
 edx-sphinx-theme==1.5.0   # via -r requirements/doc.in
 gitdb==4.0.5              # via -r requirements/test.txt, gitpython
-github.py==0.5.0          # via -r requirements/test.txt
+git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/test.txt
 gitpython==3.1.7          # via -r requirements/test.txt
 idna-ssl==1.1.0           # via -r requirements/test.txt, aiohttp
 idna==2.10                # via -r requirements/test.txt, idna-ssl, requests, yarl

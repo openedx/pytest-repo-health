@@ -1,7 +1,7 @@
 # Core requirements for using this application
 -c constraints.txt
+-r github.in
 
-github.py                 # GitHub API bindings for the GitHub repository data fixtures
 GitPython                 # Python wrapper for the git binary, for the git repository data fixtures
 pytest                    # Framework used to find and execute each "opynion"
 pytest-aiohttp            # Async test support, needed to use the github.py package for the GitHub API fixtures
