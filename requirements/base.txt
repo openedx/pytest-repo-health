@@ -6,7 +6,7 @@
 #
 aiohttp==3.6.2            # via github.py, pytest-aiohttp
 async-timeout==3.0.1      # via aiohttp
-attrs==19.3.0             # via aiohttp, pytest
+attrs==20.1.0             # via aiohttp, pytest
 chardet==3.0.4            # via aiohttp
 gitdb==4.0.5              # via gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/github.in
@@ -27,6 +27,6 @@ pyyaml==5.3.1             # via -r requirements/base.in
 six==1.15.0               # via packaging
 smmap==3.0.4              # via gitdb
 toml==0.10.1              # via pytest
-typing-extensions==3.7.4.2  # via aiohttp, yarl
+typing-extensions==3.7.4.3  # via aiohttp, yarl
 yarl==1.5.1               # via aiohttp
 zipp==3.1.0               # via importlib-metadata
