@@ -8,7 +8,7 @@ aiohttp==3.6.2            # via -r requirements/quality.txt, github.py, pytest-a
 appdirs==1.4.4            # via -r requirements/travis.txt, virtualenv
 astroid==2.3.3            # via -r requirements/quality.txt, pylint, pylint-celery
 async-timeout==3.0.1      # via -r requirements/quality.txt, aiohttp
-attrs==20.1.0             # via -r requirements/quality.txt, aiohttp, pytest
+attrs==20.2.0             # via -r requirements/quality.txt, aiohttp, pytest
 certifi==2020.6.20        # via -r requirements/travis.txt, requests
 chardet==3.0.4            # via -r requirements/quality.txt, -r requirements/travis.txt, aiohttp, requests
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
@@ -21,7 +21,7 @@ edx-lint==1.5.2           # via -r requirements/quality.txt
 filelock==3.0.12          # via -r requirements/travis.txt, tox, virtualenv
 gitdb==4.0.5              # via -r requirements/quality.txt, gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/quality.txt
-gitpython==3.1.7          # via -r requirements/quality.txt
+gitpython==3.1.8          # via -r requirements/quality.txt
 idna-ssl==1.1.0           # via -r requirements/quality.txt, aiohttp
 idna==2.10                # via -r requirements/quality.txt, -r requirements/travis.txt, idna-ssl, requests, yarl
 importlib-metadata==1.7.0  # via -r requirements/quality.txt, -r requirements/travis.txt, pluggy, pytest, tox, virtualenv
