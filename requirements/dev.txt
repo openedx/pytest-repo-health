@@ -14,7 +14,7 @@ chardet==3.0.4            # via -r requirements/quality.txt, -r requirements/tra
 click-log==0.3.2          # via -r requirements/quality.txt, edx-lint
 click==7.1.2              # via -r requirements/pip-tools.txt, -r requirements/quality.txt, click-log, edx-lint, pip-tools
 codecov==2.1.9            # via -r requirements/travis.txt
-coverage==5.2.1           # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
+coverage==5.3             # via -r requirements/quality.txt, -r requirements/travis.txt, codecov, pytest-cov
 diff-cover==4.0.0         # via -r requirements/dev.in
 distlib==0.3.1            # via -r requirements/travis.txt, virtualenv
 edx-lint==1.5.2           # via -r requirements/quality.txt
@@ -42,7 +42,7 @@ pluggy==0.13.1            # via -r requirements/quality.txt, -r requirements/tra
 py==1.9.0                 # via -r requirements/quality.txt, -r requirements/travis.txt, pytest, tox
 pycodestyle==2.6.0        # via -r requirements/quality.txt
 pydocstyle==5.1.1         # via -r requirements/quality.txt
-pygments==2.6.1           # via diff-cover
+pygments==2.7.0           # via diff-cover
 pylint-celery==0.3        # via -r requirements/quality.txt, edx-lint
 pylint-django==2.0.11     # via -r requirements/quality.txt, edx-lint
 pylint-plugin-utils==0.6  # via -r requirements/quality.txt, pylint-celery, pylint-django
@@ -50,7 +50,7 @@ pylint==2.4.4             # via -r requirements/quality.txt, edx-lint, pylint-ce
 pyparsing==2.4.7          # via -r requirements/quality.txt, -r requirements/travis.txt, packaging
 pytest-aiohttp==0.3.0     # via -r requirements/quality.txt
 pytest-cov==2.10.1        # via -r requirements/quality.txt
-pytest==6.0.1             # via -r requirements/quality.txt, pytest-aiohttp, pytest-cov
+pytest==6.0.2             # via -r requirements/quality.txt, pytest-aiohttp, pytest-cov
 pyyaml==5.3.1             # via -r requirements/quality.txt
 requests==2.24.0          # via -r requirements/travis.txt, codecov
 six==1.15.0               # via -r requirements/pip-tools.txt, -r requirements/quality.txt, -r requirements/travis.txt, astroid, edx-lint, packaging, pip-tools, tox, virtualenv
