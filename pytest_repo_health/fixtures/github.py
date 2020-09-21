@@ -40,14 +40,16 @@ async def github_repo(git_origin_url, github_client, loop):  # pylint: disable=r
     """
     if git_origin_url is None:
         # There isn't an origin for this repository or directory
-        return None
+        raise Exception("There isn't an origin for this repository or directory")
+
     match = re.search(URL_PATTERN, git_origin_url)
     if match is None:
         # The origin isn't hosted on GitHub (might be GitLab, Bitbucket, etc.)
-        return None
+        raise Exception("The origin isn't hosted on GitHub")
+
     org_name = match.group("org_name")
     repo_name = match.group("repo_name")
     try:
         return await github_client.fetch_repository(org_name, repo_name)
-    except GitHubError:
-        return None
+    except GitHubError as e:
+        raise Exception('GithubAPI throws an error, "{0}"'.format(e))
