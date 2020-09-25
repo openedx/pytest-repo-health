@@ -13,7 +13,7 @@ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3
 gitpython==3.1.8          # via -r requirements/base.in
 idna-ssl==1.1.0           # via aiohttp
 idna==2.10                # via idna-ssl, yarl
-importlib-metadata==1.7.0  # via pluggy, pytest
+importlib-metadata==1.7.0  # via -c requirements/constraints.txt, pluggy, pytest
 iniconfig==1.0.1          # via pytest
 more-itertools==8.5.0     # via pytest
 multidict==4.7.6          # via aiohttp, yarl
@@ -28,5 +28,5 @@ six==1.15.0               # via packaging
 smmap==3.0.4              # via gitdb
 toml==0.10.1              # via pytest
 typing-extensions==3.7.4.3  # via aiohttp, yarl
-yarl==1.5.1               # via aiohttp
-zipp==3.1.0               # via importlib-metadata
+yarl==1.6.0               # via aiohttp
+zipp==3.2.0               # via importlib-metadata
