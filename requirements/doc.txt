@@ -18,7 +18,7 @@ docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sp
 edx-sphinx-theme==1.5.0   # via -r requirements/doc.in
 gitdb==4.0.5              # via -r requirements/test.txt, gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/test.txt
-gitpython==3.1.8          # via -r requirements/test.txt
+gitpython==3.1.9          # via -r requirements/test.txt
 idna-ssl==1.1.0           # via -r requirements/test.txt, aiohttp
 idna==2.10                # via -r requirements/test.txt, idna-ssl, requests, yarl
 imagesize==1.2.0          # via sphinx
@@ -35,7 +35,7 @@ pygments==2.7.1           # via doc8, readme-renderer, sphinx
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-aiohttp==0.3.0     # via -r requirements/test.txt
 pytest-cov==2.10.1        # via -r requirements/test.txt
-pytest==6.1.0             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
+pytest==6.1.1             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
 pytz==2020.1              # via babel
 pyyaml==5.3.1             # via -r requirements/test.txt
 readme-renderer==26.0     # via -r requirements/doc.in
@@ -57,7 +57,7 @@ typing-extensions==3.7.4.3  # via -r requirements/test.txt, aiohttp, yarl
 urllib3==1.25.10          # via requests
 webencodings==0.5.1       # via bleach
 yarl==1.6.0               # via -r requirements/test.txt, aiohttp
-zipp==3.2.0               # via -r requirements/test.txt, importlib-metadata
+zipp==3.3.0               # via -r requirements/test.txt, importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
