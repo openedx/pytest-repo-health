@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.6.2            # via -r requirements/base.txt, github.py, pytest-aiohttp
+aiohttp==3.6.3            # via -r requirements/base.txt, github.py, pytest-aiohttp
 async-timeout==3.0.1      # via -r requirements/base.txt, aiohttp
 attrs==20.2.0             # via -r requirements/base.txt, aiohttp, pytest
 chardet==3.0.4            # via -r requirements/base.txt, aiohttp
@@ -29,5 +29,5 @@ six==1.15.0               # via -r requirements/base.txt, packaging
 smmap==3.0.4              # via -r requirements/base.txt, gitdb
 toml==0.10.1              # via -r requirements/base.txt, pytest
 typing-extensions==3.7.4.3  # via -r requirements/base.txt, aiohttp, yarl
-yarl==1.6.0               # via -r requirements/base.txt, aiohttp
+yarl==1.5.1               # via -r requirements/base.txt, aiohttp
 zipp==3.3.0               # via -r requirements/base.txt, importlib-metadata
