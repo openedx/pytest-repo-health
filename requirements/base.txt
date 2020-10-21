@@ -14,7 +14,7 @@ gitpython==3.1.9          # via -r requirements/base.in
 idna-ssl==1.1.0           # via aiohttp
 idna==2.10                # via idna-ssl, yarl
 importlib-metadata==2.0.0  # via pluggy, pytest
-iniconfig==1.0.1          # via pytest
+iniconfig==1.1.1          # via pytest
 multidict==4.7.6          # via aiohttp, yarl
 packaging==20.4           # via pytest
 pluggy==0.13.1            # via pytest
@@ -28,4 +28,4 @@ smmap==3.0.4              # via gitdb
 toml==0.10.1              # via pytest
 typing-extensions==3.7.4.3  # via aiohttp, yarl
 yarl==1.5.1               # via aiohttp
-zipp==3.3.0               # via importlib-metadata
+zipp==3.3.1               # via importlib-metadata
