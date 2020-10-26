@@ -29,10 +29,12 @@ import os
 import pytest
 
 def check_github_client(github_client):
-    assert github_client is not None
+    assert github_client.message is None
+    assert github_client.object is not None
 
 async def check_github_repo(github_repo):
-    assert github_repo.created_at
+    assert github_repo.object is not None
+    assert github_repo.object.created_at
 """
 
 
