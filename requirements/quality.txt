@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.6.3            # via -r requirements/test.txt, github.py, pytest-aiohttp
+aiohttp==3.7.2            # via -r requirements/test.txt, github.py, pytest-aiohttp
 astroid==2.3.3            # via pylint, pylint-celery
 async-timeout==3.0.1      # via -r requirements/test.txt, aiohttp
 attrs==20.2.0             # via -r requirements/test.txt, aiohttp, pytest
@@ -15,7 +15,7 @@ coverage==5.3             # via -r requirements/test.txt, pytest-cov
 edx-lint==1.5.2           # via -r requirements/quality.in
 gitdb==4.0.5              # via -r requirements/test.txt, gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/test.txt
-gitpython==3.1.9          # via -r requirements/test.txt
+gitpython==3.1.11         # via -r requirements/test.txt
 idna-ssl==1.1.0           # via -r requirements/test.txt, aiohttp
 idna==2.10                # via -r requirements/test.txt, idna-ssl, yarl
 importlib-metadata==2.0.0  # via -r requirements/test.txt, pluggy, pytest
@@ -23,7 +23,7 @@ iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via -r requirements/quality.in, pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
-multidict==4.7.6          # via -r requirements/test.txt, aiohttp, yarl
+multidict==5.0.0          # via -r requirements/test.txt, aiohttp, yarl
 packaging==20.4           # via -r requirements/test.txt, pytest
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 py==1.9.0                 # via -r requirements/test.txt, pytest
@@ -45,5 +45,5 @@ toml==0.10.1              # via -r requirements/test.txt, pytest
 typed-ast==1.4.1          # via astroid
 typing-extensions==3.7.4.3  # via -r requirements/test.txt, aiohttp, yarl
 wrapt==1.11.2             # via astroid
-yarl==1.5.1               # via -r requirements/test.txt, aiohttp
-zipp==3.3.1               # via -r requirements/test.txt, importlib-metadata
+yarl==1.6.2               # via -r requirements/test.txt, aiohttp
+zipp==3.4.0               # via -r requirements/test.txt, importlib-metadata
