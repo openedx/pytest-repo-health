@@ -33,3 +33,8 @@ def test_create_report(testdir):
     result = run_checks(testdir, test_collection=TEST_COLLECTION)
     result.assert_outcomes(passed=1)
     assert (testdir.tmpdir / 'repo_health.yaml').exists()
+
+def test_metadata(testdir):
+    result = run_checks(testdir, metadata_path='test_metadata.yaml', test_collection=TEST_COLLECTION)
+    result.assert_outcomes(passed=1)
+    assert (testdir.tmpdir / 'test_metadata.yaml').exists()

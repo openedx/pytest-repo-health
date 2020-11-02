@@ -5,11 +5,11 @@ from pathlib import Path
 
 PYTEST_INI = """
 [pytest]
-addopts = --repo-health --repo-health-path {checks_path} --repo-path {repo_path} --repo-health-metadata
+addopts = --repo-health --repo-health-path {checks_path} --repo-path {repo_path} --repo-health-metadata {metadata_path}
 """
 
 
-def run_checks(testdir, repo_path=None, **kwargs):
+def run_checks(testdir, repo_path=None, metadata_path=None, **kwargs):
     """
     Put the check file content for each provided kwarg key into check files under the
     specified test directory, and then run them.  Runs the checks against the root of
@@ -27,7 +27,10 @@ def run_checks(testdir, repo_path=None, **kwargs):
             f.write(content)
     if repo_path is None:
         repo_path = Path(__file__).parent / ".."
+    if metadata_path is None:
+        metadata_path = ""
     # Tell pytest where to find the checks and to run them on the real repository root
     testdir.makefile(".ini", pytest=PYTEST_INI.format(checks_path=str(checks_path),
-                                                      repo_path=str(repo_path)))
+                                                      repo_path=str(repo_path),
+                                                      metadata_path=metadata_path))
     return testdir.runpytest()
