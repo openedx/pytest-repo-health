@@ -93,7 +93,7 @@ def pytest_addoption(parser):
         dest='repo_health_metadata',
         nargs='?',
         default=False,
-        const="metadata.yaml"
+        const="metadata.yaml",
         help="if true, plugin will collect repo health metadata from each check"
     )
 
