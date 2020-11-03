@@ -14,6 +14,14 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.1.0] - 2020-11-03
+~~~~~~~~~~~~~~~~~~~~
+
+Added
+_____
+
+* Added ability to set filename for checks metadata file. You can now give a file path after --repo-health-metadata flag
+
 [2.0.1] - 2020-08-12
 ~~~~~~~~~~~~~~~~~~~~
 

@@ -86,7 +86,7 @@ Arguments added by plugin::
 
   --output-path <file path> : path to where to save resulting checks report
 
-  --repo-health-metadata: if the is present, plugin will collect metadata(docs) from checks and output them as a metadata.yaml file
+  --repo-health-metadata: if the is present, plugin will collect metadata(docs) from checks. You can give filename after flag(if no filename, it defaults to metadata.yaml)
 
 Plugin Enhancement path
 ------------------------
