@@ -90,9 +90,10 @@ def pytest_addoption(parser):
 
     group.addoption(
         "--repo-health-metadata",
-        action="store_true",
         dest='repo_health_metadata',
+        nargs='?',
         default=False,
+        const="metadata.yaml",
         help="if true, plugin will collect repo health metadata from each check"
     )
 
@@ -163,7 +164,7 @@ def pytest_collection_modifyitems(session, config, items):
                 # add doc string if function also has doc string
                 if item.function.__doc__ is not None:
                     checks_metadata[module_name][item.name]["doc_string"] = item.function.__doc__.strip()
-        with open("metadata.yaml", "w") as write_file:
+        with open(config.getoption("repo_health_metadata"), "w") as write_file:
             yaml.dump(checks_metadata, write_file, indent=4)
 
 
