@@ -23,11 +23,11 @@ py==1.9.0                 # via -r requirements/base.txt, pytest
 pyparsing==2.4.7          # via -r requirements/base.txt, packaging
 pytest-aiohttp==0.3.0     # via -r requirements/base.txt
 pytest-cov==2.10.1        # via -r requirements/test.in
-pytest==6.1.1             # via -r requirements/base.txt, pytest-aiohttp, pytest-cov
+pytest==6.1.2             # via -r requirements/base.txt, pytest-aiohttp, pytest-cov
 pyyaml==5.3.1             # via -r requirements/base.txt
 six==1.15.0               # via -r requirements/base.txt, packaging
 smmap==3.0.4              # via -r requirements/base.txt, gitdb
-toml==0.10.1              # via -r requirements/base.txt, pytest
+toml==0.10.2              # via -r requirements/base.txt, pytest
 typing-extensions==3.7.4.3  # via -r requirements/base.txt, aiohttp, yarl
 yarl==1.6.2               # via -r requirements/base.txt, aiohttp
 zipp==3.4.0               # via -r requirements/base.txt, importlib-metadata
