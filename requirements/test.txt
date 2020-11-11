@@ -6,7 +6,7 @@
 #
 aiohttp==3.7.2            # via -r requirements/base.txt, github.py, pytest-aiohttp
 async-timeout==3.0.1      # via -r requirements/base.txt, aiohttp
-attrs==20.2.0             # via -r requirements/base.txt, aiohttp, pytest
+attrs==20.3.0             # via -r requirements/base.txt, aiohttp, pytest
 chardet==3.0.4            # via -r requirements/base.txt, aiohttp
 coverage==5.3             # via pytest-cov
 gitdb==4.0.5              # via -r requirements/base.txt, gitpython
