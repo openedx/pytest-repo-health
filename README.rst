@@ -11,8 +11,8 @@ pytest-repo-health
     :target: https://pypi.org/project/pytest-repo-health
     :alt: Python versions
 
-.. image:: https://travis-ci.org/edx/pytest-repo-health.svg?branch=master
-    :target: https://travis-ci.org/edx/pytest-repo-health
+.. image:: https://travis-ci.com/edx/pytest-repo-health.svg?branch=master
+    :target: https://travis-ci.com/edx/pytest-repo-health
     :alt: See Build Status on Travis CI
 
 .. image:: https://ci.appveyor.com/api/projects/status/github/edx/pytest-repo-health?branch=master
