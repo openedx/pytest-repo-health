@@ -16,7 +16,7 @@ idna-ssl==1.1.0           # via -r requirements/base.txt, aiohttp
 idna==2.10                # via -r requirements/base.txt, idna-ssl, yarl
 importlib-metadata==2.0.0  # via -r requirements/base.txt, pluggy, pytest
 iniconfig==1.1.1          # via -r requirements/base.txt, pytest
-multidict==5.0.0          # via -r requirements/base.txt, aiohttp, yarl
+multidict==5.0.2          # via -r requirements/base.txt, aiohttp, yarl
 packaging==20.4           # via -r requirements/base.txt, pytest
 pluggy==0.13.1            # via -r requirements/base.txt, pytest
 py==1.9.0                 # via -r requirements/base.txt, pytest
@@ -29,5 +29,5 @@ six==1.15.0               # via -r requirements/base.txt, packaging
 smmap==3.0.4              # via -r requirements/base.txt, gitdb
 toml==0.10.2              # via -r requirements/base.txt, pytest
 typing-extensions==3.7.4.3  # via -r requirements/base.txt, aiohttp, yarl
-yarl==1.6.2               # via -r requirements/base.txt, aiohttp
+yarl==1.6.3               # via -r requirements/base.txt, aiohttp
 zipp==3.4.0               # via -r requirements/base.txt, importlib-metadata

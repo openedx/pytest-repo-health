@@ -8,7 +8,7 @@ aiohttp==3.7.2            # via -r requirements/test.txt, github.py, pytest-aioh
 alabaster==0.7.12         # via sphinx
 async-timeout==3.0.1      # via -r requirements/test.txt, aiohttp
 attrs==20.3.0             # via -r requirements/test.txt, aiohttp, pytest
-babel==2.8.0              # via sphinx
+babel==2.9.0              # via sphinx
 bleach==3.2.1             # via readme-renderer
 certifi==2020.11.8        # via requests
 chardet==3.0.4            # via -r requirements/test.txt, aiohttp, doc8, requests
@@ -26,7 +26,7 @@ importlib-metadata==2.0.0  # via -r requirements/test.txt, pluggy, pytest, steve
 iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
-multidict==5.0.0          # via -r requirements/test.txt, aiohttp, yarl
+multidict==5.0.2          # via -r requirements/test.txt, aiohttp, yarl
 packaging==20.4           # via -r requirements/test.txt, bleach, pytest, sphinx
 pbr==5.5.1                # via stevedore
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
@@ -39,12 +39,12 @@ pytest==6.1.2             # via -r requirements/test.txt, pytest-aiohttp, pytest
 pytz==2020.4              # via babel
 pyyaml==5.3.1             # via -r requirements/test.txt
 readme-renderer==28.0     # via -r requirements/doc.in
-requests==2.24.0          # via sphinx
+requests==2.25.0          # via sphinx
 restructuredtext-lint==1.3.1  # via doc8
 six==1.15.0               # via -r requirements/test.txt, bleach, doc8, edx-sphinx-theme, packaging, readme-renderer
 smmap==3.0.4              # via -r requirements/test.txt, gitdb
 snowballstemmer==2.0.0    # via sphinx
-sphinx==3.3.0             # via -r requirements/doc.in, edx-sphinx-theme
+sphinx==3.3.1             # via -r requirements/doc.in, edx-sphinx-theme
 sphinxcontrib-applehelp==1.0.2  # via sphinx
 sphinxcontrib-devhelp==1.0.2  # via sphinx
 sphinxcontrib-htmlhelp==1.0.3  # via sphinx
@@ -54,9 +54,9 @@ sphinxcontrib-serializinghtml==1.1.4  # via sphinx
 stevedore==3.2.2          # via doc8
 toml==0.10.2              # via -r requirements/test.txt, pytest
 typing-extensions==3.7.4.3  # via -r requirements/test.txt, aiohttp, yarl
-urllib3==1.25.11          # via requests
+urllib3==1.26.2           # via requests
 webencodings==0.5.1       # via bleach
-yarl==1.6.2               # via -r requirements/test.txt, aiohttp
+yarl==1.6.3               # via -r requirements/test.txt, aiohttp
 zipp==3.4.0               # via -r requirements/test.txt, importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
