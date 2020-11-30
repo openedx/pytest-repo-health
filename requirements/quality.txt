@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.7.2            # via -r requirements/test.txt, github.py, pytest-aiohttp
+aiohttp==3.7.3            # via -r requirements/test.txt, github.py, pytest-aiohttp
 astroid==2.3.3            # via pylint, pylint-celery
 async-timeout==3.0.1      # via -r requirements/test.txt, aiohttp
 attrs==20.3.0             # via -r requirements/test.txt, aiohttp, pytest
@@ -18,13 +18,13 @@ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3
 gitpython==3.1.11         # via -r requirements/test.txt
 idna-ssl==1.1.0           # via -r requirements/test.txt, aiohttp
 idna==2.10                # via -r requirements/test.txt, idna-ssl, yarl
-importlib-metadata==2.0.0  # via -r requirements/test.txt, pluggy, pytest
+importlib-metadata==2.1.0  # via -c requirements/constraints.txt, -r requirements/test.txt, pluggy, pytest
 iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via -r requirements/quality.in, pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
 multidict==5.0.2          # via -r requirements/test.txt, aiohttp, yarl
-packaging==20.4           # via -r requirements/test.txt, pytest
+packaging==20.7           # via -r requirements/test.txt, pytest
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 py==1.9.0                 # via -r requirements/test.txt, pytest
 pycodestyle==2.6.0        # via -r requirements/quality.in
@@ -38,7 +38,7 @@ pytest-aiohttp==0.3.0     # via -r requirements/test.txt
 pytest-cov==2.10.1        # via -r requirements/test.txt
 pytest==6.1.2             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
 pyyaml==5.3.1             # via -r requirements/test.txt
-six==1.15.0               # via -r requirements/test.txt, astroid, edx-lint, packaging
+six==1.15.0               # via astroid, edx-lint
 smmap==3.0.4              # via -r requirements/test.txt, gitdb
 snowballstemmer==2.0.0    # via pydocstyle
 toml==0.10.2              # via -r requirements/test.txt, pytest
