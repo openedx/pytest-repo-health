@@ -3,6 +3,6 @@
 
 -r pip-tools.txt          # pip-tools and its dependencies, for managing requirements files
 -r quality.txt            # Core and quality check dependencies
--r travis.txt             # tox and associated dependencies
+-r ci.txt             # tox and associated dependencies
 
 diff-cover                # Changeset diff test coverage

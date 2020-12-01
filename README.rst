@@ -11,9 +11,9 @@ pytest-repo-health
     :target: https://pypi.org/project/pytest-repo-health
     :alt: Python versions
 
-.. image:: https://travis-ci.org/edx/pytest-repo-health.svg?branch=master
-    :target: https://travis-ci.org/edx/pytest-repo-health
-    :alt: See Build Status on Travis CI
+.. image:: https://github.com/edx/pytest-repo-health/workflows/PythonCI/badge.svg?branch=master
+    :target: https://github.com/edx/pytest-repo-health/actions?query=workflow%3A%22Python+CI%22
+    :alt: See Build Status on GitHub CI
 
 .. image:: https://ci.appveyor.com/api/projects/status/github/edx/pytest-repo-health?branch=master
     :target: https://ci.appveyor.com/project/edx/pytest-repo-health/branch/master
@@ -43,7 +43,7 @@ Usage
 -----
 Once installed, following command is used to run checks::
 
-    $ pytest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests> 
+    $ pytest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests>
 
 
 If you run into problems, these pytest flags might help::
@@ -54,7 +54,7 @@ If you run into problems, these pytest flags might help::
 
 At edX, the following command works for most of our repos::
 
-    $ pytest -c <() --noconftest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests> 
+    $ pytest -c <() --noconftest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests>
 
 Adding Custom Checks
 --------------------
