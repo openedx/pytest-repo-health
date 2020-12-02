@@ -51,7 +51,7 @@ sphinxcontrib-htmlhelp==1.0.3  # via sphinx
 sphinxcontrib-jsmath==1.0.1  # via sphinx
 sphinxcontrib-qthelp==1.0.3  # via sphinx
 sphinxcontrib-serializinghtml==1.1.4  # via sphinx
-stevedore==3.2.2          # via doc8
+stevedore==3.3.0          # via doc8
 toml==0.10.2              # via -r requirements/test.txt, pytest
 typing-extensions==3.7.4.3  # via -r requirements/test.txt, aiohttp, yarl
 urllib3==1.26.2           # via requests
