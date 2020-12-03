@@ -22,7 +22,7 @@ gitpython==3.1.11         # via -r requirements/test.txt
 idna-ssl==1.1.0           # via -r requirements/test.txt, aiohttp
 idna==2.10                # via -r requirements/test.txt, idna-ssl, requests, yarl
 imagesize==1.2.0          # via sphinx
-importlib-metadata==2.1.0  # via -c requirements/constraints.txt, -r requirements/test.txt, pluggy, pytest, stevedore
+importlib-metadata==2.1.1  # via -c requirements/constraints.txt, -r requirements/test.txt, pluggy, pytest, stevedore
 iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
