@@ -34,7 +34,7 @@ jinja2==2.11.2            # via diff-cover, jinja2-pluralize
 lazy-object-proxy==1.4.3  # via -r requirements/quality.txt, astroid
 markupsafe==1.1.1         # via jinja2
 mccabe==0.6.1             # via -r requirements/quality.txt, pylint
-multidict==5.0.2          # via -r requirements/quality.txt, aiohttp, yarl
+multidict==5.1.0          # via -r requirements/quality.txt, aiohttp, yarl
 packaging==20.7           # via -r requirements/ci.txt, -r requirements/quality.txt, pytest, tox
 pip-tools==5.4.0          # via -r requirements/pip-tools.txt
 pluggy==0.13.1            # via -r requirements/ci.txt, -r requirements/quality.txt, diff-cover, pytest, tox
