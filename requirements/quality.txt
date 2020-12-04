@@ -23,7 +23,7 @@ iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 isort==4.3.21             # via -r requirements/quality.in, pylint
 lazy-object-proxy==1.4.3  # via astroid
 mccabe==0.6.1             # via pylint
-multidict==5.0.2          # via -r requirements/test.txt, aiohttp, yarl
+multidict==5.1.0          # via -r requirements/test.txt, aiohttp, yarl
 packaging==20.7           # via -r requirements/test.txt, pytest
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
 py==1.9.0                 # via -r requirements/test.txt, pytest
