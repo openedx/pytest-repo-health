@@ -11,9 +11,9 @@ pytest-repo-health
     :target: https://pypi.org/project/pytest-repo-health
     :alt: Python versions
 
-.. image:: https://github.com/edx/pytest-repo-health/workflows/PythonCI/badge.svg?branch=master
+.. image:: https://github.com/edx/pytest-repo-health/workflows/Python%20CI/badge.svg?branch=master
     :target: https://github.com/edx/pytest-repo-health/actions?query=workflow%3A%22Python+CI%22
-    :alt: See Build Status on GitHub CI
+    :alt: CI
 
 .. image:: https://ci.appveyor.com/api/projects/status/github/edx/pytest-repo-health?branch=master
     :target: https://ci.appveyor.com/project/edx/pytest-repo-health/branch/master
