@@ -10,12 +10,12 @@ async-timeout==3.0.1      # via -r requirements/test.txt, aiohttp
 attrs==20.3.0             # via -r requirements/test.txt, aiohttp, pytest
 babel==2.9.0              # via sphinx
 bleach==3.2.1             # via readme-renderer
-certifi==2020.11.8        # via requests
-chardet==3.0.4            # via -r requirements/test.txt, aiohttp, doc8, requests
-coverage==5.3             # via -r requirements/test.txt, pytest-cov
+certifi==2020.12.5        # via requests
+chardet==3.0.4            # via -c requirements/constraints.txt, -r requirements/test.txt, aiohttp, doc8, requests
+coverage==5.3.1           # via -r requirements/test.txt, pytest-cov
 doc8==0.8.1               # via -r requirements/doc.in
 docutils==0.16            # via doc8, readme-renderer, restructuredtext-lint, sphinx
-edx-sphinx-theme==1.5.0   # via -r requirements/doc.in
+edx-sphinx-theme==1.6.0   # via -r requirements/doc.in
 gitdb==4.0.5              # via -r requirements/test.txt, gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/test.txt
 gitpython==3.1.11         # via -r requirements/test.txt
@@ -27,24 +27,24 @@ iniconfig==1.1.1          # via -r requirements/test.txt, pytest
 jinja2==2.11.2            # via sphinx
 markupsafe==1.1.1         # via jinja2
 multidict==5.1.0          # via -r requirements/test.txt, aiohttp, yarl
-packaging==20.7           # via -r requirements/test.txt, bleach, pytest, sphinx
+packaging==20.8           # via -r requirements/test.txt, bleach, pytest, sphinx
 pbr==5.5.1                # via stevedore
 pluggy==0.13.1            # via -r requirements/test.txt, pytest
-py==1.9.0                 # via -r requirements/test.txt, pytest
-pygments==2.7.2           # via doc8, readme-renderer, sphinx
+py==1.10.0                # via -r requirements/test.txt, pytest
+pygments==2.7.3           # via doc8, readme-renderer, sphinx
 pyparsing==2.4.7          # via -r requirements/test.txt, packaging
 pytest-aiohttp==0.3.0     # via -r requirements/test.txt
 pytest-cov==2.10.1        # via -r requirements/test.txt
-pytest==6.1.2             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
+pytest==6.2.1             # via -r requirements/test.txt, pytest-aiohttp, pytest-cov
 pytz==2020.4              # via babel
 pyyaml==5.3.1             # via -r requirements/test.txt
 readme-renderer==28.0     # via -r requirements/doc.in
-requests==2.25.0          # via sphinx
+requests==2.25.1          # via sphinx
 restructuredtext-lint==1.3.2  # via doc8
 six==1.15.0               # via bleach, doc8, edx-sphinx-theme, readme-renderer
 smmap==3.0.4              # via -r requirements/test.txt, gitdb
 snowballstemmer==2.0.0    # via sphinx
-sphinx==3.3.1             # via -r requirements/doc.in, edx-sphinx-theme
+sphinx==3.4.0             # via -r requirements/doc.in, edx-sphinx-theme
 sphinxcontrib-applehelp==1.0.2  # via sphinx
 sphinxcontrib-devhelp==1.0.2  # via sphinx
 sphinxcontrib-htmlhelp==1.0.3  # via sphinx
