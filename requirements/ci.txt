@@ -11,7 +11,7 @@ codecov==2.1.11           # via -r requirements/ci.in
 coverage==5.3.1           # via codecov
 distlib==0.3.1            # via virtualenv
 filelock==3.0.12          # via tox, virtualenv
-idna==2.10                # via requests
+idna==2.10                # via -c requirements/constraints.txt, requests
 importlib-metadata==2.1.1  # via -c requirements/constraints.txt, pluggy, tox, virtualenv
 importlib-resources==4.1.1  # via virtualenv
 packaging==20.8           # via tox
