@@ -22,7 +22,7 @@ def run_checks(testdir, repo_path=None, metadata_path=None, **kwargs):
     checks_path = Path(str(testdir.tmpdir)) / "repo_health"
     # The testdir convenience methods for file creation only work in the base directory
     for path, content in kwargs.items():
-        file_path = checks_path / "check_{}.py".format(path)
+        file_path = checks_path / f"check_{path}.py"
         with open(str(file_path), "w") as f:
             f.write(content)
     if repo_path is None:
