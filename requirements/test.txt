@@ -4,29 +4,105 @@
 #
 #    make upgrade
 #
-aiohttp==3.7.3            # via -r requirements/base.txt, github.py, pytest-aiohttp
-async-timeout==3.0.1      # via -r requirements/base.txt, aiohttp
-attrs==20.3.0             # via -r requirements/base.txt, aiohttp, pytest
-chardet==3.0.4            # via -c requirements/constraints.txt, -r requirements/base.txt, aiohttp
-coverage==5.3.1           # via pytest-cov
-gitdb==4.0.5              # via -r requirements/base.txt, gitpython
-git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140  # via -r requirements/base.txt
-gitpython==3.1.12         # via -r requirements/base.txt
-idna-ssl==1.1.0           # via -r requirements/base.txt, aiohttp
-idna==2.10                # via -c requirements/constraints.txt, -r requirements/base.txt, idna-ssl, yarl
-importlib-metadata==2.1.1  # via -c requirements/constraints.txt, -r requirements/base.txt, pluggy, pytest
-iniconfig==1.1.1          # via -r requirements/base.txt, pytest
-multidict==5.1.0          # via -r requirements/base.txt, aiohttp, yarl
-packaging==20.8           # via -r requirements/base.txt, pytest
-pluggy==0.13.1            # via -r requirements/base.txt, pytest
-py==1.10.0                # via -r requirements/base.txt, pytest
-pyparsing==2.4.7          # via -r requirements/base.txt, packaging
-pytest-aiohttp==0.3.0     # via -r requirements/base.txt
-pytest-cov==2.10.1        # via -r requirements/test.in
-pytest==6.2.1             # via -r requirements/base.txt, pytest-aiohttp, pytest-cov
-pyyaml==5.3.1             # via -r requirements/base.txt
-smmap==3.0.4              # via -r requirements/base.txt, gitdb
-toml==0.10.2              # via -r requirements/base.txt, pytest
-typing-extensions==3.7.4.3  # via -r requirements/base.txt, aiohttp, yarl
-yarl==1.6.3               # via -r requirements/base.txt, aiohttp
-zipp==3.4.0               # via -r requirements/base.txt, importlib-metadata
+aiohttp==3.7.3
+    # via
+    #   -r requirements/base.txt
+    #   github.py
+    #   pytest-aiohttp
+async-timeout==3.0.1
+    # via
+    #   -r requirements/base.txt
+    #   aiohttp
+attrs==20.3.0
+    # via
+    #   -r requirements/base.txt
+    #   aiohttp
+    #   pytest
+chardet==3.0.4
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.txt
+    #   aiohttp
+coverage==5.3.1
+    # via pytest-cov
+gitdb==4.0.5
+    # via
+    #   -r requirements/base.txt
+    #   gitpython
+git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140
+    # via -r requirements/base.txt
+gitpython==3.1.12
+    # via -r requirements/base.txt
+idna-ssl==1.1.0
+    # via
+    #   -r requirements/base.txt
+    #   aiohttp
+idna==2.10
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.txt
+    #   idna-ssl
+    #   yarl
+importlib-metadata==2.1.1
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/base.txt
+    #   pluggy
+    #   pytest
+iniconfig==1.1.1
+    # via
+    #   -r requirements/base.txt
+    #   pytest
+multidict==5.1.0
+    # via
+    #   -r requirements/base.txt
+    #   aiohttp
+    #   yarl
+packaging==20.8
+    # via
+    #   -r requirements/base.txt
+    #   pytest
+pluggy==0.13.1
+    # via
+    #   -r requirements/base.txt
+    #   pytest
+py==1.10.0
+    # via
+    #   -r requirements/base.txt
+    #   pytest
+pyparsing==2.4.7
+    # via
+    #   -r requirements/base.txt
+    #   packaging
+pytest-aiohttp==0.3.0
+    # via -r requirements/base.txt
+pytest-cov==2.10.1
+    # via -r requirements/test.in
+pytest==6.2.1
+    # via
+    #   -r requirements/base.txt
+    #   pytest-aiohttp
+    #   pytest-cov
+pyyaml==5.3.1
+    # via -r requirements/base.txt
+smmap==3.0.4
+    # via
+    #   -r requirements/base.txt
+    #   gitdb
+toml==0.10.2
+    # via
+    #   -r requirements/base.txt
+    #   pytest
+typing-extensions==3.7.4.3
+    # via
+    #   -r requirements/base.txt
+    #   aiohttp
+    #   yarl
+yarl==1.6.3
+    # via
+    #   -r requirements/base.txt
+    #   aiohttp
+zipp==3.4.0
+    # via
+    #   -r requirements/base.txt
+    #   importlib-metadata
