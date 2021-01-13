@@ -68,6 +68,6 @@ async def github_repo(git_origin_url, github_client, loop):  # pylint: disable=r
     try:
         return GitHubClient(await github_client.object.fetch_repository(org_name, repo_name), None)
     except GitHubError as e:
-        error_message = 'An error occurred while fetching the repository. GitHub API threw an error, "{0}"'.format(e)
+        error_message = f'An error occurred while fetching the repository. GitHub API threw an error, "{e}"'
         logger.error(error_message, exc_info=e)
         return GitHubClient(None, error_message)
