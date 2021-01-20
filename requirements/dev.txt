@@ -78,13 +78,31 @@ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3
     # via -r requirements/quality.txt
 gitpython==3.1.12
     # via -r requirements/quality.txt
+idna-ssl==1.1.0
+    # via
+    #   -r requirements/quality.txt
+    #   aiohttp
 idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
+    #   idna-ssl
     #   requests
     #   yarl
+importlib-metadata==2.1.1
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/ci.txt
+    #   -r requirements/quality.txt
+    #   pluggy
+    #   pytest
+    #   tox
+    #   virtualenv
+importlib-resources==5.1.0
+    # via
+    #   -r requirements/ci.txt
+    #   virtualenv
 inflect==5.0.2
     # via jinja2-pluralize
 iniconfig==1.1.1
@@ -141,7 +159,7 @@ pycodestyle==2.6.0
     # via -r requirements/quality.txt
 pydocstyle==5.1.1
     # via -r requirements/quality.txt
-pygments==2.7.3
+pygments==2.7.4
     # via diff-cover
 pylint-celery==0.3
     # via
@@ -170,14 +188,14 @@ pyparsing==2.4.7
     #   packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/quality.txt
-pytest-cov==2.10.1
+pytest-cov==2.11.0
     # via -r requirements/quality.txt
 pytest==6.2.1
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
     #   pytest-cov
-pyyaml==5.3.1
+pyyaml==5.4
     # via -r requirements/quality.txt
 requests==2.25.1
     # via
@@ -208,19 +226,24 @@ toml==0.10.2
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-tox==3.21.0
+tox==3.21.2
     # via
     #   -r requirements/ci.txt
     #   tox-battery
+typed-ast==1.4.2
+    # via
+    #   -r requirements/quality.txt
+    #   astroid
 typing-extensions==3.7.4.3
     # via
     #   -r requirements/quality.txt
     #   aiohttp
+    #   yarl
 urllib3==1.26.2
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.3.0
+virtualenv==20.4.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -232,6 +255,12 @@ yarl==1.6.3
     # via
     #   -r requirements/quality.txt
     #   aiohttp
+zipp==3.4.0
+    # via
+    #   -r requirements/ci.txt
+    #   -r requirements/quality.txt
+    #   importlib-metadata
+    #   importlib-resources
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip

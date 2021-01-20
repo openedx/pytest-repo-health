@@ -47,11 +47,22 @@ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3
     # via -r requirements/test.txt
 gitpython==3.1.12
     # via -r requirements/test.txt
+idna-ssl==1.1.0
+    # via
+    #   -r requirements/test.txt
+    #   aiohttp
 idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
+    #   idna-ssl
     #   yarl
+importlib-metadata==2.1.1
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/test.txt
+    #   pluggy
+    #   pytest
 iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
@@ -105,14 +116,14 @@ pyparsing==2.4.7
     #   packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/test.txt
-pytest-cov==2.10.1
+pytest-cov==2.11.0
     # via -r requirements/test.txt
 pytest==6.2.1
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
     #   pytest-cov
-pyyaml==5.3.1
+pyyaml==5.4
     # via -r requirements/test.txt
 six==1.15.0
     # via
@@ -129,13 +140,20 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
+typed-ast==1.4.2
+    # via astroid
 typing-extensions==3.7.4.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
+    #   yarl
 wrapt==1.12.1
     # via astroid
 yarl==1.6.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
+zipp==3.4.0
+    # via
+    #   -r requirements/test.txt
+    #   importlib-metadata

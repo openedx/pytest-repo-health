@@ -45,7 +45,7 @@ docutils==0.16
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-edx-sphinx-theme==1.6.0
+edx-sphinx-theme==1.6.1
     # via -r requirements/doc.in
 gitdb==4.0.5
     # via
@@ -55,14 +55,26 @@ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3
     # via -r requirements/test.txt
 gitpython==3.1.12
     # via -r requirements/test.txt
+idna-ssl==1.1.0
+    # via
+    #   -r requirements/test.txt
+    #   aiohttp
 idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
+    #   idna-ssl
     #   requests
     #   yarl
 imagesize==1.2.0
     # via sphinx
+importlib-metadata==2.1.1
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/test.txt
+    #   pluggy
+    #   pytest
+    #   stevedore
 iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
@@ -92,7 +104,7 @@ py==1.10.0
     # via
     #   -r requirements/test.txt
     #   pytest
-pygments==2.7.3
+pygments==2.7.4
     # via
     #   doc8
     #   readme-renderer
@@ -103,7 +115,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/test.txt
-pytest-cov==2.10.1
+pytest-cov==2.11.0
     # via -r requirements/test.txt
 pytest==6.2.1
     # via
@@ -112,7 +124,7 @@ pytest==6.2.1
     #   pytest-cov
 pytz==2020.5
     # via babel
-pyyaml==5.3.1
+pyyaml==5.4
     # via -r requirements/test.txt
 readme-renderer==28.0
     # via -r requirements/doc.in
@@ -158,6 +170,7 @@ typing-extensions==3.7.4.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
+    #   yarl
 urllib3==1.26.2
     # via requests
 webencodings==0.5.1
@@ -166,6 +179,10 @@ yarl==1.6.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
+zipp==3.4.0
+    # via
+    #   -r requirements/test.txt
+    #   importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
