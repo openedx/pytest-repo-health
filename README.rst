@@ -21,12 +21,15 @@ pytest-repo-health
 
 ----
 
-pytest-repo-health inspects a code repository and outputs a report with info on whether the repository
+pytest-repo-health adapts pytest to run repo health checks as described in
+`edx-repo-health`_.  Similar to how pytest runs a number of test functions,
+pytest-repo-health runs a number of repo check functions.
+
+It inspects a code repository and outputs a report with info on whether the repository
 follows standards as defined by checks.  It's
 a good complement for a `cookiecutter`_; the cookiecutter provides a good
 template for starting a repository with current best practices, and pytest-repo-health
 helps it keep up with those practices as they evolve over time.
-
 
 This `pytest`_ plugin was generated with `Cookiecutter`_ along
 with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
@@ -41,23 +44,27 @@ in a Python 3.5+ virtualenv.
 
 Usage
 -----
-Once installed, following command is used to run checks::
 
-    $ pytest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests>
+Once installed, use this command to run checks::
 
+    $ pytest -c <() --noconftest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to repo to check>
 
-If you run into problems, these pytest flags might help::
+The -c and --noconftest options are needed to stop pytest from incorrectly reading configuration files in the repo you are checking.
 
     -c file: load configuration from `file` instead of trying to locate one of the
                         implicit configuration files. Helpful if invocation dir defines "add-opts" in one of its files.
     --noconftest: Don't load any conftest.py files. Helpful in case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
 
-At edX, the following command works for most of our repos::
+Other pytest options can be used.  For example, `-k` is helpful for running a subset of checks.
 
-    $ pytest -c <() --noconftest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to dir on which to run tests>
+The "all_results" dictionary will be written as YAML to repo_health.yaml.
+
 
 Adding Custom Checks
 --------------------
+
+Any repo can host repo checks. They must be in a directory named "repo_health".
+
 If you would like to add custom checks for your own repo, create a dir named "repo_health" and place
 modules with checks inside of it.
 
@@ -68,7 +75,7 @@ Checks naming convention:
 
 Checks Discovery
 ----------------
-Pytest will look for checks in directories located in these places:
+Pytest will look for checks in these directories, though it will only successfully run checks in the first place it finds them:
 - Dir of pytest invocation(so current dir)
 - Dir where pytest-repo-health is installed
 - Dir specified by --repo-health-path flag in pytest invocation
@@ -86,16 +93,18 @@ Arguments added by plugin::
 
   --output-path <file path> : path to where to save resulting checks report
 
-  --repo-health-metadata: if the is present, plugin will collect metadata(docs) from checks. You can give filename after flag(if no filename, it defaults to metadata.yaml)
+  --repo-health-metadata: if this is present, plugin will collect metadata(docs) from checks. You can give filename after flag(if no filename, it defaults to metadata.yaml)
 
-Plugin Enhancement path
-------------------------
+Future improvements
+-------------------
+
 - Currently, the checks do not throw any kind of warning or error if check does not pass.
-- Documenting standard reqs/checks in each check better
-- create tests for this plugin(currently, you can run these checks on this repo, but no automated method for it)
+- Documenting standard reqs/checks in each check better.
+- Create tests for this plugin(currently, you can run these checks on this repo, but no automated method for it)
 
 Contributing
 ------------
+
 Contributions are very welcome. Tests can be run with `tox`_, please ensure
 the coverage at least stays the same before you submit a pull request.
 
