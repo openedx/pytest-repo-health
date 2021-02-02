@@ -14,7 +14,7 @@ chardet==3.0.4
     #   requests
 codecov==2.1.11
     # via -r requirements/ci.in
-coverage==5.3.1
+coverage==5.4
     # via codecov
 distlib==0.3.1
     # via virtualenv
@@ -34,7 +34,7 @@ importlib-metadata==2.1.1
     #   virtualenv
 importlib-resources==5.1.0
     # via virtualenv
-packaging==20.8
+packaging==20.9
     # via tox
 pluggy==0.13.1
     # via tox
@@ -52,13 +52,13 @@ toml==0.10.2
     # via tox
 tox-battery==0.6.1
     # via -r requirements/ci.in
-tox==3.21.2
+tox==3.21.3
     # via
     #   -r requirements/ci.in
     #   tox-battery
-urllib3==1.26.2
+urllib3==1.26.3
     # via requests
-virtualenv==20.4.0
+virtualenv==20.4.2
     # via tox
 zipp==3.4.0
     # via
