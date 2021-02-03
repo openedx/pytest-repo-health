@@ -46,7 +46,7 @@ django==3.1.6
     # via
     #   code-annotations
     #   edx-lint
-edx-lint==3.0.2
+edx-lint==4.0.0
     # via -r requirements/quality.in
 gitdb==4.0.5
     # via
