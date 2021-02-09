@@ -53,8 +53,9 @@ def add_key_to_metadata(output_key):
 
     def health_metadata_decorator(func):
         """Add metadata to function documenting the output keys it generates."""
+        final_output_key = tuple([output_key]) if isinstance(output_key, str) else output_key
         func.__dict__['pytest_repo_health'] = {
-            'output_keys': {output_key:func.__doc__.strip()}
+            'output_keys': {final_output_key:func.__doc__.strip()}
         }
         return func
     return health_metadata_decorator
