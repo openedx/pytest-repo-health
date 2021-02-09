@@ -3,12 +3,12 @@ Plugin configures pytest to run repo health checks on a code repository.
 Plugin takes care of gathering checks, running checks,
 and outputting report based on data gathered during checks.
 """
-
+from typing import Union
 
 __version__ = "2.1.0"
 
 
-def health_metadata(parent_path, output_keys):
+def health_metadata(parent_path: list, output_keys: dict):
     """
     Make a decorator that attaches metadata to the target function.
 
@@ -39,7 +39,7 @@ def health_metadata(parent_path, output_keys):
     return health_metadata_decorator
 
 
-def add_key_to_metadata(output_key):
+def add_key_to_metadata(output_key: Union[str, tuple]):
     """
     Designed for checks which only define one key
 
