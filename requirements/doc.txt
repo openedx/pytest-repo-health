@@ -55,26 +55,14 @@ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3
     # via -r requirements/test.txt
 gitpython==3.1.13
     # via -r requirements/test.txt
-idna-ssl==1.1.0
-    # via
-    #   -r requirements/test.txt
-    #   aiohttp
 idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
-    #   idna-ssl
     #   requests
     #   yarl
 imagesize==1.2.0
     # via sphinx
-importlib-metadata==2.1.1
-    # via
-    #   -c requirements/constraints.txt
-    #   -r requirements/test.txt
-    #   pluggy
-    #   pytest
-    #   stevedore
 iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
@@ -170,7 +158,6 @@ typing-extensions==3.7.4.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
-    #   yarl
 urllib3==1.26.3
     # via requests
 webencodings==0.5.1
@@ -179,10 +166,6 @@ yarl==1.6.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.4.0
-    # via
-    #   -r requirements/test.txt
-    #   importlib-metadata
 
 # The following packages are considered to be unsafe in a requirements file:
 # setuptools
