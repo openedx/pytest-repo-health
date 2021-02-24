@@ -11,7 +11,7 @@ aiohttp==3.7.3
     #   pytest-aiohttp
 asgiref==3.3.1
     # via django
-astroid==2.4.2
+astroid==2.5
     # via
     #   pylint
     #   pylint-celery
@@ -42,7 +42,7 @@ coverage==5.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-django==3.1.6
+django==3.1.7
     # via
     #   code-annotations
     #   edx-lint
@@ -83,7 +83,7 @@ isort==5.7.0
     #   pylint
 jinja2==2.11.3
     # via code-annotations
-lazy-object-proxy==1.4.3
+lazy-object-proxy==1.5.2
     # via astroid
 markupsafe==1.1.1
     # via jinja2
@@ -120,7 +120,7 @@ pylint-plugin-utils==0.6
     # via
     #   pylint-celery
     #   pylint-django
-pylint==2.6.2
+pylint==2.7.1
     # via
     #   edx-lint
     #   pylint-celery
@@ -148,9 +148,7 @@ pyyaml==5.4.1
     #   -r requirements/test.txt
     #   code-annotations
 six==1.15.0
-    # via
-    #   astroid
-    #   edx-lint
+    # via edx-lint
 smmap==3.0.5
     # via
     #   -r requirements/test.txt

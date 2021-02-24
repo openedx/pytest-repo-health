@@ -17,7 +17,7 @@ asgiref==3.3.1
     # via
     #   -r requirements/quality.txt
     #   django
-astroid==2.4.2
+astroid==2.5
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -74,7 +74,7 @@ distlib==0.3.1
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-django==3.1.6
+django==3.1.7
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -120,7 +120,7 @@ importlib-resources==5.1.0
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-inflect==5.0.2
+inflect==5.2.0
     # via jinja2-pluralize
 iniconfig==1.1.1
     # via
@@ -138,7 +138,7 @@ jinja2==2.11.3
     #   code-annotations
     #   diff-cover
     #   jinja2-pluralize
-lazy-object-proxy==1.4.3
+lazy-object-proxy==1.5.2
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -199,7 +199,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.6.2
+pylint==2.7.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -240,7 +240,6 @@ six==1.15.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
-    #   astroid
     #   edx-lint
     #   tox
     #   virtualenv
