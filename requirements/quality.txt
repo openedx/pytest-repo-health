@@ -45,7 +45,7 @@ django==2.2.19
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   code-annotations
     #   edx-lint
-edx-lint==4.0.1
+edx-lint==4.1.0
     # via -r requirements/quality.in
 gitdb==4.0.5
     # via
@@ -55,11 +55,23 @@ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3
     # via -r requirements/test.txt
 gitpython==3.1.13
     # via -r requirements/test.txt
+idna-ssl==1.1.0
+    # via
+    #   -r requirements/test.txt
+    #   aiohttp
 idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
+    #   idna-ssl
     #   yarl
+importlib-metadata==2.1.1
+    # via
+    #   -c requirements/constraints.txt
+    #   -r requirements/test.txt
+    #   pluggy
+    #   pytest
+    #   stevedore
 iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
@@ -153,13 +165,20 @@ toml==0.10.2
     #   -r requirements/test.txt
     #   pylint
     #   pytest
+typed-ast==1.4.2
+    # via astroid
 typing-extensions==3.7.4.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
+    #   yarl
 wrapt==1.12.1
     # via astroid
 yarl==1.6.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
+zipp==3.4.0
+    # via
+    #   -r requirements/test.txt
+    #   importlib-metadata
