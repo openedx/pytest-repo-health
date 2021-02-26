@@ -9,8 +9,6 @@ aiohttp==3.7.3
     #   -r requirements/test.txt
     #   github.py
     #   pytest-aiohttp
-asgiref==3.3.1
-    # via django
 astroid==2.5
     # via
     #   pylint
@@ -42,11 +40,12 @@ coverage==5.4
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-django==3.1.7
+django==2.2.19
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   code-annotations
     #   edx-lint
-edx-lint==4.0.1
+edx-lint==4.1.0
     # via -r requirements/quality.in
 gitdb==4.0.5
     # via
