@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.7.3
+aiohttp==3.7.4
     # via
     #   github.py
     #   pytest-aiohttp
@@ -16,26 +16,18 @@ attrs==20.3.0
     #   pytest
 chardet==3.0.4
     # via
-    #   -c requirements/constraints.txt
+    #   -c constraints.txt
     #   aiohttp
 gitdb==4.0.5
     # via gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140
-    # via -r requirements/github.in
+    # via -r github.in
 gitpython==3.1.13
-    # via -r requirements/base.in
-idna-ssl==1.1.0
-    # via aiohttp
+    # via -r base.in
 idna==2.10
     # via
-    #   -c requirements/constraints.txt
-    #   idna-ssl
+    #   -c constraints.txt
     #   yarl
-importlib-metadata==2.1.1
-    # via
-    #   -c requirements/constraints.txt
-    #   pluggy
-    #   pytest
 iniconfig==1.1.1
     # via pytest
 multidict==5.1.0
@@ -51,22 +43,18 @@ py==1.10.0
 pyparsing==2.4.7
     # via packaging
 pytest-aiohttp==0.3.0
-    # via -r requirements/base.in
+    # via -r base.in
 pytest==6.2.2
     # via
-    #   -r requirements/base.in
+    #   -r base.in
     #   pytest-aiohttp
 pyyaml==5.4.1
-    # via -r requirements/base.in
+    # via -r base.in
 smmap==3.0.5
     # via gitdb
 toml==0.10.2
     # via pytest
 typing-extensions==3.7.4.3
-    # via
-    #   aiohttp
-    #   yarl
+    # via aiohttp
 yarl==1.6.3
     # via aiohttp
-zipp==3.4.0
-    # via importlib-metadata
