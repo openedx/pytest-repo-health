@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.7.4
+aiohttp==3.7.4.post0
     # via
     #   -r requirements/quality.txt
     #   github.py
@@ -113,11 +113,11 @@ importlib-metadata==2.1.1
     #   stevedore
     #   tox
     #   virtualenv
-importlib-resources==5.1.1
+importlib-resources==5.1.2
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-inflect==5.2.0
+inflect==5.3.0
     # via jinja2-pluralize
 iniconfig==1.1.1
     # via
@@ -181,7 +181,7 @@ pycodestyle==2.6.0
     # via -r requirements/quality.txt
 pydocstyle==5.1.1
     # via -r requirements/quality.txt
-pygments==2.8.0
+pygments==2.8.1
     # via diff-cover
 pylint-celery==0.3
     # via
@@ -269,7 +269,7 @@ toml==0.10.2
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-tox==3.22.0
+tox==3.23.0
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -298,7 +298,7 @@ yarl==1.6.3
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-zipp==3.4.0
+zipp==3.4.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
