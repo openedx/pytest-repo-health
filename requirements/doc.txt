@@ -171,7 +171,7 @@ typing-extensions==3.7.4.3
     #   -r requirements/test.txt
     #   aiohttp
     #   yarl
-urllib3==1.26.3
+urllib3==1.26.4
     # via requests
 webencodings==0.5.1
     # via bleach
