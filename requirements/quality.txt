@@ -45,7 +45,7 @@ django==2.2.19
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   code-annotations
     #   edx-lint
-edx-lint==4.1.1
+edx-lint==5.0.0
     # via -r requirements/quality.in
 gitdb==4.0.5
     # via
@@ -76,13 +76,13 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.7.0
+isort==5.8.0
     # via
     #   -r requirements/quality.in
     #   pylint
 jinja2==2.11.3
     # via code-annotations
-lazy-object-proxy==1.5.2
+lazy-object-proxy==1.6.0
     # via astroid
 markupsafe==1.1.1
     # via jinja2
@@ -109,7 +109,7 @@ py==1.10.0
     #   pytest
 pycodestyle==2.7.0
     # via -r requirements/quality.in
-pydocstyle==5.1.1
+pydocstyle==6.0.0
     # via -r requirements/quality.in
 pylint-celery==0.3
     # via edx-lint
