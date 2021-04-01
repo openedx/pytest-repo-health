@@ -25,7 +25,7 @@ chardet==3.0.4
     #   aiohttp
 coverage==5.5
     # via pytest-cov
-gitdb==4.0.5
+gitdb==4.0.7
     # via
     #   -r requirements/base.txt
     #   gitpython
@@ -85,7 +85,7 @@ pytest==6.2.2
     #   pytest-cov
 pyyaml==5.4.1
     # via -r requirements/base.txt
-smmap==3.0.5
+smmap==4.0.0
     # via
     #   -r requirements/base.txt
     #   gitdb

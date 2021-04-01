@@ -18,7 +18,7 @@ chardet==3.0.4
     # via
     #   -c requirements/constraints.txt
     #   aiohttp
-gitdb==4.0.5
+gitdb==4.0.7
     # via gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140
     # via -r requirements/github.in
@@ -58,7 +58,7 @@ pytest==6.2.2
     #   pytest-aiohttp
 pyyaml==5.4.1
     # via -r requirements/base.in
-smmap==3.0.5
+smmap==4.0.0
     # via gitdb
 toml==0.10.2
     # via pytest
