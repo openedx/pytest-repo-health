@@ -39,13 +39,13 @@ coverage==5.5
     #   pytest-cov
 doc8==0.8.1
     # via -r requirements/doc.in
-docutils==0.16
+docutils==0.17
     # via
     #   doc8
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-edx-sphinx-theme==2.0.0
+edx-sphinx-theme==2.1.0
     # via -r requirements/doc.in
 gitdb==4.0.7
     # via
@@ -117,7 +117,7 @@ pytest-aiohttp==0.3.0
     # via -r requirements/test.txt
 pytest-cov==2.11.1
     # via -r requirements/test.txt
-pytest==6.2.2
+pytest==6.2.3
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
