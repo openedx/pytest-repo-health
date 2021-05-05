@@ -52,7 +52,7 @@ pyparsing==2.4.7
     # via packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/base.in
-pytest==6.2.3
+pytest==6.2.4
     # via
     #   -r requirements/base.in
     #   pytest-aiohttp
@@ -62,7 +62,7 @@ smmap==4.0.0
     # via gitdb
 toml==0.10.2
     # via pytest
-typing-extensions==3.7.4.3
+typing-extensions==3.10.0.0
     # via
     #   aiohttp
     #   yarl
