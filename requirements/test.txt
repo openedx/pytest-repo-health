@@ -78,7 +78,7 @@ pytest-aiohttp==0.3.0
     # via -r requirements/base.txt
 pytest-cov==2.11.1
     # via -r requirements/test.in
-pytest==6.2.3
+pytest==6.2.4
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp
@@ -93,7 +93,7 @@ toml==0.10.2
     # via
     #   -r requirements/base.txt
     #   pytest
-typing-extensions==3.7.4.3
+typing-extensions==3.10.0.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
