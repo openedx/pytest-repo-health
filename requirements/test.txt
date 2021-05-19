@@ -13,7 +13,7 @@ async-timeout==3.0.1
     # via
     #   -r requirements/base.txt
     #   aiohttp
-attrs==20.3.0
+attrs==21.2.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
@@ -23,7 +23,7 @@ chardet==3.0.4
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   aiohttp
-coverage==5.5
+coverage[toml]==5.5
     # via pytest-cov
 gitdb==4.0.7
     # via
@@ -31,7 +31,7 @@ gitdb==4.0.7
     #   gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140
     # via -r requirements/base.txt
-gitpython==3.1.14
+gitpython==3.1.17
     # via -r requirements/base.txt
 idna-ssl==1.1.0
     # via
@@ -76,7 +76,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/base.txt
-pytest-cov==2.11.1
+pytest-cov==2.12.0
     # via -r requirements/test.in
 pytest==6.2.4
     # via
@@ -97,6 +97,7 @@ typing-extensions==3.10.0.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
+    #   gitpython
     #   yarl
 yarl==1.6.3
     # via
