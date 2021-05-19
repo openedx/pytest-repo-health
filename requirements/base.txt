@@ -10,7 +10,7 @@ aiohttp==3.7.4.post0
     #   pytest-aiohttp
 async-timeout==3.0.1
     # via aiohttp
-attrs==20.3.0
+attrs==21.2.0
     # via
     #   aiohttp
     #   pytest
@@ -22,7 +22,7 @@ gitdb==4.0.7
     # via gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140
     # via -r requirements/github.in
-gitpython==3.1.14
+gitpython==3.1.17
     # via -r requirements/base.in
 idna-ssl==1.1.0
     # via aiohttp
@@ -65,6 +65,7 @@ toml==0.10.2
 typing-extensions==3.10.0.0
     # via
     #   aiohttp
+    #   gitpython
     #   yarl
 yarl==1.6.3
     # via aiohttp
