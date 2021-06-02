@@ -24,7 +24,7 @@ babel==2.9.1
     # via sphinx
 bleach==3.3.0
     # via readme-renderer
-certifi==2020.12.5
+certifi==2021.5.30
     # via requests
 chardet==3.0.4
     # via
@@ -33,7 +33,7 @@ chardet==3.0.4
     #   aiohttp
     #   doc8
     #   requests
-coverage[toml]==5.5
+coverage==5.5
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -116,7 +116,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/test.txt
-pytest-cov==2.12.0
+pytest-cov==2.12.1
     # via -r requirements/test.txt
 pytest==6.2.4
     # via
@@ -166,15 +166,15 @@ stevedore==3.3.0
 toml==0.10.2
     # via
     #   -r requirements/test.txt
-    #   coverage
     #   pytest
+    #   pytest-cov
 typing-extensions==3.10.0.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
     #   gitpython
     #   yarl
-urllib3==1.26.4
+urllib3==1.26.5
     # via requests
 webencodings==0.5.1
     # via bleach

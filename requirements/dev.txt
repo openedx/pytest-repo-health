@@ -27,7 +27,7 @@ attrs==21.2.0
     #   -r requirements/quality.txt
     #   aiohttp
     #   pytest
-certifi==2020.12.5
+certifi==2021.5.30
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -56,7 +56,7 @@ code-annotations==1.1.2
     #   edx-lint
 codecov==2.1.11
     # via -r requirements/ci.txt
-coverage[toml]==5.5
+coverage==5.5
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -66,7 +66,7 @@ diff-cover==4.1.1
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/dev.in
-distlib==0.3.1
+distlib==0.3.2
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -202,7 +202,7 @@ pylint-plugin-utils==0.6
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pylint==2.8.2
+pylint==2.8.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -216,7 +216,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/quality.txt
-pytest-cov==2.12.0
+pytest-cov==2.12.1
     # via -r requirements/quality.txt
 pytest==6.2.4
     # via
@@ -271,10 +271,10 @@ toml==0.10.2
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
-    #   coverage
     #   pep517
     #   pylint
     #   pytest
+    #   pytest-cov
     #   tox
 tox-battery==0.6.1
     # via -r requirements/ci.txt
@@ -292,7 +292,7 @@ typing-extensions==3.10.0.0
     #   aiohttp
     #   gitpython
     #   yarl
-urllib3==1.26.4
+urllib3==1.26.5
     # via
     #   -r requirements/ci.txt
     #   requests
