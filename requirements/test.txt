@@ -23,7 +23,7 @@ chardet==3.0.4
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   aiohttp
-coverage[toml]==5.5
+coverage==5.5
     # via pytest-cov
 gitdb==4.0.7
     # via
@@ -76,7 +76,7 @@ pyparsing==2.4.7
     #   packaging
 pytest-aiohttp==0.3.0
     # via -r requirements/base.txt
-pytest-cov==2.12.0
+pytest-cov==2.12.1
     # via -r requirements/test.in
 pytest==6.2.4
     # via
@@ -93,6 +93,7 @@ toml==0.10.2
     # via
     #   -r requirements/base.txt
     #   pytest
+    #   pytest-cov
 typing-extensions==3.10.0.0
     # via
     #   -r requirements/base.txt
