@@ -52,7 +52,7 @@ gitdb==4.0.7
     #   gitpython
 git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6#egg=github.py==1.0.0a495+g8e35140
     # via -r requirements/test.txt
-gitpython==3.1.17
+gitpython==3.1.18
     # via -r requirements/test.txt
 idna-ssl==1.1.0
     # via
@@ -76,7 +76,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.8.0
+isort==5.9.1
     # via
     #   -r requirements/quality.in
     #   pylint
