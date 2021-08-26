@@ -6,3 +6,4 @@ GitPython                 # Python wrapper for the git binary, for the git repos
 pytest                    # Framework used to find and execute each "opynion"
 pytest-aiohttp            # Async test support, needed to use the github.py package for the GitHub API fixtures
 pyyaml                    # For saving the collected data in a YAML file
+requests
