@@ -3,11 +3,11 @@ pytest plugin to test if specific repo follows standards
 """
 import datetime
 import os
-import requests
 from collections import defaultdict
 from pathlib import Path
 
 import pytest
+import requests
 import yaml
 
 from .fixtures.git import git_origin_url, git_repo  # pylint: disable=unused-import
@@ -189,7 +189,7 @@ def pytest_collection_modifyitems(session, config, items):
                 # add doc string if function also has doc string
                 if item.function.__doc__ is not None:
                     checks_metadata[module_name][item.name]["doc_string"] = item.function.__doc__.strip()
-        with open(config.getoption("repo_health_metadata"), "w") as write_file:
+        with open(config.getoption("repo_health_metadata"), "w", encoding='utf-8') as write_file:
             yaml.dump(checks_metadata, write_file, indent=4)
 
 
@@ -198,5 +198,5 @@ def pytest_sessionfinish(session):
     pytest hook used to collect results for tests and put into output file
     """
     if session.config.getoption("repo_health"):
-        with open(session.config.getoption("output_path"), "w") as write_file:
+        with open(session.config.getoption("output_path"), "w", encoding='utf-8') as write_file:
             yaml.dump(dict(session_data_holder_dict), write_file, indent=4)
