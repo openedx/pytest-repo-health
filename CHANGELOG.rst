@@ -14,6 +14,14 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+[2.2.0] - 2021-08-26
+~~~~~~~~~~~~~~~~~~~~
+
+Added
+_____
+
+* Added session level fixture for getting django dependencies sheet
+
 [2.1.0] - 2020-11-03
 ~~~~~~~~~~~~~~~~~~~~
 

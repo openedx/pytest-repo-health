@@ -1,9 +1,11 @@
 """
 pytest plugin to test if specific repo follows standards
 """
-import os
-from collections import defaultdict
 import datetime
+import os
+import requests
+from collections import defaultdict
+from pathlib import Path
 
 import pytest
 import yaml
@@ -14,6 +16,8 @@ from .utils import get_git_origin
 
 session_data_holder_dict = defaultdict(dict)
 session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
+DJANGO_DEPS_SHEET_URL = "https://docs.google.com/spreadsheets/d/" \
+                        "19-BzpcX3XvqlazHcLhn1ZifBMVNund15EwY3QQM390M/export?format=csv"
 
 
 @pytest.fixture(scope="session")
@@ -115,6 +119,20 @@ def repo_path(request):
         path = os.getcwd()
     path = os.path.abspath(path)
     return path
+
+
+@pytest.fixture(scope="session")
+def django_dependency_sheet():
+    """
+    Returns the path for csv file which contains django dependencies status.
+    Also, makes a request for latest sheet & dumps response into the csv file if request was successful.
+    """
+    res = requests.get(DJANGO_DEPS_SHEET_URL)
+    if res.status_code == 200:
+        with open(Path(__file__).with_name('django_dependencies_sheet.csv'), 'w', encoding="utf8") as fp:
+            fp.write(res.text)
+
+    return Path(__file__).with_name('django_dependencies_sheet.csv')
 
 
 @pytest.fixture
