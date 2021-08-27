@@ -5,7 +5,7 @@ and outputting report based on data gathered during checks.
 """
 from typing import Union
 
-__version__ = "2.1.1"
+__version__ = "2.2.0"
 
 
 def health_metadata(parent_path: list, output_keys: dict):

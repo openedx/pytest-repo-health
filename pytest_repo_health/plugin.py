@@ -1,11 +1,13 @@
 """
 pytest plugin to test if specific repo follows standards
 """
+import datetime
 import os
 from collections import defaultdict
-import datetime
+from pathlib import Path
 
 import pytest
+import requests
 import yaml
 
 from .fixtures.git import git_origin_url, git_repo  # pylint: disable=unused-import
@@ -14,6 +16,8 @@ from .utils import get_git_origin
 
 session_data_holder_dict = defaultdict(dict)
 session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
+DJANGO_DEPS_SHEET_URL = "https://docs.google.com/spreadsheets/d/" \
+                        "19-BzpcX3XvqlazHcLhn1ZifBMVNund15EwY3QQM390M/export?format=csv"
 
 
 @pytest.fixture(scope="session")
@@ -117,6 +121,20 @@ def repo_path(request):
     return path
 
 
+@pytest.fixture(scope="session")
+def django_dependency_sheet():
+    """
+    Returns the path for csv file which contains django dependencies status.
+    Also, makes a request for latest sheet & dumps response into the csv file if request was successful.
+    """
+    res = requests.get(DJANGO_DEPS_SHEET_URL)
+    if res.status_code == 200:
+        with open(Path(__file__).with_name('django_dependencies_sheet.csv'), 'w', encoding="utf8") as fp:
+            fp.write(res.text)
+
+    return Path(__file__).with_name('django_dependencies_sheet.csv')
+
+
 @pytest.fixture
 def repo_health(request):
     """
@@ -171,7 +189,7 @@ def pytest_collection_modifyitems(session, config, items):
                 # add doc string if function also has doc string
                 if item.function.__doc__ is not None:
                     checks_metadata[module_name][item.name]["doc_string"] = item.function.__doc__.strip()
-        with open(config.getoption("repo_health_metadata"), "w") as write_file:
+        with open(config.getoption("repo_health_metadata"), "w", encoding='utf-8') as write_file:
             yaml.dump(checks_metadata, write_file, indent=4)
 
 
@@ -180,5 +198,5 @@ def pytest_sessionfinish(session):
     pytest hook used to collect results for tests and put into output file
     """
     if session.config.getoption("repo_health"):
-        with open(session.config.getoption("output_path"), "w") as write_file:
+        with open(session.config.getoption("output_path"), "w", encoding='utf-8') as write_file:
             yaml.dump(dict(session_data_holder_dict), write_file, indent=4)
