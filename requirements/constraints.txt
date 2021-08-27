@@ -24,6 +24,3 @@ diff-cover<4.2.0
 
 # requests has a constraint idna<3 in it, so pinning it unless requests updates the constraint
 idna<3.0
-
-# Newer versions cause conflict in make upgrade
-pluggy<1.0
