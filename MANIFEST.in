@@ -3,3 +3,4 @@ include LICENSE.txt
 include README.rst
 include requirements/base.in
 recursive-include pytest_repo_health *.html *.png *.gif *.js *.css *.jpg *.jpeg *.svg *.py
+include requirements/constraints.txt
