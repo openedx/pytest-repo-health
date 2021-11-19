@@ -28,7 +28,7 @@ def test_health_metadata(testdir):
     assert (metadata_yaml_path).exists()
     # converting metadata_yaml_path to str cause pathlib doesn't work will with open in python 3.5
     with open(str(metadata_yaml_path)) as y_f:
-        content = yaml.load(y_f)
+        content = yaml.load(y_f, Loader=yaml.Loader)
         # name based on kwrg input to run_checks funtion
         assert "check_test_health_metadata.py" in content.keys()
         assert "check_decorator" in content["check_test_health_metadata.py"]
@@ -61,7 +61,7 @@ def test_add_key_to_metadata(testdir):
     assert (metadata_yaml_path).exists()
     # converting metadata_yaml_path to str cause pathlib doesn't work will with open in python 3.5
     with open(str(metadata_yaml_path)) as y_f:
-        content = yaml.load(y_f)
+        content = yaml.load(y_f, Loader=yaml.Loader)
         # name based on kwrg input to run_checks funtion
         assert "check_test_add_key_to_metadata.py" in content.keys()
         assert "check_decorator" in content["check_test_add_key_to_metadata.py"]

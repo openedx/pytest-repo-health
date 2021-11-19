@@ -13,9 +13,11 @@ def get_version(*file_paths):
     Extract the version string from the file at the given relative path fragments.
     """
     filename = os.path.join(os.path.dirname(__file__), *file_paths)
-    version_file = open(filename).read()
-    version_match = re.search(r"^__version__ = ['\"]([^'\"]*)['\"]",
-                              version_file, re.M)
+    with open(filename) as version_file:
+        version_file = version_file.read()
+        version_match = re.search(
+            r"^__version__ = ['\"]([^'\"]*)['\"]",version_file, re.M
+        )
     if version_match:
         return version_match.group(1)
     raise RuntimeError('Unable to find version string.')
@@ -23,7 +25,7 @@ def get_version(*file_paths):
 
 def read(fname):
     file_path = os.path.join(os.path.dirname(__file__), fname)
-    return codecs.open(file_path, encoding='utf-8').read()
+    return codecs.open(file_path).read()
 
 
 def load_requirements(*requirements_paths):
@@ -65,8 +67,9 @@ def load_requirements(*requirements_paths):
                 if is_requirement(line):
                     add_version_constraint_or_raise(line, requirements, True)
                 if line and line.startswith('-c') and not line.startswith('-c http'):
-                    constraint_files.add(os.path.dirname(path) + '/' + line.split('#')[0].replace('-c', '').strip())
-
+                    constraint_files.add(
+                        os.path.dirname(path) + '/' + line.split('#')[0].replace('-c', '').strip()
+                    )
     # process constraint files and add any new constraints found to existing requirements
     for constraint_file in constraint_files:
         with open(constraint_file) as reader:
@@ -75,7 +78,9 @@ def load_requirements(*requirements_paths):
                     add_version_constraint_or_raise(line, requirements, False)
 
     # process back into list of pkg><=constraints strings
-    constrained_requirements = [f'{pkg}{version or ""}' for (pkg, version) in sorted(requirements.items())]
+    constrained_requirements = [
+        f'{pkg}{version or ""}' for (pkg, version) in sorted(requirements.items())
+    ]
     return constrained_requirements
 
 
@@ -92,13 +97,16 @@ def is_requirement(line):
     return line and line.strip() and not line.startswith(('-r', '#', '-e', 'git+', '-c'))
 
 
-README = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
-CHANGELOG = open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')).read()
+with open(os.path.join(os.path.dirname(__file__), 'README.rst')) as readme_file:
+    README = readme_file.read()
+
+with open(os.path.join(os.path.dirname(__file__), 'CHANGELOG.rst')) as changelog_file:
+    CHANGELOG = changelog_file.read()
 VERSION = get_version('pytest_repo_health', '__init__.py')
 
 if sys.argv[-1] == 'tag':
     print("Tagging the version on github:")
-    os.system("git tag -a %s -m '%s'" % (VERSION, VERSION))
+    os.system(f"git tag -a ${VERSION} -m '${VERSION}'")
     os.system("git push --tags")
     sys.exit()
 
@@ -111,7 +119,7 @@ setup(
     description='A pytest plugin to report on repository standards conformance',
     long_description=read('README.rst'),
     packages=find_packages(exclude=["tests"]),
-    python_requires=">=3.6",
+    python_requires=">=3.7",
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,
     keywords='pytest edx',
@@ -124,7 +132,6 @@ setup(
         'Topic :: Software Development :: Testing',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
