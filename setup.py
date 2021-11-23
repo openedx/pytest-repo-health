@@ -118,6 +118,7 @@ setup(
     url='https://github.com/edX/pytest-repo-health',
     description='A pytest plugin to report on repository standards conformance',
     long_description=read('README.rst'),
+    long_description_content_type="text/markdown",
     packages=find_packages(exclude=["tests"]),
     python_requires=">=3.7",
     install_requires=load_requirements('requirements/base.in'),
