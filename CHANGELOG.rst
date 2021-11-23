@@ -14,11 +14,11 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-[2.2.0] - 2021-11-23
+[2.2.2] - 2021-11-23
 ~~~~~~~~~~~~~~~~~~~~
 
 Removed
-_____
+_______
 
 * Removed Python 3.6 support as it is reaching end of life in December 2021
 
