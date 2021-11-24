@@ -13,7 +13,7 @@ aiosignal==1.2.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
-astroid==2.8.5
+astroid==2.8.6
     # via
     #   pylint
     #   pylint-celery
