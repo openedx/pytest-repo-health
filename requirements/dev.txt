@@ -13,7 +13,7 @@ aiosignal==1.2.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-astroid==2.8.6
+astroid==2.9.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -39,7 +39,7 @@ certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.7
+charset-normalizer==2.0.8
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -63,7 +63,7 @@ code-annotations==1.2.0
     #   edx-lint
 codecov==2.1.12
     # via -r requirements/ci.txt
-coverage[toml]==6.1.2
+coverage[toml]==6.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -194,7 +194,7 @@ pydocstyle==6.1.1
     # via -r requirements/quality.txt
 pygments==2.10.0
     # via diff-cover
-pylint==2.11.1
+pylint==2.12.1
     # via
     #   -r requirements/quality.txt
     #   edx-lint
