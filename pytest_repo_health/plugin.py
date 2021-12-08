@@ -161,7 +161,7 @@ def pytest_collection_modifyitems(session, config, items):
             if item_meta is not None:
                 # store all data based for one module in its dict
                 module_name = item.parent.name
-                if item.parent.name not in checks_metadata.keys():
+                if item.parent.name not in checks_metadata.keys():  # lint-amnesty, pylint: disable=consider-iterating-dictionary
                     checks_metadata[module_name] = {}
                     # add modules docstring to data if present
                     if item.parent.module.__doc__ is not None:
