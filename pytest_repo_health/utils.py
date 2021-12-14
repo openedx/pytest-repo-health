@@ -9,9 +9,11 @@ from git import Repo
 URL_PATTERN = r"(git@|https://)([\w\.@]+)(/|:)(?P<owner>[\w,\-,\_]+)/(?P<repo_name>[\w,\-,\_]+)(.git){0,1}((/){0,1})"
 
 
-def get_git_origin(repo_path):
+def get_repo_remote_name(repo_path):
     """
-    Returns the origin url for the repo_path provided, returns None if doesn't has a remote origin.
+    Returns the repo name from the remote url for the repo_path provided.
+    Returns None if repo doesn't have a remote named 'origin'.
+    Assumes repo is hosted on Github.
     """
     if repo_path is None:
         return None
