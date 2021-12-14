@@ -73,3 +73,15 @@ def test_get_repo_remote_name_with_ssh_origin_without_git(tmpdir):
     repo.create_remote("origin", url=url)
     response = get_repo_remote_name(repo_dir)
     assert response == 'pytest-repo-health'
+
+
+def test_get_repo_remote_name_with_dot_in_name(tmpdir):
+    """
+    Regression test for edx/.github repo.
+    """
+    url = "https://github.com/edx/.github.git"
+    repo_dir = tmpdir / "target-repo"
+    repo = git.Repo.init(repo_dir)
+    repo.create_remote("origin", url=url)
+    response = get_repo_remote_name(repo_dir)
+    assert response == '.github'
