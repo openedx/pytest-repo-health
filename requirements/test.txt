@@ -100,7 +100,7 @@ toml==0.10.2
     # via
     #   -r requirements/base.txt
     #   pytest
-tomli==1.2.2
+tomli==2.0.0
     # via coverage
 typing-extensions==4.0.1
     # via
