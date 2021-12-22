@@ -17,7 +17,7 @@ astroid==2.9.0
     # via
     #   pylint
     #   pylint-celery
-async-timeout==4.0.1
+async-timeout==4.0.2
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -85,7 +85,7 @@ isort==5.10.1
     #   pylint
 jinja2==3.0.3
     # via code-annotations
-lazy-object-proxy==1.6.0
+lazy-object-proxy==1.7.1
     # via astroid
 markupsafe==2.0.1
     # via jinja2
