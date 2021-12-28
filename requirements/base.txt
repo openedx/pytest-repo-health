@@ -14,7 +14,7 @@ async-timeout==4.0.2
     # via aiohttp
 asynctest==0.13.0
     # via aiohttp
-attrs==21.2.0
+attrs==21.3.0
     # via
     #   aiohttp
     #   pytest

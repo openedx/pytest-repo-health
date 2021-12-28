@@ -23,7 +23,7 @@ asynctest==0.13.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
-attrs==21.2.0
+attrs==21.3.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
