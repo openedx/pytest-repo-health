@@ -13,7 +13,7 @@ aiosignal==1.2.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
-astroid==2.9.0
+astroid==2.9.2
     # via
     #   pylint
     #   pylint-celery
@@ -25,12 +25,12 @@ asynctest==0.13.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
-attrs==21.3.0
+attrs==21.4.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
     #   pytest
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -124,7 +124,7 @@ pylint==2.12.2
     #   pylint-plugin-utils
 pylint-celery==0.3
     # via edx-lint
-pylint-django==2.4.4
+pylint-django==2.5.0
     # via edx-lint
 pylint-plugin-utils==0.7
     # via
@@ -187,7 +187,7 @@ yarl==1.7.2
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.6.0
+zipp==3.7.0
     # via
     #   -r requirements/test.txt
     #   importlib-metadata

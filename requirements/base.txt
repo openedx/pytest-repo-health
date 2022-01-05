@@ -14,11 +14,11 @@ async-timeout==4.0.2
     # via aiohttp
 asynctest==0.13.0
     # via aiohttp
-attrs==21.3.0
+attrs==21.4.0
     # via
     #   aiohttp
     #   pytest
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
     # via aiohttp
 frozenlist==1.2.0
     # via
@@ -73,5 +73,5 @@ typing-extensions==4.0.1
     #   yarl
 yarl==1.7.2
     # via aiohttp
-zipp==3.6.0
+zipp==3.7.0
     # via importlib-metadata

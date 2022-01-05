@@ -21,12 +21,12 @@ asynctest==0.13.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
-attrs==21.3.0
+attrs==21.4.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
     #   pytest
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
     # via
     #   -r requirements/base.txt
     #   aiohttp
@@ -113,7 +113,7 @@ yarl==1.7.2
     # via
     #   -r requirements/base.txt
     #   aiohttp
-zipp==3.6.0
+zipp==3.7.0
     # via
     #   -r requirements/base.txt
     #   importlib-metadata
