@@ -13,7 +13,7 @@ aiosignal==1.2.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-astroid==2.9.0
+astroid==2.9.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -26,7 +26,7 @@ asynctest==0.13.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-attrs==21.3.0
+attrs==21.4.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
@@ -35,7 +35,7 @@ certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.9
+charset-normalizer==2.0.10
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -187,7 +187,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.txt
 pydocstyle==6.1.1
     # via -r requirements/quality.txt
-pygments==2.10.0
+pygments==2.11.1
     # via diff-cover
 pylint==2.12.2
     # via
@@ -200,7 +200,7 @@ pylint-celery==0.3
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-pylint-django==2.4.4
+pylint-django==2.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -231,7 +231,7 @@ pyyaml==6.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
-requests==2.26.0
+requests==2.27.0
     # via
     #   -r requirements/ci.txt
     #   codecov
@@ -271,7 +271,7 @@ tomli==2.0.0
     #   -r requirements/quality.txt
     #   coverage
     #   pep517
-tox==3.24.4
+tox==3.24.5
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -294,7 +294,7 @@ urllib3==1.26.7
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.11.0
+virtualenv==20.13.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -310,7 +310,7 @@ yarl==1.7.2
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-zipp==3.6.0
+zipp==3.7.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
