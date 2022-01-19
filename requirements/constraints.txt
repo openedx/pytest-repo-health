@@ -11,11 +11,6 @@
 # Common constraints for edx repos
 -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
  
-# Tox and virtualenv require importlib-metadata<3.0 to support python3.5
-# so pinning until both packages drop support for python3.5 &
-# update their required importlib-metadata version constraint
-importlib-metadata<3.0
-
 # aiohttp latest version 3.7.3 requires chardet<4.0, can be removed once aiohttp==4.0.0 is released.
 chardet<4.0
 

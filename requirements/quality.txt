@@ -49,7 +49,7 @@ coverage[toml]==6.2
     #   pytest-cov
 edx-lint==5.2.1
     # via -r requirements/quality.in
-frozenlist==1.2.0
+frozenlist==1.3.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -67,9 +67,8 @@ idna==2.10
     #   -c requirements/constraints.txt
     #   -r requirements/test.txt
     #   yarl
-importlib-metadata==2.1.2
+importlib-metadata==4.10.1
     # via
-    #   -c requirements/constraints.txt
     #   -r requirements/test.txt
     #   click
     #   pluggy
@@ -179,6 +178,7 @@ typing-extensions==4.0.1
     #   astroid
     #   async-timeout
     #   gitpython
+    #   importlib-metadata
     #   pylint
     #   yarl
 wrapt==1.13.3
