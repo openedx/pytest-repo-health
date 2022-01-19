@@ -14,6 +14,13 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+
+[2.3.0] - 2022-01-20
+~~~~~~~~~~~~~~~~~~~~
+
+* Added pytest-rerunfailures to base requirements
+  - its pytest plugin that adds the ability for pytest to rerun failuers automatically.
+
 [2.2.4] - 2021-12-16
 ~~~~~~~~~~~~~~~~~~~~
 
