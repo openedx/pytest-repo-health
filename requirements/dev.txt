@@ -35,7 +35,7 @@ certifi==2021.10.8
     # via
     #   -r requirements/ci.txt
     #   requests
-charset-normalizer==2.0.10
+charset-normalizer==2.0.11
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -59,7 +59,7 @@ code-annotations==1.2.0
     #   edx-lint
 codecov==2.1.12
     # via -r requirements/ci.txt
-coverage[toml]==6.2
+coverage[toml]==6.3
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -112,7 +112,7 @@ importlib-metadata==4.10.1
     #   stevedore
     #   tox
     #   virtualenv
-inflect==5.3.0
+inflect==5.4.0
     # via jinja2-pluralize
 iniconfig==1.1.1
     # via
@@ -142,7 +142,7 @@ mccabe==0.6.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-multidict==5.2.0
+multidict==6.0.2
     # via
     #   -r requirements/quality.txt
     #   aiohttp
@@ -208,7 +208,7 @@ pylint-plugin-utils==0.7
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.6
+pyparsing==3.0.7
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -217,9 +217,14 @@ pytest==6.2.5
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
+    #   pytest-asyncio
     #   pytest-cov
-pytest-aiohttp==0.3.0
+pytest-aiohttp==1.0.3
     # via -r requirements/quality.txt
+pytest-asyncio==0.17.2
+    # via
+    #   -r requirements/quality.txt
+    #   pytest-aiohttp
 pytest-cov==3.0.0
     # via -r requirements/quality.txt
 python-slugify==5.0.2
@@ -276,7 +281,7 @@ tox==3.24.5
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-typed-ast==1.5.1
+typed-ast==1.5.2
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -291,6 +296,7 @@ typing-extensions==4.0.1
     #   gitpython
     #   importlib-metadata
     #   pylint
+    #   pytest-asyncio
     #   yarl
 urllib3==1.26.8
     # via
