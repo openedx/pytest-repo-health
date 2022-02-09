@@ -6,7 +6,7 @@
 #
 aiohttp==3.8.1
     # via
-    #   github.py
+    #   github-py
     #   pytest-aiohttp
 aiosignal==1.2.0
     # via aiohttp
@@ -52,20 +52,20 @@ py==1.11.0
     # via pytest
 pyparsing==3.0.7
     # via packaging
-pytest==6.2.5
+pytest==7.0.0
     # via
     #   -r requirements/base.in
     #   pytest-aiohttp
     #   pytest-asyncio
 pytest-aiohttp==1.0.3
     # via -r requirements/base.in
-pytest-asyncio==0.17.2
+pytest-asyncio==0.18.0
     # via pytest-aiohttp
 pyyaml==6.0
     # via -r requirements/base.in
 smmap==5.0.0
     # via gitdb
-toml==0.10.2
+tomli==2.0.1
     # via pytest
 typing-extensions==4.0.1
     # via

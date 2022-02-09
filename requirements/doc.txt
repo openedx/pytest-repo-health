@@ -7,7 +7,7 @@
 aiohttp==3.8.1
     # via
     #   -r requirements/test.txt
-    #   github.py
+    #   github-py
     #   pytest-aiohttp
 aiosignal==1.2.0
     # via
@@ -39,7 +39,7 @@ charset-normalizer==2.0.11
     #   -r requirements/test.txt
     #   aiohttp
     #   requests
-coverage[toml]==6.3
+coverage[toml]==6.3.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -100,7 +100,7 @@ packaging==21.3
     #   bleach
     #   pytest
     #   sphinx
-pbr==5.8.0
+pbr==5.8.1
     # via stevedore
 pluggy==1.0.0
     # via
@@ -119,7 +119,7 @@ pyparsing==3.0.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==6.2.5
+pytest==7.0.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -127,7 +127,7 @@ pytest==6.2.5
     #   pytest-cov
 pytest-aiohttp==1.0.3
     # via -r requirements/test.txt
-pytest-asyncio==0.17.2
+pytest-asyncio==0.18.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -171,14 +171,11 @@ sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
 stevedore==3.5.0
     # via doc8
-toml==0.10.2
-    # via
-    #   -r requirements/test.txt
-    #   pytest
-tomli==2.0.0
+tomli==2.0.1
     # via
     #   -r requirements/test.txt
     #   coverage
+    #   pytest
 typing-extensions==4.0.1
     # via
     #   -r requirements/test.txt

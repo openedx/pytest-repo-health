@@ -75,4 +75,5 @@ target/
 # virtual env
 po_env/
 venv/
+.idea/
 
