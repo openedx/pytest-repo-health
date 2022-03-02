@@ -50,7 +50,7 @@ idna==2.10
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   yarl
-importlib-metadata==4.11.1
+importlib-metadata==4.11.2
     # via
     #   -r requirements/base.txt
     #   pluggy

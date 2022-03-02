@@ -34,7 +34,7 @@ idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   yarl
-importlib-metadata==4.11.1
+importlib-metadata==4.11.2
     # via
     #   pluggy
     #   pytest
