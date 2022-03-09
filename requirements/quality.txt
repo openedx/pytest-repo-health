@@ -141,7 +141,7 @@ pytest==7.0.1
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.18.1
+pytest-asyncio==0.18.2
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
