@@ -119,7 +119,7 @@ pyparsing==3.0.7
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==7.1.0
+pytest==7.1.1
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -133,7 +133,7 @@ pytest-asyncio==0.18.2
     #   pytest-aiohttp
 pytest-cov==3.0.0
     # via -r requirements/test.txt
-pytz==2021.3
+pytz==2022.1
     # via babel
 pyyaml==6.0
     # via -r requirements/test.txt
@@ -185,7 +185,7 @@ typing-extensions==4.1.1
     #   importlib-metadata
     #   pytest-asyncio
     #   yarl
-urllib3==1.26.8
+urllib3==1.26.9
     # via requests
 webencodings==0.5.1
     # via bleach
