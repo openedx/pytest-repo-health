@@ -85,7 +85,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-jinja2==3.0.3
+jinja2==3.1.1
     # via sphinx
 markupsafe==2.1.1
     # via jinja2
@@ -127,7 +127,7 @@ pytest==7.1.1
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.18.2
+pytest-asyncio==0.18.3
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -153,7 +153,7 @@ smmap==5.0.0
     #   gitdb
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==4.4.0
+sphinx==4.5.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
