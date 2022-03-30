@@ -55,7 +55,7 @@ typing-extensions==4.1.1
     # via importlib-metadata
 urllib3==1.26.9
     # via requests
-virtualenv==20.13.4
+virtualenv==20.14.0
     # via tox
 zipp==3.7.0
     # via importlib-metadata
