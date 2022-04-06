@@ -57,5 +57,5 @@ urllib3==1.26.9
     # via requests
 virtualenv==20.14.0
     # via tox
-zipp==3.7.0
+zipp==3.8.0
     # via importlib-metadata

@@ -34,7 +34,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/test.txt
     #   aiohttp
-click==8.1.0
+click==8.1.2
     # via
     #   click-log
     #   code-annotations
@@ -117,7 +117,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.in
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.13.3
+pylint==2.13.4
     # via
     #   edx-lint
     #   pylint-celery
@@ -192,7 +192,7 @@ yarl==1.7.2
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.7.0
+zipp==3.8.0
     # via
     #   -r requirements/test.txt
     #   importlib-metadata
