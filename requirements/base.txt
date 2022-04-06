@@ -77,5 +77,5 @@ typing-extensions==4.1.1
     #   yarl
 yarl==1.7.2
     # via aiohttp
-zipp==3.7.0
+zipp==3.8.0
     # via importlib-metadata
