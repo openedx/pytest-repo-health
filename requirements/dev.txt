@@ -116,7 +116,7 @@ importlib-metadata==4.11.3
     #   stevedore
     #   tox
     #   virtualenv
-inflect==5.4.0
+inflect==5.5.2
     # via jinja2-pluralize
 iniconfig==1.1.1
     # via
@@ -165,7 +165,7 @@ pep517==0.12.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-pip-tools==6.5.1
+pip-tools==6.6.0
     # via -r requirements/pip-tools.txt
 platformdirs==2.5.1
     # via
@@ -192,7 +192,7 @@ pydocstyle==6.1.1
     # via -r requirements/quality.txt
 pygments==2.11.2
     # via diff-cover
-pylint==2.13.4
+pylint==2.13.5
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -212,7 +212,7 @@ pylint-plugin-utils==0.7
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.7
+pyparsing==3.0.8
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -278,7 +278,7 @@ tomli==2.0.1
     #   pep517
     #   pylint
     #   pytest
-tox==3.24.5
+tox==3.25.0
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -305,7 +305,7 @@ urllib3==1.26.9
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.14.0
+virtualenv==20.14.1
     # via
     #   -r requirements/ci.txt
     #   tox
