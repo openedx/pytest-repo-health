@@ -13,7 +13,7 @@ aiosignal==1.2.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-astroid==2.11.2
+astroid==2.11.3
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -167,7 +167,7 @@ pep517==0.12.0
     #   pip-tools
 pip-tools==6.6.0
     # via -r requirements/pip-tools.txt
-platformdirs==2.5.1
+platformdirs==2.5.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -284,11 +284,11 @@ tox==3.25.0
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-typed-ast==1.5.2
+typed-ast==1.5.3
     # via
     #   -r requirements/quality.txt
     #   astroid
-typing-extensions==4.1.1
+typing-extensions==4.2.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt

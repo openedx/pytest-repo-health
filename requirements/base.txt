@@ -67,7 +67,7 @@ smmap==5.0.0
     # via gitdb
 tomli==2.0.1
     # via pytest
-typing-extensions==4.1.1
+typing-extensions==4.2.0
     # via
     #   aiohttp
     #   async-timeout
