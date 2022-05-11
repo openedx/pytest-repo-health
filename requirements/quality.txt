@@ -13,7 +13,7 @@ aiosignal==1.2.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
-astroid==2.11.4
+astroid==2.11.5
     # via
     #   pylint
     #   pylint-celery
@@ -101,7 +101,7 @@ packaging==21.3
     # via
     #   -r requirements/test.txt
     #   pytest
-pbr==5.8.1
+pbr==5.9.0
     # via stevedore
 platformdirs==2.5.2
     # via pylint
@@ -131,7 +131,7 @@ pylint-plugin-utils==0.7
     # via
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.8
+pyparsing==3.0.9
     # via
     #   -r requirements/test.txt
     #   packaging

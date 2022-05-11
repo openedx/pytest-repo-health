@@ -13,7 +13,7 @@ aiosignal==1.2.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-astroid==2.11.4
+astroid==2.11.5
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -157,7 +157,7 @@ packaging==21.3
     #   -r requirements/quality.txt
     #   pytest
     #   tox
-pbr==5.8.1
+pbr==5.9.0
     # via
     #   -r requirements/quality.txt
     #   stevedore
@@ -212,7 +212,7 @@ pylint-plugin-utils==0.7
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.8
+pyparsing==3.0.9
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
