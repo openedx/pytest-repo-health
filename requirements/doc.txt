@@ -39,11 +39,11 @@ charset-normalizer==2.0.12
     #   -r requirements/test.txt
     #   aiohttp
     #   requests
-coverage[toml]==6.3.2
+coverage[toml]==6.3.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-doc8==0.11.1
+doc8==0.11.2
     # via -r requirements/doc.in
 docutils==0.17.1
     # via
