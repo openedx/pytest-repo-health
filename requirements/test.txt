@@ -30,7 +30,7 @@ charset-normalizer==2.0.12
     # via
     #   -r requirements/base.txt
     #   aiohttp
-coverage[toml]==6.3.3
+coverage[toml]==6.4
     # via pytest-cov
 frozenlist==1.3.0
     # via
@@ -50,7 +50,7 @@ idna==2.10
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   yarl
-importlib-metadata==4.11.3
+importlib-metadata==4.11.4
     # via
     #   -r requirements/base.txt
     #   pluggy
