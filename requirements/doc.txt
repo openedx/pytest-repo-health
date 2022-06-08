@@ -39,7 +39,7 @@ charset-normalizer==2.0.12
     #   -r requirements/test.txt
     #   aiohttp
     #   requests
-coverage[toml]==6.4
+coverage[toml]==6.4.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -152,7 +152,7 @@ smmap==5.0.0
     #   gitdb
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.0.0
+sphinx==5.0.1
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
