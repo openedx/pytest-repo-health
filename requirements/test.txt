@@ -28,6 +28,7 @@ attrs==21.4.0
     #   pytest
 charset-normalizer==2.0.12
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   aiohttp
 coverage[toml]==6.4.1
