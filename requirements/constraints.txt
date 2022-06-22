@@ -19,3 +19,6 @@ diff-cover<4.2.0
 
 # requests has a constraint idna<3 in it, so pinning it unless requests updates the constraint
 idna<3.0
+
+# requests has a constraint charset-normalizer~=2.0.0 which so the version can't be bumped for now.
+charset-normalizer~=2.0.0
