@@ -24,7 +24,7 @@ idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   requests
-importlib-metadata==4.11.4
+importlib-metadata==4.12.0
     # via
     #   pluggy
     #   tox
@@ -57,7 +57,7 @@ typing-extensions==4.2.0
     # via importlib-metadata
 urllib3==1.26.9
     # via requests
-virtualenv==20.14.1
+virtualenv==20.15.0
     # via tox
 zipp==3.8.0
     # via importlib-metadata
