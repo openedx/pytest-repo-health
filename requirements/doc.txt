@@ -30,7 +30,7 @@ attrs==21.4.0
     #   pytest
 babel==2.10.3
     # via sphinx
-bleach==5.0.0
+bleach==5.0.1
     # via readme-renderer
 certifi==2022.6.15
     # via requests
@@ -75,7 +75,7 @@ idna==2.10
     #   yarl
 imagesize==1.3.0
     # via sphinx
-importlib-metadata==4.11.4
+importlib-metadata==4.12.0
     # via
     #   -r requirements/test.txt
     #   pluggy
