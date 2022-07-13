@@ -40,7 +40,7 @@ charset-normalizer==2.0.12
     #   -r requirements/test.txt
     #   aiohttp
     #   requests
-coverage[toml]==6.4.1
+coverage[toml]==6.4.2
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -185,7 +185,7 @@ typing-extensions==4.3.0
     #   importlib-metadata
     #   pytest-asyncio
     #   yarl
-urllib3==1.26.9
+urllib3==1.26.10
     # via requests
 webencodings==0.5.1
     # via bleach
@@ -193,7 +193,7 @@ yarl==1.7.2
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.8.0
+zipp==3.8.1
     # via
     #   -r requirements/test.txt
     #   importlib-metadata
