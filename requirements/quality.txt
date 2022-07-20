@@ -118,7 +118,7 @@ pycodestyle==2.8.0
     # via -r requirements/quality.in
 pydocstyle==6.1.1
     # via -r requirements/quality.in
-pylint==2.14.4
+pylint==2.14.5
     # via
     #   edx-lint
     #   pylint-celery
@@ -144,7 +144,7 @@ pytest==7.1.2
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.18.3
+pytest-asyncio==0.19.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
