@@ -78,7 +78,7 @@ dill==0.3.5.1
     # via
     #   -r requirements/quality.txt
     #   pylint
-distlib==0.3.4
+distlib==0.3.5
     # via
     #   -r requirements/ci.txt
     #   virtualenv
@@ -122,7 +122,7 @@ importlib-metadata==4.12.0
     #   stevedore
     #   tox
     #   virtualenv
-inflect==5.6.1
+inflect==5.6.2
     # via jinja2-pluralize
 iniconfig==1.1.1
     # via
@@ -200,7 +200,7 @@ pydocstyle==6.1.1
     # via -r requirements/quality.txt
 pygments==2.12.0
     # via diff-cover
-pylint==2.14.4
+pylint==2.14.5
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -234,7 +234,7 @@ pytest==7.1.2
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/quality.txt
-pytest-asyncio==0.18.3
+pytest-asyncio==0.19.0
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
