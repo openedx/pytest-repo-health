@@ -258,7 +258,6 @@ six==1.16.0
     #   -r requirements/quality.txt
     #   edx-lint
     #   tox
-    #   virtualenv
 smmap==5.0.0
     # via
     #   -r requirements/quality.txt
@@ -315,11 +314,11 @@ typing-extensions==4.3.0
     #   pylint
     #   pytest-asyncio
     #   yarl
-urllib3==1.26.10
+urllib3==1.26.11
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.15.1
+virtualenv==20.16.0
     # via
     #   -r requirements/ci.txt
     #   tox

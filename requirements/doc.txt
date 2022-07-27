@@ -46,7 +46,7 @@ coverage[toml]==6.4.2
     #   pytest-cov
 doc8==0.11.2
     # via -r requirements/doc.in
-docutils==0.18.1
+docutils==0.19
     # via
     #   doc8
     #   readme-renderer
@@ -153,7 +153,7 @@ smmap==5.0.0
     #   gitdb
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.0.2
+sphinx==5.1.1
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -185,7 +185,7 @@ typing-extensions==4.3.0
     #   importlib-metadata
     #   pytest-asyncio
     #   yarl
-urllib3==1.26.10
+urllib3==1.26.11
     # via requests
 webencodings==0.5.1
     # via bleach
