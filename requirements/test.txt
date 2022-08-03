@@ -21,7 +21,7 @@ asynctest==0.13.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
-attrs==21.4.0
+attrs==22.1.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
@@ -114,7 +114,7 @@ typing-extensions==4.3.0
     #   importlib-metadata
     #   pytest-asyncio
     #   yarl
-yarl==1.7.2
+yarl==1.8.1
     # via
     #   -r requirements/base.txt
     #   aiohttp
