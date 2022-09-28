@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.8.1
+aiohttp==3.8.3
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -32,7 +32,7 @@ babel==2.10.3
     # via sphinx
 bleach==5.0.1
     # via readme-renderer
-certifi==2022.9.14
+certifi==2022.9.24
     # via requests
 charset-normalizer==2.0.12
     # via
@@ -137,7 +137,7 @@ pytz==2022.2.1
     # via babel
 pyyaml==6.0
     # via -r requirements/test.txt
-readme-renderer==37.1
+readme-renderer==37.2
     # via -r requirements/doc.in
 requests==2.28.1
     # via sphinx
@@ -153,7 +153,7 @@ smmap==5.0.0
     #   gitdb
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.1.1
+sphinx==5.2.2
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
