@@ -30,13 +30,13 @@ gitdb==4.0.9
     # via gitpython
 github.py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/github.in
-gitpython==3.1.27
+gitpython==3.1.29
     # via -r requirements/base.in
 idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   yarl
-importlib-metadata==4.12.0
+importlib-metadata==5.0.0
     # via
     #   pluggy
     #   pytest
@@ -69,7 +69,7 @@ smmap==5.0.0
     # via gitdb
 tomli==2.0.1
     # via pytest
-typing-extensions==4.3.0
+typing-extensions==4.4.0
     # via
     #   aiohttp
     #   async-timeout
@@ -79,5 +79,5 @@ typing-extensions==4.3.0
     #   yarl
 yarl==1.8.1
     # via aiohttp
-zipp==3.8.1
+zipp==3.9.0
     # via importlib-metadata
