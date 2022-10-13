@@ -120,7 +120,7 @@ setup(
     long_description=read('README.rst'),
     long_description_content_type="text/markdown",
     packages=find_packages(exclude=["tests"]),
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     install_requires=load_requirements('requirements/base.in'),
     zip_safe=False,
     keywords='pytest edx',
@@ -133,7 +133,6 @@ setup(
         'Topic :: Software Development :: Testing',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
     ],
     entry_points={
