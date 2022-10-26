@@ -40,7 +40,7 @@ charset-normalizer==2.0.12
     #   -r requirements/test.txt
     #   aiohttp
     #   requests
-coverage[toml]==6.4.4
+coverage[toml]==6.5.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -54,6 +54,10 @@ docutils==0.19
     #   sphinx
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
+exceptiongroup==1.0.0rc9
+    # via
+    #   -r requirements/test.txt
+    #   pytest
 frozenlist==1.3.1
     # via
     #   -r requirements/test.txt
@@ -65,7 +69,7 @@ gitdb==4.0.9
     #   gitpython
 github.py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/test.txt
-gitpython==3.1.27
+gitpython==3.1.29
     # via -r requirements/test.txt
 idna==2.10
     # via
@@ -75,7 +79,7 @@ idna==2.10
     #   yarl
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==4.12.0
+importlib-metadata==5.0.0
     # via
     #   -r requirements/test.txt
     #   pluggy
@@ -100,13 +104,9 @@ packaging==21.3
     #   -r requirements/test.txt
     #   pytest
     #   sphinx
-pbr==5.10.0
+pbr==5.11.0
     # via stevedore
 pluggy==1.0.0
-    # via
-    #   -r requirements/test.txt
-    #   pytest
-py==1.11.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -119,7 +119,7 @@ pyparsing==3.0.9
     # via
     #   -r requirements/test.txt
     #   packaging
-pytest==7.1.3
+pytest==7.2.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -127,13 +127,13 @@ pytest==7.1.3
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.19.0
+pytest-asyncio==0.20.1
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
-pytest-cov==3.0.0
+pytest-cov==4.0.0
     # via -r requirements/test.txt
-pytz==2022.2.1
+pytz==2022.5
     # via babel
 pyyaml==6.0
     # via -r requirements/test.txt
@@ -153,7 +153,7 @@ smmap==5.0.0
     #   gitdb
 snowballstemmer==2.2.0
     # via sphinx
-sphinx==5.2.2
+sphinx==5.3.0
     # via
     #   -r requirements/doc.in
     #   edx-sphinx-theme
@@ -169,7 +169,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-stevedore==3.5.0
+stevedore==3.5.2
     # via doc8
 tomli==2.0.1
     # via
@@ -177,7 +177,7 @@ tomli==2.0.1
     #   coverage
     #   doc8
     #   pytest
-typing-extensions==4.3.0
+typing-extensions==4.4.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -194,7 +194,7 @@ yarl==1.8.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.8.1
+zipp==3.10.0
     # via
     #   -r requirements/test.txt
     #   importlib-metadata
