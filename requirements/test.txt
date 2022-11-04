@@ -33,7 +33,7 @@ charset-normalizer==2.0.12
     #   aiohttp
 coverage[toml]==6.5.0
     # via pytest-cov
-exceptiongroup==1.0.0rc9
+exceptiongroup==1.0.0
     # via
     #   -r requirements/base.txt
     #   pytest
