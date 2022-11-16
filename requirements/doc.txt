@@ -54,7 +54,7 @@ docutils==0.19
     #   sphinx
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -127,7 +127,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.20.1
+pytest-asyncio==0.20.2
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp

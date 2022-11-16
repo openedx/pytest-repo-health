@@ -84,7 +84,7 @@ distlib==0.3.6
     #   virtualenv
 edx-lint==5.3.0
     # via -r requirements/quality.txt
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via
     #   -r requirements/quality.txt
     #   pytest
@@ -177,9 +177,9 @@ pep517==0.13.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pip-tools==6.9.0
+pip-tools==6.10.0
     # via -r requirements/pip-tools.txt
-platformdirs==2.5.3
+platformdirs==2.5.4
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -238,7 +238,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/quality.txt
-pytest-asyncio==0.20.1
+pytest-asyncio==0.20.2
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
@@ -293,7 +293,7 @@ tomlkit==0.11.6
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==3.27.0
+tox==3.27.1
     # via
     #   -r requirements/ci.txt
     #   tox-battery
@@ -321,11 +321,11 @@ urllib3==1.26.12
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.16.6
+virtualenv==20.16.7
     # via
     #   -r requirements/ci.txt
     #   tox
-wheel==0.38.3
+wheel==0.38.4
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
