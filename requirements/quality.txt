@@ -52,7 +52,7 @@ dill==0.3.6
     # via pylint
 edx-lint==5.3.0
     # via -r requirements/quality.in
-exceptiongroup==1.0.1
+exceptiongroup==1.0.4
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -108,7 +108,7 @@ packaging==21.3
     #   pytest
 pbr==5.11.0
     # via stevedore
-platformdirs==2.5.3
+platformdirs==2.5.4
     # via pylint
 pluggy==1.0.0
     # via
@@ -144,7 +144,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.20.1
+pytest-asyncio==0.20.2
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
