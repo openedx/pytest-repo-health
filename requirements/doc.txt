@@ -63,7 +63,7 @@ frozenlist==1.3.3
     #   -r requirements/test.txt
     #   aiohttp
     #   aiosignal
-gitdb==4.0.9
+gitdb==4.0.10
     # via
     #   -r requirements/test.txt
     #   gitpython
@@ -79,7 +79,7 @@ idna==2.10
     #   yarl
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==5.0.0
+importlib-metadata==5.1.0
     # via
     #   -r requirements/test.txt
     #   pluggy
@@ -186,7 +186,7 @@ typing-extensions==4.4.0
     #   importlib-metadata
     #   pytest-asyncio
     #   yarl
-urllib3==1.26.12
+urllib3==1.26.13
     # via requests
 webencodings==0.5.1
     # via bleach
@@ -194,7 +194,7 @@ yarl==1.8.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.10.0
+zipp==3.11.0
     # via
     #   -r requirements/test.txt
     #   importlib-metadata
