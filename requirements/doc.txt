@@ -32,7 +32,7 @@ babel==2.11.0
     # via sphinx
 bleach==5.0.1
     # via readme-renderer
-certifi==2022.9.24
+certifi==2022.12.7
     # via requests
 charset-normalizer==2.0.12
     # via
@@ -99,7 +99,7 @@ multidict==6.0.3
     #   -r requirements/test.txt
     #   aiohttp
     #   yarl
-packaging==21.3
+packaging==22.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -115,10 +115,6 @@ pygments==2.13.0
     #   doc8
     #   readme-renderer
     #   sphinx
-pyparsing==3.0.9
-    # via
-    #   -r requirements/test.txt
-    #   packaging
 pytest==7.2.0
     # via
     #   -r requirements/test.txt
@@ -127,7 +123,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.20.2
+pytest-asyncio==0.20.3
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp

@@ -48,12 +48,10 @@ multidict==6.0.3
     # via
     #   aiohttp
     #   yarl
-packaging==21.3
+packaging==22.0
     # via pytest
 pluggy==1.0.0
     # via pytest
-pyparsing==3.0.9
-    # via packaging
 pytest==7.2.0
     # via
     #   -r requirements/base.in
@@ -61,7 +59,7 @@ pytest==7.2.0
     #   pytest-asyncio
 pytest-aiohttp==1.0.4
     # via -r requirements/base.in
-pytest-asyncio==0.20.2
+pytest-asyncio==0.20.3
     # via pytest-aiohttp
 pyyaml==6.0
     # via -r requirements/base.in

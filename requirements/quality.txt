@@ -85,7 +85,7 @@ iniconfig==1.1.1
     # via
     #   -r requirements/test.txt
     #   pytest
-isort==5.10.1
+isort==5.11.2
     # via
     #   -r requirements/quality.in
     #   pylint
@@ -102,13 +102,13 @@ multidict==6.0.3
     #   -r requirements/test.txt
     #   aiohttp
     #   yarl
-packaging==21.3
+packaging==22.0
     # via
     #   -r requirements/test.txt
     #   pytest
 pbr==5.11.0
     # via stevedore
-platformdirs==2.5.4
+platformdirs==2.6.0
     # via pylint
 pluggy==1.0.0
     # via
@@ -132,10 +132,6 @@ pylint-plugin-utils==0.7
     # via
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.9
-    # via
-    #   -r requirements/test.txt
-    #   packaging
 pytest==7.2.0
     # via
     #   -r requirements/test.txt
@@ -144,7 +140,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.20.2
+pytest-asyncio==0.20.3
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp

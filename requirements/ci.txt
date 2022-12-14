@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-certifi==2022.9.24
+certifi==2022.12.7
     # via requests
 charset-normalizer==2.0.12
     # via
@@ -29,16 +29,14 @@ importlib-metadata==5.1.0
     #   pluggy
     #   tox
     #   virtualenv
-packaging==21.3
+packaging==22.0
     # via tox
-platformdirs==2.5.4
+platformdirs==2.6.0
     # via virtualenv
 pluggy==1.0.0
     # via tox
 py==1.11.0
     # via tox
-pyparsing==3.0.9
-    # via packaging
 requests==2.28.1
     # via codecov
 six==1.16.0
@@ -47,6 +45,7 @@ tomli==2.0.1
     # via tox
 tox==3.27.1
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/ci.in
     #   tox-battery
 tox-battery==0.6.1
