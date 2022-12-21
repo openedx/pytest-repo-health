@@ -31,7 +31,7 @@ charset-normalizer==2.0.12
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   aiohttp
-coverage[toml]==6.5.0
+coverage[toml]==7.0.0
     # via pytest-cov
 exceptiongroup==1.0.4
     # via
@@ -55,7 +55,7 @@ idna==2.10
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   yarl
-importlib-metadata==5.1.0
+importlib-metadata==5.2.0
     # via
     #   -r requirements/base.txt
     #   pluggy
@@ -69,7 +69,7 @@ multidict==6.0.3
     #   -r requirements/base.txt
     #   aiohttp
     #   yarl
-packaging==21.3
+packaging==22.0
     # via
     #   -r requirements/base.txt
     #   pytest
@@ -77,10 +77,6 @@ pluggy==1.0.0
     # via
     #   -r requirements/base.txt
     #   pytest
-pyparsing==3.0.9
-    # via
-    #   -r requirements/base.txt
-    #   packaging
 pytest==7.2.0
     # via
     #   -r requirements/base.txt
@@ -89,7 +85,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/base.txt
-pytest-asyncio==0.20.2
+pytest-asyncio==0.20.3
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp
