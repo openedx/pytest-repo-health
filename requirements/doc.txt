@@ -23,7 +23,7 @@ asynctest==0.13.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
-attrs==22.1.0
+attrs==22.2.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -32,7 +32,7 @@ babel==2.11.0
     # via sphinx
 bleach==5.0.1
     # via readme-renderer
-certifi==2022.9.24
+certifi==2022.12.7
     # via requests
 charset-normalizer==2.0.12
     # via
@@ -40,7 +40,7 @@ charset-normalizer==2.0.12
     #   -r requirements/test.txt
     #   aiohttp
     #   requests
-coverage[toml]==6.5.0
+coverage[toml]==7.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -54,7 +54,7 @@ docutils==0.19
     #   sphinx
 edx-sphinx-theme==3.0.0
     # via -r requirements/doc.in
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -79,7 +79,7 @@ idna==2.10
     #   yarl
 imagesize==1.4.1
     # via sphinx
-importlib-metadata==5.1.0
+importlib-metadata==5.2.0
     # via
     #   -r requirements/test.txt
     #   pluggy
@@ -94,12 +94,12 @@ jinja2==3.1.2
     # via sphinx
 markupsafe==2.1.1
     # via jinja2
-multidict==6.0.3
+multidict==6.0.4
     # via
     #   -r requirements/test.txt
     #   aiohttp
     #   yarl
-packaging==21.3
+packaging==22.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -115,10 +115,6 @@ pygments==2.13.0
     #   doc8
     #   readme-renderer
     #   sphinx
-pyparsing==3.0.9
-    # via
-    #   -r requirements/test.txt
-    #   packaging
 pytest==7.2.0
     # via
     #   -r requirements/test.txt
@@ -127,13 +123,13 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/test.txt
-pytest-asyncio==0.20.2
+pytest-asyncio==0.20.3
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
 pytest-cov==4.0.0
     # via -r requirements/test.txt
-pytz==2022.6
+pytz==2022.7
     # via babel
 pyyaml==6.0
     # via -r requirements/test.txt
