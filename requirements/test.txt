@@ -21,7 +21,7 @@ asynctest==0.13.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
-attrs==22.1.0
+attrs==22.2.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
@@ -31,9 +31,9 @@ charset-normalizer==2.0.12
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   aiohttp
-coverage[toml]==6.5.0
+coverage[toml]==7.0.5
     # via pytest-cov
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via
     #   -r requirements/base.txt
     #   pytest
@@ -48,28 +48,29 @@ gitdb==4.0.10
     #   gitpython
 github.py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/base.txt
-gitpython==3.1.29
+gitpython==3.1.30
     # via -r requirements/base.txt
 idna==2.10
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   yarl
-importlib-metadata==5.1.0
+importlib-metadata==4.13.0
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   pluggy
     #   pytest
-iniconfig==1.1.1
+iniconfig==2.0.0
     # via
     #   -r requirements/base.txt
     #   pytest
-multidict==6.0.3
+multidict==6.0.4
     # via
     #   -r requirements/base.txt
     #   aiohttp
     #   yarl
-packaging==21.3
+packaging==23.0
     # via
     #   -r requirements/base.txt
     #   pytest
@@ -77,10 +78,6 @@ pluggy==1.0.0
     # via
     #   -r requirements/base.txt
     #   pytest
-pyparsing==3.0.9
-    # via
-    #   -r requirements/base.txt
-    #   packaging
 pytest==7.2.0
     # via
     #   -r requirements/base.txt
@@ -89,7 +86,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/base.txt
-pytest-asyncio==0.20.2
+pytest-asyncio==0.20.3
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp

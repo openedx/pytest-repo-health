@@ -13,7 +13,7 @@ aiosignal==1.3.1
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-astroid==2.12.13
+astroid==2.13.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -26,16 +26,16 @@ asynctest==0.13.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-attrs==22.1.0
+attrs==22.2.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
     #   pytest
-build==0.9.0
+build==0.10.0
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-certifi==2022.9.24
+certifi==2022.12.7
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -64,7 +64,7 @@ code-annotations==1.3.0
     #   edx-lint
 codecov==2.1.12
     # via -r requirements/ci.txt
-coverage[toml]==6.5.0
+coverage[toml]==7.0.5
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -84,11 +84,11 @@ distlib==0.3.6
     #   virtualenv
 edx-lint==5.3.0
     # via -r requirements/quality.txt
-exceptiongroup==1.0.4
+exceptiongroup==1.1.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-filelock==3.8.2
+filelock==3.9.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -104,7 +104,7 @@ gitdb==4.0.10
     #   gitpython
 github.py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/quality.txt
-gitpython==3.1.29
+gitpython==3.1.30
     # via -r requirements/quality.txt
 idna==2.10
     # via
@@ -113,26 +113,27 @@ idna==2.10
     #   -r requirements/quality.txt
     #   requests
     #   yarl
-importlib-metadata==5.1.0
+importlib-metadata==4.13.0
     # via
+    #   -c requirements/constraints.txt
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   build
     #   click
-    #   pep517
     #   pluggy
+    #   pydocstyle
     #   pytest
     #   stevedore
     #   tox
     #   virtualenv
 inflect==6.0.2
     # via jinja2-pluralize
-iniconfig==1.1.1
+iniconfig==2.0.0
     # via
     #   -r requirements/quality.txt
     #   pytest
-isort==5.10.1
+isort==5.11.4
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -144,7 +145,7 @@ jinja2==3.1.2
     #   jinja2-pluralize
 jinja2-pluralize==0.3.0
     # via diff-cover
-lazy-object-proxy==1.8.0
+lazy-object-proxy==1.9.0
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -156,12 +157,12 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-multidict==6.0.3
+multidict==6.0.4
     # via
     #   -r requirements/quality.txt
     #   aiohttp
     #   yarl
-packaging==21.3
+packaging==23.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
@@ -169,17 +170,13 @@ packaging==21.3
     #   build
     #   pytest
     #   tox
-pbr==5.11.0
+pbr==5.11.1
     # via
     #   -r requirements/quality.txt
     #   stevedore
-pep517==0.13.0
-    # via
-    #   -r requirements/pip-tools.txt
-    #   build
-pip-tools==6.11.0
+pip-tools==6.12.1
     # via -r requirements/pip-tools.txt
-platformdirs==2.5.4
+platformdirs==2.6.2
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -198,13 +195,13 @@ py==1.11.0
     #   tox
 pycodestyle==2.10.0
     # via -r requirements/quality.txt
-pydantic==1.10.2
+pydantic==1.10.4
     # via inflect
-pydocstyle==6.1.1
+pydocstyle==6.2.3
     # via -r requirements/quality.txt
-pygments==2.13.0
+pygments==2.14.0
     # via diff-cover
-pylint==2.15.8
+pylint==2.15.10
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -224,12 +221,10 @@ pylint-plugin-utils==0.7
     #   -r requirements/quality.txt
     #   pylint-celery
     #   pylint-django
-pyparsing==3.0.9
+pyproject-hooks==1.0.0
     # via
-    #   -r requirements/ci.txt
     #   -r requirements/pip-tools.txt
-    #   -r requirements/quality.txt
-    #   packaging
+    #   build
 pytest==7.2.0
     # via
     #   -r requirements/quality.txt
@@ -238,7 +233,7 @@ pytest==7.2.0
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/quality.txt
-pytest-asyncio==0.20.2
+pytest-asyncio==0.20.3
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
@@ -285,16 +280,17 @@ tomli==2.0.1
     #   -r requirements/quality.txt
     #   build
     #   coverage
-    #   pep517
     #   pylint
+    #   pyproject-hooks
     #   pytest
     #   tox
 tomlkit==0.11.6
     # via
     #   -r requirements/quality.txt
     #   pylint
-tox==3.27.1
+tox==3.28.0
     # via
+    #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   -r requirements/ci.txt
     #   tox-battery
 tox-battery==0.6.1
@@ -313,11 +309,12 @@ typing-extensions==4.4.0
     #   async-timeout
     #   gitpython
     #   importlib-metadata
+    #   platformdirs
     #   pydantic
     #   pylint
     #   pytest-asyncio
     #   yarl
-urllib3==1.26.13
+urllib3==1.26.14
     # via
     #   -r requirements/ci.txt
     #   requests
@@ -343,7 +340,6 @@ zipp==3.11.0
     #   -r requirements/pip-tools.txt
     #   -r requirements/quality.txt
     #   importlib-metadata
-    #   pep517
 
 # The following packages are considered to be unsafe in a requirements file:
 # pip
