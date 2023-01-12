@@ -13,7 +13,7 @@ from git import Repo
 # remotes.
 #
 # Examples:
-# - https://github.com/edx/edx-platform.git
+# - https://github.com/openedx/edx-platform.git
 # - git@github.com:edx/edx-platform.git
 URL_PATTERN = r"^(git@|https://).*/(?P<repo_name>[a-zA-Z0-9_\-.]+?)(\.git)?/?$"
 
