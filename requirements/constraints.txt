@@ -23,6 +23,6 @@ idna<3.0
 # requests has a constraint charset-normalizer~=2.0.0 which so the version can't be bumped for now.
 charset-normalizer~=2.0.0
 
-# importlib_metadata is constrained pycodestyle. This can be removed once the upstream constraint is resolved.
+# importlib_metadata is constrained in pycodestyle. This can be removed once the upstream constraint is resolved.
 # https://github.com/PyCQA/pydocstyle/blob/master/pyproject.toml#L25
 importlib-metadata<5.0.0
