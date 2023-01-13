@@ -49,9 +49,10 @@ Once installed, use this command to run checks::
 
     $ pytest -c <() --noconftest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to repo to check>
 
-The -c and --noconftest options are needed to stop pytest from incorrectly reading configuration files in the repo you are checking.
+The -c and --noconftest options are needed to stop pytest from incorrectly reading configuration files in the repo you are checking::
 
     -c file: load configuration from `file` instead of trying to locate one of the implicit configuration files. Helpful if invocation dir defines "add-opts" in one of its files.
+
     --noconftest: Don't load any conftest.py files. Helpful in case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
 
 Other pytest options can be used.  For example, `-k` is helpful for running a subset of checks.
