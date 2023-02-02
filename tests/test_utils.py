@@ -31,7 +31,7 @@ def test_get_repo_remote_name_with_http_origin(tmpdir):
     """
     Verify that the origin URL is retrieved through get_repo_remote_name on valid git repository with origin set
     """
-    url = "https://github.com/edx/pytest-repo-health.git"
+    url = "https://github.com/openedx/pytest-repo-health.git"
     repo_dir = tmpdir / "target-repo"
     repo = git.Repo.init(repo_dir)
     repo.create_remote("origin", url=url)
@@ -43,7 +43,7 @@ def test_get_repo_remote_name_with_http_origin_without_git(tmpdir):
     """
     Verify that the origin URL is retrieved through get_repo_remote_name on valid git repository with origin set
     """
-    url = "https://github.com/edx/pytest-repo-health"
+    url = "https://github.com/openedx/pytest-repo-health"
     repo_dir = tmpdir / "target-repo"
     repo = git.Repo.init(repo_dir)
     repo.create_remote("origin", url=url)
@@ -79,7 +79,7 @@ def test_get_repo_remote_name_with_dot_in_name(tmpdir):
     """
     Regression test for edx/.github repo.
     """
-    url = "https://github.com/edx/.github.git"
+    url = "https://github.com/openedx/.github.git"
     repo_dir = tmpdir / "target-repo"
     repo = git.Repo.init(repo_dir)
     repo.create_remote("origin", url=url)

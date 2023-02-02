@@ -11,8 +11,8 @@ pytest-repo-health
     :target: https://pypi.org/project/pytest-repo-health
     :alt: Python versions
 
-.. image:: https://github.com/edx/pytest-repo-health/workflows/Python%20CI/badge.svg?branch=master
-    :target: https://github.com/edx/pytest-repo-health/actions?query=workflow%3A%22Python+CI%22
+.. image:: https://github.com/openedx/pytest-repo-health/workflows/Python%20CI/badge.svg?branch=master
+    :target: https://github.com/openedx/pytest-repo-health/actions?query=workflow%3A%22Python+CI%22
     :alt: CI
 
 .. image:: https://ci.appveyor.com/api/projects/status/github/edx/pytest-repo-health?branch=master
@@ -49,9 +49,10 @@ Once installed, use this command to run checks::
 
     $ pytest -c <() --noconftest --repo-health --repo-health-path <path to dir with checks> --repo-path <path to repo to check>
 
-The -c and --noconftest options are needed to stop pytest from incorrectly reading configuration files in the repo you are checking.
+The -c and --noconftest options are needed to stop pytest from incorrectly reading configuration files in the repo you are checking::
 
     -c file: load configuration from `file` instead of trying to locate one of the implicit configuration files. Helpful if invocation dir defines "add-opts" in one of its files.
+
     --noconftest: Don't load any conftest.py files. Helpful in case invocation dir/repository has conftest files that change configurations or cause pytest to run unnecessary code.
 
 Other pytest options can be used.  For example, `-k` is helpful for running a subset of checks.
@@ -120,19 +121,19 @@ How To Contribute
 
 Contributions are very welcome.
 
-Please read `How To Contribute <https://github.com/edx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
+Please read `How To Contribute <https://github.com/openedx/edx-platform/blob/master/CONTRIBUTING.rst>`_ for details.
 
 Even though they were written with ``edx-platform`` in mind, the guidelines
 should be followed for Open edX code in general.
 
 The pull request description template should be automatically applied if you are creating a pull request from GitHub.  Otherwise you
-can find it it at `PULL_REQUEST_TEMPLATE.md <https://github.com/edx/pytest-repo-health/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_
+can find it it at `PULL_REQUEST_TEMPLATE.md <https://github.com/openedx/pytest-repo-health/blob/master/.github/PULL_REQUEST_TEMPLATE.md>`_
 
 Issues
 ------
 
 The issue report template should be automatically applied if you are creating an issue on GitHub as well.  Otherwise you
-can find it at `ISSUE_TEMPLATE.md <https://github.com/edx/pytest-repo-health/blob/master/.github/ISSUE_TEMPLATE.md>`_
+can find it at `ISSUE_TEMPLATE.md <https://github.com/openedx/pytest-repo-health/blob/master/.github/ISSUE_TEMPLATE.md>`_
 
 
 If you encounter any problems, please `file an issue`_ along with a detailed description.
@@ -156,7 +157,7 @@ refer to this `list of resources`_ if you need any assistance.
 .. _`GNU GPL v3.0`: http://www.gnu.org/licenses/gpl-3.0.txt
 .. _`Apache Software License 2.0`: http://www.apache.org/licenses/LICENSE-2.0
 .. _`cookiecutter-pytest-plugin`: https://github.com/pytest-dev/cookiecutter-pytest-plugin
-.. _`file an issue`: https://github.com/edx/pytest-repo-health/issues
+.. _`file an issue`: https://github.com/openedx/pytest-repo-health/issues
 .. _`pytest`: https://github.com/pytest-dev/pytest
 .. _`tox`: https://tox.readthedocs.io/en/latest/
 .. _`pip`: https://pypi.org/project/pip/
