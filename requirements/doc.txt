@@ -175,5 +175,5 @@ yarl==1.8.2
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.12.0
+zipp==3.12.1
     # via importlib-metadata

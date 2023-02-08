@@ -97,7 +97,7 @@ packaging==23.0
     #   pytest
 pbr==5.11.1
     # via stevedore
-platformdirs==2.6.2
+platformdirs==3.0.0
     # via pylint
 pluggy==1.0.0
     # via
@@ -107,7 +107,7 @@ pycodestyle==2.10.0
     # via -r requirements/quality.in
 pydocstyle==6.3.0
     # via -r requirements/quality.in
-pylint==2.16.0
+pylint==2.16.1
     # via
     #   edx-lint
     #   pylint-celery
