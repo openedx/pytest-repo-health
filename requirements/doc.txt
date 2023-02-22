@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.8.3
+aiohttp==3.8.4
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -65,7 +65,7 @@ gitdb==4.0.10
     #   gitpython
 github.py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/test.txt
-gitpython==3.1.30
+gitpython==3.1.31
     # via -r requirements/test.txt
 idna==2.10
     # via
@@ -159,7 +159,7 @@ sphinxcontrib-qthelp==1.0.3
     # via sphinx
 sphinxcontrib-serializinghtml==1.1.5
     # via sphinx
-stevedore==4.1.1
+stevedore==5.0.0
     # via doc8
 tomli==2.0.1
     # via
@@ -175,5 +175,5 @@ yarl==1.8.2
     # via
     #   -r requirements/test.txt
     #   aiohttp
-zipp==3.12.0
+zipp==3.14.0
     # via importlib-metadata
