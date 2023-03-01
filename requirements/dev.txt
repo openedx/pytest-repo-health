@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.8.3
+aiohttp==3.8.4
     # via
     #   -r requirements/quality.txt
     #   github-py
@@ -13,7 +13,7 @@ aiosignal==1.3.1
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-astroid==2.14.1
+astroid==2.14.2
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -60,7 +60,7 @@ code-annotations==1.3.0
     #   edx-lint
 codecov==2.1.12
     # via -r requirements/ci.txt
-coverage[toml]==7.1.0
+coverage[toml]==7.2.1
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -78,7 +78,7 @@ distlib==0.3.6
     # via
     #   -r requirements/ci.txt
     #   virtualenv
-edx-lint==5.3.0
+edx-lint==5.3.2
     # via -r requirements/quality.txt
 exceptiongroup==1.1.0
     # via
@@ -100,7 +100,7 @@ gitdb==4.0.10
     #   gitpython
 github.py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/quality.txt
-gitpython==3.1.30
+gitpython==3.1.31
     # via -r requirements/quality.txt
 idna==2.10
     # via
@@ -158,7 +158,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.12.2
     # via -r requirements/pip-tools.txt
-platformdirs==2.6.2
+platformdirs==3.0.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -177,13 +177,13 @@ py==1.11.0
     #   tox
 pycodestyle==2.10.0
     # via -r requirements/quality.txt
-pydantic==1.10.4
+pydantic==1.10.5
     # via inflect
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.14.0
     # via diff-cover
-pylint==2.16.0
+pylint==2.16.2
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -221,7 +221,7 @@ pytest-asyncio==0.20.3
     #   pytest-aiohttp
 pytest-cov==4.0.0
     # via -r requirements/quality.txt
-python-slugify==8.0.0
+python-slugify==8.0.1
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -247,7 +247,7 @@ snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-stevedore==4.1.1
+stevedore==5.0.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -277,7 +277,7 @@ tox==3.28.0
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.txt
-typing-extensions==4.4.0
+typing-extensions==4.5.0
     # via
     #   -r requirements/quality.txt
     #   astroid
@@ -287,7 +287,7 @@ urllib3==1.26.14
     # via
     #   -r requirements/ci.txt
     #   requests
-virtualenv==20.17.1
+virtualenv==20.20.0
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -295,7 +295,7 @@ wheel==0.38.4
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-wrapt==1.14.1
+wrapt==1.15.0
     # via
     #   -r requirements/quality.txt
     #   astroid
