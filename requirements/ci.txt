@@ -12,11 +12,11 @@ charset-normalizer==2.0.12
     #   requests
 codecov==2.1.12
     # via -r requirements/ci.in
-coverage==7.1.0
+coverage==7.2.2
     # via codecov
 distlib==0.3.6
     # via virtualenv
-filelock==3.9.0
+filelock==3.10.0
     # via
     #   tox
     #   virtualenv
@@ -26,7 +26,7 @@ idna==2.10
     #   requests
 packaging==23.0
     # via tox
-platformdirs==2.6.2
+platformdirs==3.1.1
     # via virtualenv
 pluggy==1.0.0
     # via tox
@@ -45,7 +45,7 @@ tox==3.28.0
     #   tox-battery
 tox-battery==0.6.1
     # via -r requirements/ci.in
-urllib3==1.26.14
+urllib3==1.26.15
     # via requests
-virtualenv==20.17.1
+virtualenv==20.21.0
     # via tox
