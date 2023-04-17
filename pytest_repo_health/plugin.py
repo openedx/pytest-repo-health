@@ -1,9 +1,11 @@
 """
 pytest plugin to test if specific repo follows standards
 """
-import os
-from collections import defaultdict
+
 import datetime
+import os
+import warnings
+from collections import defaultdict
 
 import pytest
 import yaml
@@ -14,6 +16,12 @@ from .utils import get_repo_remote_name
 
 session_data_holder_dict = defaultdict(dict)
 session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
+
+
+@pytest.fixture(autouse=True)
+def set_warnings() -> None:
+    """Force asyncio mistakes to be errors"""
+    warnings.simplefilter("error", pytest.PytestUnhandledCoroutineWarning)
 
 
 @pytest.fixture(scope="session")
