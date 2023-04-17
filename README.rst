@@ -75,6 +75,7 @@ Checks naming convention:
 
 Checks Discovery
 ----------------
+
 Pytest will look for checks in these directories, though it will only successfully run checks in the first place it finds them:
 - Dir of pytest invocation(so current dir)
 - Dir where pytest-repo-health is installed
@@ -83,6 +84,7 @@ Pytest will look for checks in these directories, though it will only successful
 
 Args
 ----
+
 Arguments added by plugin::
 
   --repo-health: this arg needs to be present for plugin to do anything
@@ -151,6 +153,7 @@ Have a question about this repository, or about Open edX in general?  Please
 refer to this `list of resources`_ if you need any assistance.
 
 .. _list of resources: https://open.edx.org/getting-help
+.. _edx-repo-health: https://github.com/openedx/edx-repo-health
 .. _`Cookiecutter`: https://github.com/audreyr/cookiecutter
 .. _`@hackebrot`: https://github.com/hackebrot
 .. _`BSD-3`: http://opensource.org/licenses/BSD-3-Clause
