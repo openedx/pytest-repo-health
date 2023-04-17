@@ -14,8 +14,8 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-[3.0.0] - 2022-10-13
-~~~~~~~~~~~~~~~~~~~~
+3.0.0 - 2022-10-13
+~~~~~~~~~~~~~~~~~~
 
 BREAKING CHANGE
 _______________
@@ -23,8 +23,8 @@ _______________
 * Dropped Python 3.7 support
 
 
-[2.2.4] - 2021-12-16
-~~~~~~~~~~~~~~~~~~~~
+2.2.4 - 2021-12-16
+~~~~~~~~~~~~~~~~~~
 
 Fixed
 _____
@@ -32,37 +32,37 @@ _____
 * Allow matching remote URL for .github repo
 
 
-[2.2.3] - 2021-11-23
-~~~~~~~~~~~~~~~~~~~~
+2.2.3 - 2021-11-23
+~~~~~~~~~~~~~~~~~~
 
 No change.
 
-[2.2.2] - 2021-11-23
-~~~~~~~~~~~~~~~~~~~~
+2.2.2 - 2021-11-23
+~~~~~~~~~~~~~~~~~~
 
 Removed
 _______
 
 * Removed Python 3.6 support as it is reaching end of life in December 2021
 
-[2.1.0] - 2020-11-03
-~~~~~~~~~~~~~~~~~~~~
+2.1.0 - 2020-11-03
+~~~~~~~~~~~~~~~~~~
 
 Added
 _____
 
 * Added ability to set filename for checks metadata file. You can now give a file path after --repo-health-metadata flag
 
-[2.0.1] - 2020-08-12
-~~~~~~~~~~~~~~~~~~~~
+2.0.1 - 2020-08-12
+~~~~~~~~~~~~~~~~~~
 
 Fixed
 _____
 
 * Fixed uploads to PyPI from Travis CI
 
-[2.0.0] - 2020-08-12
-~~~~~~~~~~~~~~~~~~~~
+2.0.0 - 2020-08-12
+~~~~~~~~~~~~~~~~~~
 
 Removed
 _______
@@ -75,16 +75,16 @@ _____
 * Recent versions of github.py installed from source control are now supported (and recommended if you want to inspect a repository's code of conduct, as 0.5.0 has a bug that throws an exception when attempting this).
 * Checks can now be run on a ``.github`` repository (the regular expression used to parse out the organization and repository names didn't work with this before)
 
-[1.1.1] - 2020-07-21
-~~~~~~~~~~~~~~~~~~~~
+1.1.1 - 2020-07-21
+~~~~~~~~~~~~~~~~~~
 
 Fixed
 _____
 
 * Gracefully handle errors in fetching data from GitHub
 
-[1.1.0] - 2020-07-16
-~~~~~~~~~~~~~~~~~~~~
+1.1.0 - 2020-07-16
+~~~~~~~~~~~~~~~~~~
 
 Added
 _____
@@ -95,8 +95,8 @@ _____
 * New fixtures that allow checks to easily fetch information from the GitHub API
   about the repository: ``github_client`` and ``github_repo``
 
-[1.0.0] - 2020-05-13
-~~~~~~~~~~~~~~~~~~~~
+1.0.0 - 2020-05-13
+~~~~~~~~~~~~~~~~~~
 
 Added
 _____
@@ -106,7 +106,7 @@ _____
 * Added the current timestamp to the output (under ``TIMESTAMP``)
 
 
-[0.1.0] - 2020-04-13
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+0.1.0 - 2020-04-13
+~~~~~~~~~~~~~~~~~~
 
 Initial release.
