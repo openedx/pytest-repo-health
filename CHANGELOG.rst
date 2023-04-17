@@ -15,12 +15,14 @@ Unreleased
 ~~~~~~~~~~
 
 
-3.0.1 - 2023-04-17
+3.0.2 - 2023-04-17
 ~~~~~~~~~~~~~~~~~~
 
 * If a check is an ``async def``, but is not marked with
   ``@pytest.mark.asyncio``, raise a true error, not just a warning that can be
   lost in the logs.
+
+* Correct packaging errors.
 
 
 3.0.0 - 2022-10-13
