@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.8.3
+aiohttp==3.8.4
     # via
     #   -r requirements/base.txt
     #   github-py
@@ -17,19 +17,18 @@ async-timeout==4.0.2
     # via
     #   -r requirements/base.txt
     #   aiohttp
-attrs==22.2.0
+attrs==23.1.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
-    #   pytest
 charset-normalizer==2.0.12
     # via
     #   -c requirements/constraints.txt
     #   -r requirements/base.txt
     #   aiohttp
-coverage[toml]==7.1.0
+coverage[toml]==7.2.3
     # via pytest-cov
-exceptiongroup==1.1.0
+exceptiongroup==1.1.1
     # via
     #   -r requirements/base.txt
     #   pytest
@@ -44,7 +43,7 @@ gitdb==4.0.10
     #   gitpython
 github.py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/base.txt
-gitpython==3.1.30
+gitpython==3.1.31
     # via -r requirements/base.txt
 idna==2.10
     # via
@@ -60,7 +59,7 @@ multidict==6.0.4
     #   -r requirements/base.txt
     #   aiohttp
     #   yarl
-packaging==23.0
+packaging==23.1
     # via
     #   -r requirements/base.txt
     #   pytest
@@ -68,7 +67,7 @@ pluggy==1.0.0
     # via
     #   -r requirements/base.txt
     #   pytest
-pytest==7.2.1
+pytest==7.3.1
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp
@@ -76,7 +75,7 @@ pytest==7.2.1
     #   pytest-cov
 pytest-aiohttp==1.0.4
     # via -r requirements/base.txt
-pytest-asyncio==0.20.3
+pytest-asyncio==0.21.0
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp
@@ -92,7 +91,7 @@ tomli==2.0.1
     # via
     #   -r requirements/base.txt
     #   pytest
-yarl==1.8.2
+yarl==1.9.2
     # via
     #   -r requirements/base.txt
     #   aiohttp
