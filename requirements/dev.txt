@@ -73,7 +73,7 @@ exceptiongroup==1.1.1
     # via
     #   -r requirements/quality.txt
     #   pytest
-filelock==3.12.0
+filelock==3.12.2
     # via
     #   -r requirements/ci.txt
     #   tox
@@ -145,7 +145,7 @@ pbr==5.11.1
     #   stevedore
 pip-tools==6.13.0
     # via -r requirements/pip-tools.txt
-platformdirs==3.5.1
+platformdirs==3.5.3
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -164,7 +164,7 @@ py==1.11.0
     #   tox
 pycodestyle==2.10.0
     # via -r requirements/quality.txt
-pydantic==1.10.8
+pydantic==1.10.9
     # via inflect
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
@@ -194,7 +194,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.3.1
+pytest==7.3.2
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
