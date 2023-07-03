@@ -63,11 +63,11 @@ packaging==23.1
     # via
     #   -r requirements/base.txt
     #   pytest
-pluggy==1.0.0
+pluggy==1.2.0
     # via
     #   -r requirements/base.txt
     #   pytest
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp

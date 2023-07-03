@@ -42,9 +42,9 @@ multidict==6.0.4
     #   yarl
 packaging==23.1
     # via pytest
-pluggy==1.0.0
+pluggy==1.2.0
     # via pytest
-pytest==7.3.2
+pytest==7.4.0
     # via
     #   -r requirements/base.in
     #   pytest-aiohttp
