@@ -54,7 +54,7 @@ docutils==0.19
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-exceptiongroup==1.1.1
+exceptiongroup==1.1.2
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -178,7 +178,7 @@ tomli==2.0.1
     #   coverage
     #   doc8
     #   pytest
-typing-extensions==4.6.3
+typing-extensions==4.7.1
     # via pydata-sphinx-theme
 urllib3==2.0.3
     # via requests
