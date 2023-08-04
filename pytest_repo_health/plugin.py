@@ -146,7 +146,7 @@ def pytest_ignore_collect(path, config):
     if config.getoption("repo_health"):
         if "/repo_health" not in str(path):
             return True
-    return False
+    return None
 
 
 # Unused argument "session", but pylint complains if it is renamed "_session"
