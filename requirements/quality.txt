@@ -142,7 +142,7 @@ pyyaml==6.0.1
     #   code-annotations
 six==1.16.0
     # via edx-lint
-smmap==5.0.0
+smmap==5.0.1
     # via
     #   -r requirements/test.txt
     #   gitdb
@@ -160,7 +160,7 @@ tomli==2.0.1
     #   pytest
 tomlkit==0.12.1
     # via pylint
-typing-extensions==4.7.1
+typing-extensions==4.8.0
     # via
     #   astroid
     #   pylint

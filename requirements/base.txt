@@ -55,7 +55,7 @@ pytest-asyncio==0.21.1
     # via pytest-aiohttp
 pyyaml==6.0.1
     # via -r requirements/base.in
-smmap==5.0.0
+smmap==5.0.1
     # via gitdb
 tomli==2.0.1
     # via pytest

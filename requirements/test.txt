@@ -83,7 +83,7 @@ pytest-cov==4.1.0
     # via -r requirements/test.in
 pyyaml==6.0.1
     # via -r requirements/base.txt
-smmap==5.0.0
+smmap==5.0.1
     # via
     #   -r requirements/base.txt
     #   gitdb
