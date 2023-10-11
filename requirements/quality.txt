@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.8.5
+aiohttp==3.8.6
     # via
     #   -r requirements/test.txt
     #   github-py
