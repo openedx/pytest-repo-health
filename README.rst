@@ -141,7 +141,7 @@ If you encounter any problems, please `file an issue`_ along with a detailed des
 Reporting Security Issues
 -------------------------
 
-Please do not report security issues in public. Please email security@edx.org.
+Please do not report security issues in public. Please email security@openedx.org.
 
 
 Getting Help
