@@ -69,7 +69,7 @@ pluggy==1.3.0
     # via
     #   -r requirements/base.txt
     #   pytest
-pytest==7.4.2
+pytest==7.4.3
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp
