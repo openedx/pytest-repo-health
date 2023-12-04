@@ -4,18 +4,24 @@ pytest plugin to test if specific repo follows standards
 
 import datetime
 import os
+import re
+import requests
+import tempfile
 import warnings
 from collections import defaultdict
 
 import pytest
 import yaml
 
-from .fixtures.git import git_origin_url, git_repo  # pylint: disable=unused-import
-from .fixtures.github import github_client, github_repo  # pylint: disable=unused-import
-from .utils import get_repo_remote_name
+from .utils import get_file_content, get_repo_remote_name
 
 session_data_holder_dict = defaultdict(dict)
 session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
+
+
+DJANGO_DEPS_SHEET_URL = (
+    "https://docs.google.com/spreadsheets/d/19-BzpcX3XvqlazHcLhn1ZifBMVNund15EwY3QQM390M/export?format=csv"
+)
 
 
 @pytest.fixture(autouse=True)
@@ -33,6 +39,12 @@ def pytest_configure(config):
     """
     pytest hook used to add plugin install dir as place for pytest to find tests
     """
+
+    if any([config.getoption("repo_health"), config.getoption("dependencies_health")]):
+        # Change test prefix to check only if it ran for
+        # repo_health or dependencies_health
+        config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
+        config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
 
     if config.getoption("repo_health"):
 
@@ -57,10 +69,11 @@ def pytest_configure(config):
 
         if repo_health_path is not None:
             config.args.append(os.path.abspath(repo_health_path))
+    elif config.getoption("dependencies_health"):
+        repo_health_path = config.getoption("repo_health_path")
+        if repo_health_path is not None:
+            config.args.append(os.path.abspath(repo_health_path))
 
-        # Change test prefix to check
-        config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
-        config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
     return config
 
 
@@ -96,6 +109,14 @@ def pytest_addoption(parser):
     )
 
     group.addoption(
+        "--dependencies-health",
+        action="store_true",
+        dest='dependencies_health',
+        default=False,
+        help="if true, only dependencies health checks will be run"
+    )
+
+    group.addoption(
         "--output-path",
         action="store",
         dest='output_path',
@@ -125,6 +146,30 @@ def repo_path(request):
     return path
 
 
+@pytest.fixture(name="setup_py")
+def fixture_setup_py(repo_path):
+    """Fixture containing the text content of setup.py"""
+    full_path = os.path.join(repo_path, "setup.py")
+    return get_file_content(full_path)
+
+
+@pytest.fixture(name="setup_cfg")
+def fixture_setup_cfg(repo_path):
+    """Fixture containing the text content of setup.cfg"""
+    full_path = os.path.join(repo_path, "setup.cfg")
+    return get_file_content(full_path)
+
+
+@pytest.fixture(name="python_versions_in_classifiers")
+def fixture_python_version(setup_py):
+    """
+    The list of python versions in setup.py classifiers
+    """
+    regex_pattern = r"Programming Language :: Python :: ([\d\.]+)"
+    python_classifiers = re.findall(regex_pattern, setup_py, re.MULTILINE)
+    return python_classifiers
+
+
 @pytest.fixture
 def repo_health(request):
     """
@@ -137,6 +182,25 @@ def repo_health(request):
     return request.config.option.repo_health
 
 
+
+
+@pytest.fixture(name='django_deps_sheet', scope="session")  # pragma: no cover
+def django_dependency_sheet_fixture():
+    """
+    Returns the path for csv file which contains django dependencies status.
+    Also, makes a request for latest sheet & dumps response into the csv file if request was successful.
+    """
+    tmpdir = tempfile.mkdtemp()
+    csv_filepath = os.path.join(tmpdir, "django_dependencies_sheet.csv")
+
+    res = requests.get(DJANGO_DEPS_SHEET_URL)
+    if res.status_code == 200:
+        with open(csv_filepath, 'w', encoding="utf8") as fp:
+            fp.write(res.text)
+
+    return csv_filepath
+
+
 def pytest_ignore_collect(path, config):
     """
     pytest hook that determines if pytest looks at specific file to collect tests
@@ -145,6 +209,9 @@ def pytest_ignore_collect(path, config):
     """
     if config.getoption("repo_health"):
         if "/repo_health" not in str(path):
+            return True
+    elif config.getoption("dependencies_health"):
+        if "/dependencies_health" not in str(path):
             return True
     return None
 
@@ -187,6 +254,6 @@ def pytest_sessionfinish(session):
     """
     pytest hook used to collect results for tests and put into output file
     """
-    if session.config.getoption("repo_health"):
+    if session.config.getoption("repo_health") or session.config.getoption("dependencies_health"):
         with open(session.config.getoption("output_path"), "w") as write_file:
             yaml.dump(dict(session_data_holder_dict), write_file, indent=4)
