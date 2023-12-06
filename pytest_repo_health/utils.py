@@ -1,9 +1,6 @@
 """
 Utilities for pytest plugin
 """
-
-import codecs
-import os
 import re
 from pathlib import Path
 
@@ -43,14 +40,3 @@ def get_repo_remote_name(repo_path):
         return None
     match = re.fullmatch(URL_PATTERN, origin.url)
     return match.group("repo_name")
-
-
-def get_file_content(path):
-    """
-    Get the content of the UTF-8 text file at the specified path.
-    Used for pytest fixtures.
-    """
-    if not os.path.exists(path):
-        return ""
-    with codecs.open(path, "r", "utf-8") as f:
-        return f.read()

@@ -4,24 +4,18 @@ pytest plugin to test if specific repo follows standards
 
 import datetime
 import os
-import re
-import requests
-import tempfile
 import warnings
 from collections import defaultdict
 
 import pytest
 import yaml
 
-from .utils import get_file_content, get_repo_remote_name
+from .fixtures.git import git_origin_url, git_repo  # pylint: disable=unused-import
+from .fixtures.github import github_client, github_repo  # pylint: disable=unused-import
+from .utils import get_repo_remote_name
 
 session_data_holder_dict = defaultdict(dict)
 session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
-
-
-DJANGO_DEPS_SHEET_URL = (
-    "https://docs.google.com/spreadsheets/d/19-BzpcX3XvqlazHcLhn1ZifBMVNund15EwY3QQM390M/export?format=csv"
-)
 
 
 @pytest.fixture(autouse=True)
@@ -146,30 +140,6 @@ def repo_path(request):
     return path
 
 
-@pytest.fixture(name="setup_py")
-def fixture_setup_py(repo_path):
-    """Fixture containing the text content of setup.py"""
-    full_path = os.path.join(repo_path, "setup.py")
-    return get_file_content(full_path)
-
-
-@pytest.fixture(name="setup_cfg")
-def fixture_setup_cfg(repo_path):
-    """Fixture containing the text content of setup.cfg"""
-    full_path = os.path.join(repo_path, "setup.cfg")
-    return get_file_content(full_path)
-
-
-@pytest.fixture(name="python_versions_in_classifiers")
-def fixture_python_version(setup_py):
-    """
-    The list of python versions in setup.py classifiers
-    """
-    regex_pattern = r"Programming Language :: Python :: ([\d\.]+)"
-    python_classifiers = re.findall(regex_pattern, setup_py, re.MULTILINE)
-    return python_classifiers
-
-
 @pytest.fixture
 def repo_health(request):
     """
@@ -180,25 +150,6 @@ def repo_health(request):
         no repo_health checks will be run, other tests may or may not be run
     """
     return request.config.option.repo_health
-
-
-
-
-@pytest.fixture(name='django_deps_sheet', scope="session")  # pragma: no cover
-def django_dependency_sheet_fixture():
-    """
-    Returns the path for csv file which contains django dependencies status.
-    Also, makes a request for latest sheet & dumps response into the csv file if request was successful.
-    """
-    tmpdir = tempfile.mkdtemp()
-    csv_filepath = os.path.join(tmpdir, "django_dependencies_sheet.csv")
-
-    res = requests.get(DJANGO_DEPS_SHEET_URL)
-    if res.status_code == 200:
-        with open(csv_filepath, 'w', encoding="utf8") as fp:
-            fp.write(res.text)
-
-    return csv_filepath
 
 
 def pytest_ignore_collect(path, config):
