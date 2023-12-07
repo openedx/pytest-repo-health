@@ -34,6 +34,8 @@ def pytest_configure(config):
     pytest hook used to add plugin install dir as place for pytest to find tests
     """
 
+    # in case repo_health checks are in separate repo
+    repo_health_path = config.getoption("repo_health_path")
     if any([config.getoption("repo_health"), config.getoption("dependencies_health")]):
         # Change test prefix to check only if it ran for
         # repo_health or dependencies_health
@@ -51,9 +53,6 @@ def pytest_configure(config):
         if repo_path is None:
             repo_path = os.getcwd()
 
-        # in case repo_health checks are in separate repo
-        repo_health_path = config.getoption("repo_health_path")
-
         # When repo-health script is ran on edx-repo-health on jenkins,
         # it gives error for import mismatch as it collects same check from both directories
         # Hence if origin is same for repo_path and repo_health_path then don't
@@ -64,7 +63,6 @@ def pytest_configure(config):
         if repo_health_path is not None:
             config.args.append(os.path.abspath(repo_health_path))
     elif config.getoption("dependencies_health"):
-        repo_health_path = config.getoption("repo_health_path")
         if repo_health_path is not None:
             config.args.append(os.path.abspath(repo_health_path))
 
