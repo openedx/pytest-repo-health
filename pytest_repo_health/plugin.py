@@ -35,7 +35,7 @@ def pytest_configure(config):
     """
 
     if any([config.getoption("repo_health"), config.getoption("dependencies_health")]):
-        # Change test prefix to check only if it ran for
+        # Change test prefix to check, only if it ran for
         # repo_health or dependencies_health
         config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
         config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
