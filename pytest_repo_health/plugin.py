@@ -34,16 +34,17 @@ def pytest_configure(config):
     pytest hook used to add plugin install dir as place for pytest to find tests
     """
 
-    # in case repo_health checks are in separate repo
-    repo_health_path = config.getoption("repo_health_path")
     if any([config.getoption("repo_health"), config.getoption("dependencies_health")]):
         # Change test prefix to check only if it ran for
         # repo_health or dependencies_health
         config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
         config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
+        # in case repo_health checks are in separate repo
+        repo_health_path = config.getoption("repo_health_path")
+        if repo_health_path is not None:
+            config.args.append(os.path.abspath(repo_health_path))
 
     if config.getoption("repo_health"):
-
         # Add path to pytest-repo-health dir so pytest knows where to look for checks
         file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         config.args.append(file_dir)
@@ -59,12 +60,6 @@ def pytest_configure(config):
         # import checks from repo_path
         if get_repo_remote_name(repo_path) != get_repo_remote_name(repo_health_path):
             config.args.append(os.path.abspath(repo_path))
-
-        if repo_health_path is not None:
-            config.args.append(os.path.abspath(repo_health_path))
-    elif config.getoption("dependencies_health"):
-        if repo_health_path is not None:
-            config.args.append(os.path.abspath(repo_health_path))
 
     return config
 
