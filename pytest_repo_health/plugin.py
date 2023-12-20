@@ -33,18 +33,14 @@ def pytest_configure(config):
     """
     pytest hook used to add plugin install dir as place for pytest to find tests
     """
-
-    if any([config.getoption("repo_health"), config.getoption("dependencies_health")]):
-        # Change test prefix to check, only if it ran for
-        # repo_health or dependencies_health
-        config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
-        config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
-        # in case repo_health checks are in separate repo
-        repo_health_path = config.getoption("repo_health_path")
-        if repo_health_path is not None:
-            config.args.append(os.path.abspath(repo_health_path))
+    # Registering edx_health and py_dependency_health markers
+    config.addinivalue_line(
+        "markers", "edx_health: custom marker to select edx and openedx health checks\n"
+                   "py_dependency_health: custom marker to select py dependencies health checks"
+    )
 
     if config.getoption("repo_health"):
+
         # Add path to pytest-repo-health dir so pytest knows where to look for checks
         file_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
         config.args.append(file_dir)
@@ -54,6 +50,9 @@ def pytest_configure(config):
         if repo_path is None:
             repo_path = os.getcwd()
 
+        # in case repo_health checks are in separate repo
+        repo_health_path = config.getoption("repo_health_path")
+
         # When repo-health script is ran on edx-repo-health on jenkins,
         # it gives error for import mismatch as it collects same check from both directories
         # Hence if origin is same for repo_path and repo_health_path then don't
@@ -61,6 +60,12 @@ def pytest_configure(config):
         if get_repo_remote_name(repo_path) != get_repo_remote_name(repo_health_path):
             config.args.append(os.path.abspath(repo_path))
 
+        if repo_health_path is not None:
+            config.args.append(os.path.abspath(repo_health_path))
+
+        # Change test prefix to check
+        config._inicache['python_files'] = ['check_*.py']  # pylint: disable=protected-access
+        config._inicache['python_functions'] = ['check_*']  # pylint: disable=protected-access
     return config
 
 
@@ -93,14 +98,6 @@ def pytest_addoption(parser):
         dest='repo_health',
         default=False,
         help="if true, only repository health checks will be run"
-    )
-
-    group.addoption(
-        "--dependencies-health",
-        action="store_true",
-        dest='dependencies_health',
-        default=False,
-        help="if true, only dependencies health checks will be run"
     )
 
     group.addoption(
@@ -145,21 +142,6 @@ def repo_health(request):
     return request.config.option.repo_health
 
 
-def pytest_ignore_collect(path, config):
-    """
-    pytest hook that determines if pytest looks at specific file to collect tests
-    if repo_health is set to true:
-        only tests in test files with "repo_health" in their path will be collected
-    """
-    if config.getoption("repo_health"):
-        if "/repo_health" not in str(path):
-            return True
-    elif config.getoption("dependencies_health"):
-        if "/dependencies_health" not in str(path):
-            return True
-    return None
-
-
 # Unused argument "session", but pylint complains if it is renamed "_session"
 # pylint: disable=unused-argument
 def pytest_collection_modifyitems(session, config, items):
@@ -198,6 +180,6 @@ def pytest_sessionfinish(session):
     """
     pytest hook used to collect results for tests and put into output file
     """
-    if session.config.getoption("repo_health") or session.config.getoption("dependencies_health"):
+    if session.config.getoption("repo_health"):
         with open(session.config.getoption("output_path"), "w") as write_file:
             yaml.dump(dict(session_data_holder_dict), write_file, indent=4)
