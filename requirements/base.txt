@@ -16,7 +16,7 @@ attrs==23.1.0
     # via aiohttp
 exceptiongroup==1.2.0
     # via pytest
-frozenlist==1.4.0
+frozenlist==1.4.1
     # via
     #   aiohttp
     #   aiosignal
