@@ -48,7 +48,7 @@ code-annotations==1.5.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-coverage[toml]==7.3.3
+coverage[toml]==7.3.4
     # via
     #   -r requirements/quality.txt
     #   coverage
@@ -163,9 +163,9 @@ py==1.11.0
     #   tox
 pycodestyle==2.11.1
     # via -r requirements/quality.txt
-pydantic==2.5.2
+pydantic==2.5.3
     # via inflect
-pydantic-core==2.14.5
+pydantic-core==2.14.6
     # via pydantic
 pydocstyle==6.3.0
     # via -r requirements/quality.txt

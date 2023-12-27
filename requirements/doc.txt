@@ -37,7 +37,7 @@ charset-normalizer==2.0.12
     # via
     #   -c requirements/constraints.txt
     #   requests
-coverage[toml]==7.3.3
+coverage[toml]==7.3.4
     # via
     #   -r requirements/test.txt
     #   coverage

@@ -21,7 +21,7 @@ attrs==23.1.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
-coverage[toml]==7.3.3
+coverage[toml]==7.3.4
     # via
     #   coverage
     #   pytest-cov
