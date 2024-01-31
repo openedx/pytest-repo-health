@@ -4,7 +4,7 @@
 #
 #    make upgrade
 #
-aiohttp==3.9.1
+aiohttp==3.9.3
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -32,14 +32,14 @@ click==8.1.7
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==1.5.0
+code-annotations==1.6.0
     # via edx-lint
-coverage[toml]==7.4.0
+coverage[toml]==7.4.1
     # via
     #   -r requirements/test.txt
     #   coverage
     #   pytest-cov
-dill==0.3.7
+dill==0.3.8
     # via pylint
 edx-lint==5.3.6
     # via -r requirements/quality.in
@@ -92,7 +92,7 @@ pbr==6.0.0
     # via stevedore
 platformdirs==4.1.0
     # via pylint
-pluggy==1.3.0
+pluggy==1.4.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -122,13 +122,13 @@ pytest==7.4.4
     #   pytest-cov
 pytest-aiohttp==1.0.5
     # via -r requirements/test.txt
-pytest-asyncio==0.23.3
+pytest-asyncio==0.23.4
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
 pytest-cov==4.1.0
     # via -r requirements/test.txt
-python-slugify==8.0.1
+python-slugify==8.0.2
     # via code-annotations
 pyyaml==6.0.1
     # via
