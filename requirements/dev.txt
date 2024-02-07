@@ -15,7 +15,7 @@ aiosignal==1.3.1
     #   aiohttp
 annotated-types==0.6.0
     # via pydantic
-astroid==3.0.2
+astroid==3.0.3
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -117,7 +117,7 @@ jinja2==3.1.3
     #   jinja2-pluralize
 jinja2-pluralize==0.3.0
     # via diff-cover
-markupsafe==2.1.4
+markupsafe==2.1.5
     # via
     #   -r requirements/quality.txt
     #   jinja2
@@ -125,7 +125,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-multidict==6.0.4
+multidict==6.0.5
     # via
     #   -r requirements/quality.txt
     #   aiohttp
@@ -144,7 +144,7 @@ pbr==6.0.0
     #   stevedore
 pip-tools==7.3.0
     # via -r requirements/pip-tools.txt
-platformdirs==4.1.0
+platformdirs==4.2.0
     # via
     #   -r requirements/ci.txt
     #   -r requirements/quality.txt
@@ -163,9 +163,9 @@ py==1.11.0
     #   tox
 pycodestyle==2.11.1
     # via -r requirements/quality.txt
-pydantic==2.6.0
+pydantic==2.6.1
     # via inflect
-pydantic-core==2.16.1
+pydantic-core==2.16.2
     # via pydantic
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
@@ -209,7 +209,7 @@ pytest-asyncio==0.23.4
     #   pytest-aiohttp
 pytest-cov==4.1.0
     # via -r requirements/quality.txt
-python-slugify==8.0.2
+python-slugify==8.0.3
     # via
     #   -r requirements/quality.txt
     #   code-annotations

@@ -51,7 +51,7 @@ iniconfig==2.0.0
     # via
     #   -r requirements/base.txt
     #   pytest
-multidict==6.0.4
+multidict==6.0.5
     # via
     #   -r requirements/base.txt
     #   aiohttp
