@@ -195,7 +195,7 @@ pyproject-hooks==1.0.0
     # via
     #   -r requirements/pip-tools.txt
     #   build
-pytest==7.4.4
+pytest==8.0.0
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
@@ -203,13 +203,13 @@ pytest==7.4.4
     #   pytest-cov
 pytest-aiohttp==1.0.5
     # via -r requirements/quality.txt
-pytest-asyncio==0.23.4
+pytest-asyncio==0.23.5
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
 pytest-cov==4.1.0
     # via -r requirements/quality.txt
-python-slugify==8.0.3
+python-slugify==8.0.4
     # via
     #   -r requirements/quality.txt
     #   code-annotations
