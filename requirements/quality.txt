@@ -34,10 +34,9 @@ click-log==0.4.0
     # via edx-lint
 code-annotations==1.6.0
     # via edx-lint
-coverage[toml]==7.4.1
+coverage[toml]==7.4.2
     # via
     #   -r requirements/test.txt
-    #   coverage
     #   pytest-cov
 dill==0.3.8
     # via pylint
@@ -58,7 +57,7 @@ gitdb==4.0.11
     #   gitpython
 github-py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/test.txt
-gitpython==3.1.41
+gitpython==3.1.42
     # via -r requirements/test.txt
 idna==2.10
     # via
@@ -114,7 +113,7 @@ pylint-plugin-utils==0.8.2
     # via
     #   pylint-celery
     #   pylint-django
-pytest==8.0.0
+pytest==8.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp

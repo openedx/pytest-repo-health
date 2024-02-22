@@ -37,10 +37,9 @@ charset-normalizer==2.0.12
     # via
     #   -c requirements/constraints.txt
     #   requests
-coverage[toml]==7.4.1
+coverage[toml]==7.4.2
     # via
     #   -r requirements/test.txt
-    #   coverage
     #   pytest-cov
 doc8==1.1.1
     # via -r requirements/doc.in
@@ -66,7 +65,7 @@ gitdb==4.0.11
     #   gitpython
 github-py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6
     # via -r requirements/test.txt
-gitpython==3.1.41
+gitpython==3.1.42
     # via -r requirements/test.txt
 idna==2.10
     # via
@@ -116,7 +115,7 @@ pygments==2.17.2
     #   pydata-sphinx-theme
     #   readme-renderer
     #   sphinx
-pytest==8.0.0
+pytest==8.0.1
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -177,7 +176,7 @@ tomli==2.0.1
     #   pytest
 typing-extensions==4.9.0
     # via pydata-sphinx-theme
-urllib3==2.2.0
+urllib3==2.2.1
     # via requests
 yarl==1.9.4
     # via
