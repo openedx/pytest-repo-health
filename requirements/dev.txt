@@ -15,7 +15,7 @@ aiosignal==1.3.1
     #   aiohttp
 annotated-types==0.6.0
     # via pydantic
-astroid==3.0.3
+astroid==3.1.0
     # via
     #   -r requirements/quality.txt
     #   pylint
@@ -48,7 +48,7 @@ code-annotations==1.6.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-coverage[toml]==7.4.2
+coverage[toml]==7.4.3
     # via
     #   -r requirements/quality.txt
     #   pytest-cov
@@ -162,15 +162,15 @@ py==1.11.0
     #   tox
 pycodestyle==2.11.1
     # via -r requirements/quality.txt
-pydantic==2.6.1
+pydantic==2.6.3
     # via inflect
-pydantic-core==2.16.2
+pydantic-core==2.16.3
     # via pydantic
 pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.17.2
     # via diff-cover
-pylint==3.0.3
+pylint==3.1.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -195,7 +195,7 @@ pyproject-hooks==1.0.0
     #   -r requirements/pip-tools.txt
     #   build
     #   pip-tools
-pytest==8.0.1
+pytest==8.0.2
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
@@ -231,7 +231,7 @@ snowballstemmer==2.2.0
     # via
     #   -r requirements/quality.txt
     #   pydocstyle
-stevedore==5.1.0
+stevedore==5.2.0
     # via
     #   -r requirements/quality.txt
     #   code-annotations
@@ -251,13 +251,13 @@ tomli==2.0.1
     #   pyproject-hooks
     #   pytest
     #   tox
-tomlkit==0.12.3
+tomlkit==0.12.4
     # via
     #   -r requirements/quality.txt
     #   pylint
 tox==3.28.0
     # via -r requirements/ci.txt
-typing-extensions==4.9.0
+typing-extensions==4.10.0
     # via
     #   -r requirements/quality.txt
     #   annotated-types
@@ -266,7 +266,7 @@ typing-extensions==4.9.0
     #   pydantic
     #   pydantic-core
     #   pylint
-virtualenv==20.25.0
+virtualenv==20.25.1
     # via
     #   -r requirements/ci.txt
     #   tox
