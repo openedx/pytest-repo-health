@@ -113,10 +113,9 @@ the coverage at least stays the same before you submit a pull request.
 License
 -------
 
-The code in this repository is licensed under the Apache Software License 2.0 unless
-otherwise noted.
+This software is licensed under the terms of the AGPLv3.
 
-Please see ``LICENSE.txt`` for details.
+Please see ``LICENSE`` for details.
 
 How To Contribute
 -----------------
