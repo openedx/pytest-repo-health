@@ -28,7 +28,7 @@ attrs==23.2.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-build==1.0.3
+build==1.1.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
