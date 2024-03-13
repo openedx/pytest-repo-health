@@ -83,7 +83,7 @@ multidict==6.0.5
     #   -r requirements/test.txt
     #   aiohttp
     #   yarl
-packaging==23.2
+packaging==24.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -113,7 +113,7 @@ pylint-plugin-utils==0.8.2
     # via
     #   pylint-celery
     #   pylint-django
-pytest==8.0.2
+pytest==8.1.1
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -121,7 +121,7 @@ pytest==8.0.2
     #   pytest-cov
 pytest-aiohttp==1.0.5
     # via -r requirements/test.txt
-pytest-asyncio==0.23.5
+pytest-asyncio==0.23.5.post1
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
