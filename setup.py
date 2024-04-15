@@ -128,7 +128,7 @@ setup(
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: Apache Software License',
+        'License :: OSI Approved :: GNU Affero General Public License v3',
         'Natural Language :: English',
         'Topic :: Software Development :: Testing',
         'Programming Language :: Python',
