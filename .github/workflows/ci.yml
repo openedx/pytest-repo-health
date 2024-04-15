@@ -19,7 +19,6 @@ jobs:
         toxenv:
         - 'py'
         - 'quality'
-        - 'django42'
 
     steps:
     - name: checkout repo
