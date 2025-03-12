@@ -14,6 +14,15 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+3.1.0 - 2025-03-12
+~~~~~~~~~~~~~~~~~~
+
+BREAKING CHANGE
+_______________
+
+* Upgraded package to use Python 3.11
+* Dropped Python 3.8 support
+
 
 3.0.2 - 2023-04-17
 ~~~~~~~~~~~~~~~~~~
