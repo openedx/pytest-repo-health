@@ -10,7 +10,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
-aiohttp==3.11.13
+aiohttp==3.11.14
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -21,7 +21,7 @@ aiosignal==1.3.2
     #   aiohttp
 alabaster==1.0.0
     # via sphinx
-attrs==25.2.0
+attrs==25.3.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -35,7 +35,7 @@ certifi==2025.1.31
     # via requests
 charset-normalizer==3.4.1
     # via requests
-coverage[toml]==7.6.12
+coverage[toml]==7.7.0
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -76,7 +76,7 @@ jinja2==3.1.6
     # via sphinx
 markupsafe==3.0.2
     # via jinja2
-multidict==6.1.0
+multidict==6.2.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
