@@ -6,7 +6,7 @@
 #
 aiohappyeyeballs==2.6.1
     # via aiohttp
-aiohttp==3.11.14
+aiohttp==3.11.15
     # via
     #   github-py
     #   pytest-aiohttp
@@ -26,9 +26,9 @@ gitpython==3.1.44
     # via -r requirements/base.in
 idna==3.10
     # via yarl
-iniconfig==2.0.0
+iniconfig==2.1.0
     # via pytest
-multidict==6.2.0
+multidict==6.3.1
     # via
     #   aiohttp
     #   yarl
@@ -36,7 +36,7 @@ packaging==24.2
     # via pytest
 pluggy==1.5.0
     # via pytest
-propcache==0.3.0
+propcache==0.3.1
     # via
     #   aiohttp
     #   yarl
@@ -47,7 +47,7 @@ pytest==8.3.5
     #   pytest-asyncio
 pytest-aiohttp==1.1.0
     # via -r requirements/base.in
-pytest-asyncio==0.25.3
+pytest-asyncio==0.26.0
     # via pytest-aiohttp
 pyyaml==6.0.2
     # via -r requirements/base.in
