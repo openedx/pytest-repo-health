@@ -8,7 +8,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
-aiohttp==3.11.15
+aiohttp==3.11.16
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -32,7 +32,7 @@ click==8.1.8
     #   edx-lint
 click-log==0.4.0
     # via edx-lint
-code-annotations==2.2.0
+code-annotations==2.3.0
     # via edx-lint
 coverage[toml]==7.8.0
     # via
@@ -73,7 +73,7 @@ markupsafe==3.0.2
     # via jinja2
 mccabe==0.7.0
     # via pylint
-multidict==6.3.1
+multidict==6.2.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -125,7 +125,7 @@ pytest-asyncio==0.26.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
-pytest-cov==6.1.0
+pytest-cov==6.1.1
     # via -r requirements/test.txt
 python-slugify==8.0.4
     # via code-annotations
@@ -147,7 +147,7 @@ text-unidecode==1.3
     # via python-slugify
 tomlkit==0.13.2
     # via pylint
-yarl==1.18.3
+yarl==1.19.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
