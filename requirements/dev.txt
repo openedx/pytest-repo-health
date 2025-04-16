@@ -8,7 +8,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -r requirements/quality.txt
     #   aiohttp
-aiohttp==3.11.15
+aiohttp==3.11.16
     # via
     #   -r requirements/quality.txt
     #   github-py
@@ -51,7 +51,7 @@ click-log==0.4.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
-code-annotations==2.2.0
+code-annotations==2.3.0
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -118,7 +118,7 @@ mccabe==0.7.0
     # via
     #   -r requirements/quality.txt
     #   pylint
-multidict==6.3.1
+multidict==6.4.3
     # via
     #   -r requirements/quality.txt
     #   aiohttp
@@ -204,7 +204,7 @@ pytest-asyncio==0.26.0
     # via
     #   -r requirements/quality.txt
     #   pytest-aiohttp
-pytest-cov==6.1.0
+pytest-cov==6.1.1
     # via -r requirements/quality.txt
 python-slugify==8.0.4
     # via
@@ -248,7 +248,7 @@ wheel==0.45.1
     # via
     #   -r requirements/pip-tools.txt
     #   pip-tools
-yarl==1.18.3
+yarl==1.19.0
     # via
     #   -r requirements/quality.txt
     #   aiohttp
