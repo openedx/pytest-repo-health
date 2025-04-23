@@ -10,7 +10,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
-aiohttp==3.11.15
+aiohttp==3.11.18
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -29,7 +29,7 @@ babel==2.17.0
     # via
     #   pydata-sphinx-theme
     #   sphinx
-beautifulsoup4==4.13.3
+beautifulsoup4==4.13.4
     # via pydata-sphinx-theme
 certifi==2025.1.31
     # via requests
@@ -48,7 +48,7 @@ docutils==0.21.2
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-frozenlist==1.5.0
+frozenlist==1.6.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -76,14 +76,14 @@ jinja2==3.1.6
     # via sphinx
 markupsafe==3.0.2
     # via jinja2
-multidict==6.3.1
+multidict==6.4.3
     # via
     #   -r requirements/test.txt
     #   aiohttp
     #   yarl
 nh3==0.2.21
     # via readme-renderer
-packaging==24.2
+packaging==25.0
     # via
     #   -r requirements/test.txt
     #   pydata-sphinx-theme
@@ -121,7 +121,7 @@ pytest-asyncio==0.26.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
-pytest-cov==6.1.0
+pytest-cov==6.1.1
     # via -r requirements/test.txt
 pyyaml==6.0.2
     # via -r requirements/test.txt
@@ -139,7 +139,7 @@ smmap==5.0.2
     #   gitdb
 snowballstemmer==2.2.0
     # via sphinx
-soupsieve==2.6
+soupsieve==2.7
     # via beautifulsoup4
 sphinx==8.2.3
     # via
@@ -162,7 +162,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 stevedore==5.4.1
     # via doc8
-typing-extensions==4.13.0
+typing-extensions==4.13.2
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme
@@ -170,7 +170,7 @@ urllib3==2.2.3
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   requests
-yarl==1.18.3
+yarl==1.20.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
