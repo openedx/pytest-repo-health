@@ -17,9 +17,6 @@ Unreleased
 4.0.0 - 2025-04-30
 ~~~~~~~~~~~~~~~~~~
 
-BREAKING CHANGE
-_______________
-
 * Added support for Python 3.12
 
 
