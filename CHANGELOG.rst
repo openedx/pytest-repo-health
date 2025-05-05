@@ -14,7 +14,7 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
-4.0.0 - 2025-04-30
+3.2.0 - 2025-04-30
 ~~~~~~~~~~~~~~~~~~
 
 * Added support for Python 3.12
