@@ -163,7 +163,7 @@ pydocstyle==6.3.0
     # via -r requirements/quality.txt
 pygments==2.19.1
     # via diff-cover
-pylint==3.3.6
+pylint==3.3.7
     # via
     #   -r requirements/quality.txt
     #   edx-lint
@@ -240,7 +240,7 @@ tomlkit==0.13.2
     #   pylint
 tox==4.25.0
     # via -r requirements/ci.txt
-virtualenv==20.30.0
+virtualenv==20.31.1
     # via
     #   -r requirements/ci.txt
     #   tox
