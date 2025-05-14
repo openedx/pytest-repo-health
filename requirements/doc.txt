@@ -33,7 +33,7 @@ beautifulsoup4==4.13.4
     # via pydata-sphinx-theme
 certifi==2025.4.26
     # via requests
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 coverage[toml]==7.8.0
     # via
@@ -137,7 +137,7 @@ smmap==5.0.2
     # via
     #   -r requirements/test.txt
     #   gitdb
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
 soupsieve==2.7
     # via beautifulsoup4
