@@ -10,7 +10,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
-aiohttp==3.11.18
+aiohttp==3.12.0b0
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -33,7 +33,7 @@ beautifulsoup4==4.13.4
     # via pydata-sphinx-theme
 certifi==2025.4.26
     # via requests
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
 coverage[toml]==7.8.0
     # via
@@ -76,7 +76,7 @@ jinja2==3.1.6
     # via sphinx
 markupsafe==3.0.2
     # via jinja2
-multidict==6.4.3
+multidict==6.4.4
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -91,7 +91,7 @@ packaging==25.0
     #   sphinx
 pbr==6.1.1
     # via stevedore
-pluggy==1.5.0
+pluggy==1.6.0
     # via
     #   -r requirements/test.txt
     #   pytest
@@ -137,7 +137,7 @@ smmap==5.0.2
     # via
     #   -r requirements/test.txt
     #   gitdb
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
 soupsieve==2.7
     # via beautifulsoup4
