@@ -8,7 +8,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -r requirements/base.txt
     #   aiohttp
-aiohttp==3.11.18
+aiohttp==3.12.7
     # via
     #   -r requirements/base.txt
     #   github-py
@@ -21,9 +21,9 @@ attrs==25.3.0
     # via
     #   -r requirements/base.txt
     #   aiohttp
-coverage[toml]==7.8.0
+coverage[toml]==7.8.2
     # via pytest-cov
-frozenlist==1.6.0
+frozenlist==1.6.2
     # via
     #   -r requirements/base.txt
     #   aiohttp
@@ -44,7 +44,7 @@ iniconfig==2.1.0
     # via
     #   -r requirements/base.txt
     #   pytest
-multidict==6.4.3
+multidict==6.4.4
     # via
     #   -r requirements/base.txt
     #   aiohttp
@@ -53,7 +53,7 @@ packaging==25.0
     # via
     #   -r requirements/base.txt
     #   pytest
-pluggy==1.5.0
+pluggy==1.6.0
     # via
     #   -r requirements/base.txt
     #   pytest
@@ -62,7 +62,11 @@ propcache==0.3.1
     #   -r requirements/base.txt
     #   aiohttp
     #   yarl
-pytest==8.3.5
+pygments==2.19.1
+    # via
+    #   -r requirements/base.txt
+    #   pytest
+pytest==8.4.0
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp
@@ -70,7 +74,7 @@ pytest==8.3.5
     #   pytest-cov
 pytest-aiohttp==1.1.0
     # via -r requirements/base.txt
-pytest-asyncio==0.26.0
+pytest-asyncio==1.0.0
     # via
     #   -r requirements/base.txt
     #   pytest-aiohttp
