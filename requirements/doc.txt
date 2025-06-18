@@ -10,7 +10,7 @@ aiohappyeyeballs==2.6.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
-aiohttp==3.11.18
+aiohttp==3.12.13
     # via
     #   -r requirements/test.txt
     #   github-py
@@ -31,15 +31,15 @@ babel==2.17.0
     #   sphinx
 beautifulsoup4==4.13.4
     # via pydata-sphinx-theme
-certifi==2025.4.26
+certifi==2025.6.15
     # via requests
-charset-normalizer==3.4.1
+charset-normalizer==3.4.2
     # via requests
-coverage[toml]==7.8.0
+coverage[toml]==7.9.1
     # via
     #   -r requirements/test.txt
     #   pytest-cov
-doc8==1.1.2
+doc8==2.0.0
     # via -r requirements/doc.in
 docutils==0.21.2
     # via
@@ -48,7 +48,7 @@ docutils==0.21.2
     #   readme-renderer
     #   restructuredtext-lint
     #   sphinx
-frozenlist==1.6.0
+frozenlist==1.7.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -76,7 +76,7 @@ jinja2==3.1.6
     # via sphinx
 markupsafe==3.0.2
     # via jinja2
-multidict==6.4.3
+multidict==6.5.0
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -91,11 +91,12 @@ packaging==25.0
     #   sphinx
 pbr==6.1.1
     # via stevedore
-pluggy==1.5.0
+pluggy==1.6.0
     # via
     #   -r requirements/test.txt
     #   pytest
-propcache==0.3.1
+    #   pytest-cov
+propcache==0.3.2
     # via
     #   -r requirements/test.txt
     #   aiohttp
@@ -104,12 +105,14 @@ pydata-sphinx-theme==0.15.4
     # via sphinx-book-theme
 pygments==2.19.1
     # via
+    #   -r requirements/test.txt
     #   accessible-pygments
     #   doc8
     #   pydata-sphinx-theme
+    #   pytest
     #   readme-renderer
     #   sphinx
-pytest==8.3.5
+pytest==8.4.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -117,17 +120,17 @@ pytest==8.3.5
     #   pytest-cov
 pytest-aiohttp==1.1.0
     # via -r requirements/test.txt
-pytest-asyncio==0.26.0
+pytest-asyncio==1.0.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
-pytest-cov==6.1.1
+pytest-cov==6.2.1
     # via -r requirements/test.txt
 pyyaml==6.0.2
     # via -r requirements/test.txt
 readme-renderer==44.0
     # via -r requirements/doc.in
-requests==2.32.3
+requests==2.32.4
     # via sphinx
 restructuredtext-lint==1.4.0
     # via doc8
@@ -137,7 +140,7 @@ smmap==5.0.2
     # via
     #   -r requirements/test.txt
     #   gitdb
-snowballstemmer==2.2.0
+snowballstemmer==3.0.1
     # via sphinx
 soupsieve==2.7
     # via beautifulsoup4
@@ -162,7 +165,7 @@ sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
 stevedore==5.4.1
     # via doc8
-typing-extensions==4.13.2
+typing-extensions==4.14.0
     # via
     #   beautifulsoup4
     #   pydata-sphinx-theme
@@ -170,7 +173,7 @@ urllib3==2.2.3
     # via
     #   -c https://raw.githubusercontent.com/edx/edx-lint/master/edx_lint/files/common_constraints.txt
     #   requests
-yarl==1.20.0
+yarl==1.20.1
     # via
     #   -r requirements/test.txt
     #   aiohttp
