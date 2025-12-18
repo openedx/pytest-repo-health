@@ -16,10 +16,7 @@ jobs:
     uses: openedx/.github/.github/workflows/upgrade-python-requirements.yml@master
     with:
       branch: ${{ github.event.inputs.branch || 'master' }}
-      # optional parameters below; fill in if you'd like github or email notifications
-      # user_reviewers: ""
-      team_reviewers: "arbi-bom"
-      send_success_notification: false
+      user_reviewers: "usamasadiq"
     secrets:
       requirements_bot_github_token: ${{ secrets.REQUIREMENTS_BOT_GITHUB_TOKEN }}
       requirements_bot_github_email: ${{ secrets.REQUIREMENTS_BOT_GITHUB_EMAIL }}
