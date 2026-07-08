@@ -21,7 +21,7 @@ session_data_holder_dict["TIMESTAMP"] = datetime.datetime.now().date()
 @pytest.fixture(autouse=True)
 def set_warnings() -> None:
     """Force asyncio mistakes to be errors"""
-    warnings.simplefilter("error", pytest.PytestUnhandledCoroutineWarning)
+    warnings.simplefilter("error", pytest.PytestReturnNotNoneWarning)
 
 
 @pytest.fixture(scope="session")
@@ -137,14 +137,14 @@ def repo_health(request):
     return request.config.option.repo_health
 
 
-def pytest_ignore_collect(path, config):
+def pytest_ignore_collect(collection_path, config):
     """
     pytest hook that determines if pytest looks at specific file to collect tests
     if repo_health is set to true:
         only tests in test files with "repo_health" in their path will be collected
     """
     if config.getoption("repo_health"):
-        if "/repo_health" not in str(path):
+        if "/repo_health" not in str(collection_path):
             return True
     return None
 
