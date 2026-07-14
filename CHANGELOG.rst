@@ -14,6 +14,21 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+4.0.0 - 2026-07-08
+~~~~~~~~~~~~~~~~~~
+
+BREAKING CHANGE
+_______________
+
+* Dropped Python 3.11 support
+
+* Added support for pytest 9: use the ``collection_path`` argument in
+  ``pytest_ignore_collect`` and ``PytestReturnNotNoneWarning`` in place of
+  APIs removed in pytest 8/9
+* Switched the ``github-py`` dependency to a PEP 508 direct reference so
+  ``make upgrade`` works with current pip
+
+
 3.2.1 - 2025-12-02
 ~~~~~~~~~~~~~~~~~~
 
