@@ -3,9 +3,10 @@ Plugin configures pytest to run repo health checks on a code repository.
 Plugin takes care of gathering checks, running checks,
 and outputting report based on data gathered during checks.
 """
+from importlib.metadata import version
 from typing import Union
 
-__version__ = "4.0.0"
+__version__ = version("pytest-repo-health")
 
 
 def health_metadata(parent_path: list, output_keys: dict):
