@@ -9,7 +9,6 @@ on:
 
 jobs:
   tests:
-    name: ${{ matrix.toxenv }}
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
