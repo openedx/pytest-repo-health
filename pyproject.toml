@@ -64,6 +64,9 @@ exclude_lines = [
 [tool.coverage.html]
 directory = "htmlcov"
 
+[tool.semantic_release]
+build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+
 [dependency-groups]
 test = ["pytest-cov"]
 quality = [
