@@ -79,10 +79,12 @@ quality = [
 ]
 doc = [
     {include-group = "test"},
+    "build",
     "doc8",
     "readme_renderer",
     "Sphinx",
     "sphinx-book-theme",
+    "twine",
 ]
 ci = ["tox", "tox-uv>=1"]
 dev = [
