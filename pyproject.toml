@@ -42,12 +42,13 @@ version_scheme = "only-version"
 local_scheme = "no-local-version"
 
 [tool.setuptools.packages.find]
+where = ["src"]
 include = ["pytest_repo_health*"]
 exclude = ["*.tests", "*.tests.*"]
 
 [tool.coverage.run]
 branch = true
-source = ["pytest_repo_health"]
+source_pkgs = ["pytest_repo_health"]
 omit = ["*/tests/*", "*/__pycache__/*"]
 
 [tool.coverage.report]
