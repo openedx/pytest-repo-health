@@ -1695,7 +1695,6 @@ wheels = [
 name = "pytest-repo-health"
 source = { editable = "." }
 dependencies = [
-    { name = "github-py" },
     { name = "gitpython" },
     { name = "pytest" },
     { name = "pytest-aiohttp" },
@@ -1712,6 +1711,7 @@ dev = [
     { name = "diff-cover" },
     { name = "doc8" },
     { name = "edx-lint" },
+    { name = "github-py" },
     { name = "isort" },
     { name = "pycodestyle" },
     { name = "pydocstyle" },
@@ -1726,6 +1726,7 @@ dev = [
 doc = [
     { name = "build" },
     { name = "doc8" },
+    { name = "github-py" },
     { name = "pytest-cov" },
     { name = "readme-renderer" },
     { name = "sphinx" },
@@ -1734,18 +1735,19 @@ doc = [
 ]
 quality = [
     { name = "edx-lint" },
+    { name = "github-py" },
     { name = "isort" },
     { name = "pycodestyle" },
     { name = "pydocstyle" },
     { name = "pytest-cov" },
 ]
 test = [
+    { name = "github-py" },
     { name = "pytest-cov" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "github-py", git = "https://github.com/ShineyDev/github.py.git?rev=8e3514010eb35a91e012f2935f48138b3c35cef6" },
     { name = "gitpython" },
     { name = "pytest" },
     { name = "pytest-aiohttp" },
@@ -1762,6 +1764,7 @@ dev = [
     { name = "diff-cover" },
     { name = "doc8" },
     { name = "edx-lint" },
+    { name = "github-py", git = "https://github.com/ShineyDev/github.py.git?rev=8e3514010eb35a91e012f2935f48138b3c35cef6" },
     { name = "isort" },
     { name = "pycodestyle" },
     { name = "pydocstyle" },
@@ -1776,6 +1779,7 @@ dev = [
 doc = [
     { name = "build" },
     { name = "doc8" },
+    { name = "github-py", git = "https://github.com/ShineyDev/github.py.git?rev=8e3514010eb35a91e012f2935f48138b3c35cef6" },
     { name = "pytest-cov" },
     { name = "readme-renderer" },
     { name = "sphinx" },
@@ -1784,12 +1788,16 @@ doc = [
 ]
 quality = [
     { name = "edx-lint" },
+    { name = "github-py", git = "https://github.com/ShineyDev/github.py.git?rev=8e3514010eb35a91e012f2935f48138b3c35cef6" },
     { name = "isort" },
     { name = "pycodestyle" },
     { name = "pydocstyle" },
     { name = "pytest-cov" },
 ]
-test = [{ name = "pytest-cov" }]
+test = [
+    { name = "github-py", git = "https://github.com/ShineyDev/github.py.git?rev=8e3514010eb35a91e012f2935f48138b3c35cef6" },
+    { name = "pytest-cov" },
+]
 
 [[package]]
 name = "python-discovery"

@@ -25,7 +25,6 @@ classifiers = [
 ]
 dependencies = [
     "GitPython",
-    "github-py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6",
     "pytest",
     "pytest-aiohttp",
     "pyyaml",
@@ -69,7 +68,15 @@ directory = "htmlcov"
 build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
 
 [dependency-groups]
-test = ["pytest-cov"]
+test = [
+    "pytest-cov",
+    # Not PyPI-installable as a project dependency: PyPI rejects uploads whose
+    # Requires-Dist contains a direct URL. The PyPI release of github-py (0.5.0)
+    # chokes on parsing a repo's code of conduct, so we need this git ref for
+    # the `github_client`/`github_repo` fixtures (used in tests here, and
+    # available to downstream consumers who install it themselves).
+    "github-py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6",
+]
 quality = [
     {include-group = "test"},
     "edx-lint",
