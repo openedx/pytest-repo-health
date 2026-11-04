@@ -37,9 +37,28 @@ with `@hackebrot`_'s `cookiecutter-pytest-plugin`_ template.
 Installation
 ------------
 
-For now, you need to git clone pytest-repo-health from: ``git@github.com:edx/pytest-repo-health.git``
-You can install by running ``make requirements`` and then `pip install -e .`
-in a Python 3.5+ virtualenv.
+Install from PyPI (requires Python 3.12+)::
+
+    pip install pytest-repo-health
+
+The GitHub fixtures (``github_client``, ``github_repo``) need ``github-py``,
+which is not on PyPI in a working version, so install it yourself::
+
+    pip install "github-py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6"
+
+Development
+~~~~~~~~~~~
+
+This project uses `uv`_ to manage dependencies::
+
+    git clone https://github.com/openedx/pytest-repo-health.git
+    cd pytest-repo-health
+    make requirements      # uv sync --group dev
+    source .venv/bin/activate
+    make test              # tox -e py312
+    make quality           # tox -e quality
+    make docs              # tox -e docs
+    make upgrade           # refresh constraints and uv.lock
 
 
 Usage
@@ -163,5 +182,6 @@ refer to this `list of resources`_ if you need any assistance.
 .. _`file an issue`: https://github.com/openedx/pytest-repo-health/issues
 .. _`pytest`: https://github.com/pytest-dev/pytest
 .. _`tox`: https://tox.readthedocs.io/en/latest/
+.. _`uv`: https://docs.astral.sh/uv/
 .. _`pip`: https://pypi.org/project/pip/
 .. _`PyPI`: https://pypi.org/project
