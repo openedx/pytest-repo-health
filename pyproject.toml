@@ -1,0 +1,121 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm>8.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytest-repo-health"
+dynamic = ["version"]
+description = "A pytest plugin to report on repository standards conformance"
+readme = "README.rst"
+license = "AGPL-3.0-only"
+license-files = ["LICENSE"]
+requires-python = ">=3.12"
+authors = [
+    {name = "edX", email = "oscm@edx.org"},
+]
+keywords = ["pytest", "edx"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Topic :: Software Development :: Testing",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "GitPython",
+    "pytest",
+    "pytest-aiohttp",
+    "pyyaml",
+]
+
+[project.urls]
+Homepage = "https://github.com/openedx/pytest-repo-health"
+
+[project.entry-points.pytest11]
+plugin = "pytest_repo_health.plugin"
+
+[tool.setuptools_scm]
+version_scheme = "only-version"
+local_scheme = "no-local-version"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["pytest_repo_health*"]
+exclude = ["*.tests", "*.tests.*"]
+
+[tool.coverage.run]
+branch = true
+source_pkgs = ["pytest_repo_health"]
+omit = ["*/tests/*", "*/__pycache__/*"]
+
+[tool.coverage.report]
+show_missing = true
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.semantic_release]
+build_command = "python -m pip install --upgrade build && SETUPTOOLS_SCM_PRETEND_VERSION=$NEW_VERSION python -m build"
+
+[dependency-groups]
+test = [
+    "pytest-cov",
+    # Not PyPI-installable as a project dependency: PyPI rejects uploads whose
+    # Requires-Dist contains a direct URL. The PyPI release of github-py (0.5.0)
+    # chokes on parsing a repo's code of conduct, so we need this git ref for
+    # the `github_client`/`github_repo` fixtures (used in tests here, and
+    # available to downstream consumers who install it themselves).
+    "github-py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6",
+]
+quality = [
+    {include-group = "test"},
+    "edx-lint",
+    "isort",
+    "pycodestyle",
+    "pydocstyle",
+]
+doc = [
+    {include-group = "test"},
+    "build",
+    "doc8",
+    "readme_renderer",
+    "Sphinx",
+    "sphinx-book-theme",
+    "twine",
+]
+ci = ["tox", "tox-uv>=1"]
+dev = [
+    {include-group = "quality"},
+    {include-group = "doc"},
+    {include-group = "ci"},
+    "diff-cover",
+]
+
+[tool.edx_lint]
+uv_constraints = []
+
+[tool.uv]
+package = true
+default-groups = []
+#  DO NOT EDIT constraint-dependencies DIRECTLY.
+#  This list is managed by `edx_lint write_uv_constraints`
+#  and will be overwritten the next time `make upgrade` is run.
+#  - GLOBAL constraints: edit edx_lint/files/common_constraints.txt
+#  - REPO-SPECIFIC constraints: edit [tool.edx_lint].uv_constraints in this file
+constraint-dependencies = [
+    "Django<6.0",
+    "elasticsearch<7.14.0",
+    "social-auth-app-django<6.0.0",
+    "social-auth-core<5.0.0",
+    "pip<26.2.1",
+]
