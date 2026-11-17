@@ -41,8 +41,9 @@ Install from PyPI (requires Python 3.12+)::
 
     pip install pytest-repo-health
 
-The GitHub fixtures (``github_client``, ``github_repo``) need ``github-py``,
-which is not on PyPI in a working version, so install it yourself::
+The plugin also requires ``github-py``; without it, pytest fails to load the
+plugin at all. ``github-py`` is not on PyPI in a working version, so install it
+yourself::
 
     pip install "github-py @ git+https://github.com/ShineyDev/github.py.git@8e3514010eb35a91e012f2935f48138b3c35cef6"
 
