@@ -35,7 +35,7 @@ certifi==2026.10.23
     # via requests
 charset-normalizer==3.5.2
     # via requests
-coverage[toml]==7.17.2
+coverage[toml]==7.17.3
     # via
     #   -r requirements/test.txt
     #   pytest-cov
@@ -83,7 +83,7 @@ multidict==7.2.1
     #   -r requirements/test.txt
     #   aiohttp
     #   yarl
-nh3==0.3.7
+nh3==0.3.8
     # via readme-renderer
 packaging==26.3
     # via
@@ -119,7 +119,7 @@ pytest==9.2.0
     #   pytest-cov
 pytest-aiohttp==1.1.1
     # via -r requirements/test.txt
-pytest-asyncio==1.4.1.post1
+pytest-asyncio==1.5.0
     # via
     #   -r requirements/test.txt
     #   pytest-aiohttp
@@ -143,7 +143,7 @@ smmap==5.0.3
     #   gitdb
 snowballstemmer==3.1.1
     # via sphinx
-soupsieve==4.1
+soupsieve==4.1.1
     # via beautifulsoup4
 sphinx==9.1.1
     # via
@@ -164,7 +164,7 @@ sphinxcontrib-qthelp==2.0.0
     # via sphinx
 sphinxcontrib-serializinghtml==2.0.0
     # via sphinx
-stevedore==5.9.1
+stevedore==5.10.0
     # via doc8
 typing-extensions==4.16.0
     # via
