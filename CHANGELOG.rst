@@ -14,6 +14,10 @@ Change Log
 Unreleased
 ~~~~~~~~~~
 
+* Release notes for future releases are published on
+  `GitHub Releases <https://github.com/openedx/pytest-repo-health/releases>`_
+  by python-semantic-release; this file is no longer updated.
+
 4.0.0 - 2026-07-08
 ~~~~~~~~~~~~~~~~~~
 
